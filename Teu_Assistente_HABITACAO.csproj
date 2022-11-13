@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VIEW\FrmCadastro1de5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmCadastro1de5.Designer.cs">
+      <DependentUpon>FrmCadastro1de5.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\FrmAgendar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VIEW\FrmCadastro1de5.resx">
+      <DependentUpon>FrmCadastro1de5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VIEW\FrmAgendar.resx">
       <DependentUpon>FrmAgendar.cs</DependentUpon>
     </EmbeddedResource>
