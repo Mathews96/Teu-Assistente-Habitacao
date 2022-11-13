@@ -10,3 +10,5 @@ C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\
 C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.csproj.CoreCompileInputs.cache
 C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.exe
 C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.pdb
+C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.FrmCadastro2de5.resources
+C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.FrmCadastro1de5.resources

@@ -1,6 +1,6 @@
 ﻿namespace Teu_Assistente_HABITACAO
 {
-    partial class FrmCadastro1de5
+    partial class FrmCadastro2de5
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastro1de5));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastro2de5));
             this.pctBoxLogo = new System.Windows.Forms.PictureBox();
             this.lbLinksUteis = new System.Windows.Forms.Label();
             this.pnlLinksUteis = new System.Windows.Forms.Panel();
@@ -44,21 +44,19 @@
             this.btnCadProximo = new System.Windows.Forms.Button();
             this.lblCadDadosPessoais = new System.Windows.Forms.Label();
             this.pnlCadDadosPessoais = new System.Windows.Forms.Panel();
-            this.txtBxCadNomeMae = new System.Windows.Forms.TextBox();
-            this.lblCadNomeMae = new System.Windows.Forms.Label();
-            this.txtBxCadWhatsApp = new System.Windows.Forms.TextBox();
-            this.lblCadWhatsApp = new System.Windows.Forms.Label();
-            this.txtBxCadTelefone = new System.Windows.Forms.TextBox();
-            this.lblCadTelefone = new System.Windows.Forms.Label();
-            this.txtBxCadEmail = new System.Windows.Forms.TextBox();
-            this.lblCadEmail = new System.Windows.Forms.Label();
-            this.txtBxCadContato = new System.Windows.Forms.TextBox();
-            this.lblCadContato = new System.Windows.Forms.Label();
             this.txtBxCadCPF = new System.Windows.Forms.TextBox();
-            this.lblCadCPF = new System.Windows.Forms.Label();
+            this.lblCadNumero = new System.Windows.Forms.Label();
             this.txtBxCadNomeCompleto = new System.Windows.Forms.TextBox();
-            this.lblCadNomeCompleto = new System.Windows.Forms.Label();
+            this.lblCadEndereco = new System.Windows.Forms.Label();
             this.lblCadastro = new System.Windows.Forms.Label();
+            this.txtBxCadComplemento = new System.Windows.Forms.TextBox();
+            this.lblCadComplemento = new System.Windows.Forms.Label();
+            this.lblCadCidade = new System.Windows.Forms.Label();
+            this.lblCadCEP = new System.Windows.Forms.Label();
+            this.txtBxCadCep = new System.Windows.Forms.TextBox();
+            this.lblCadBairro = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
             this.pnlCadastro1de5.SuspendLayout();
@@ -165,14 +163,16 @@
             // 
             // lblCadNumeroPag
             // 
+            this.lblCadNumeroPag.AutoEllipsis = true;
             this.lblCadNumeroPag.AutoSize = true;
+            this.lblCadNumeroPag.BackColor = System.Drawing.SystemColors.Control;
             this.lblCadNumeroPag.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadNumeroPag.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lblCadNumeroPag.Location = new System.Drawing.Point(311, 0);
             this.lblCadNumeroPag.Name = "lblCadNumeroPag";
             this.lblCadNumeroPag.Size = new System.Drawing.Size(43, 25);
             this.lblCadNumeroPag.TabIndex = 9;
-            this.lblCadNumeroPag.Text = "1/5";
+            this.lblCadNumeroPag.Text = "2/5";
             // 
             // btnCadEditar
             // 
@@ -214,157 +214,65 @@
             this.lblCadDadosPessoais.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lblCadDadosPessoais.Location = new System.Drawing.Point(3, 39);
             this.lblCadDadosPessoais.Name = "lblCadDadosPessoais";
-            this.lblCadDadosPessoais.Size = new System.Drawing.Size(172, 20);
+            this.lblCadDadosPessoais.Size = new System.Drawing.Size(113, 20);
             this.lblCadDadosPessoais.TabIndex = 1;
-            this.lblCadDadosPessoais.Text = "DADOS PESSOAIS:";
+            this.lblCadDadosPessoais.Text = "ENDEREÇO:";
             // 
             // pnlCadDadosPessoais
             // 
             this.pnlCadDadosPessoais.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadNomeMae);
-            this.pnlCadDadosPessoais.Controls.Add(this.lblCadNomeMae);
-            this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadWhatsApp);
-            this.pnlCadDadosPessoais.Controls.Add(this.lblCadWhatsApp);
-            this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadTelefone);
-            this.pnlCadDadosPessoais.Controls.Add(this.lblCadTelefone);
-            this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadEmail);
-            this.pnlCadDadosPessoais.Controls.Add(this.lblCadEmail);
-            this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadContato);
-            this.pnlCadDadosPessoais.Controls.Add(this.lblCadContato);
+            this.pnlCadDadosPessoais.Controls.Add(this.comboBox2);
+            this.pnlCadDadosPessoais.Controls.Add(this.comboBox1);
+            this.pnlCadDadosPessoais.Controls.Add(this.lblCadBairro);
+            this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadCep);
+            this.pnlCadDadosPessoais.Controls.Add(this.lblCadCEP);
+            this.pnlCadDadosPessoais.Controls.Add(this.lblCadCidade);
+            this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadComplemento);
+            this.pnlCadDadosPessoais.Controls.Add(this.lblCadComplemento);
             this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadCPF);
-            this.pnlCadDadosPessoais.Controls.Add(this.lblCadCPF);
+            this.pnlCadDadosPessoais.Controls.Add(this.lblCadNumero);
             this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadNomeCompleto);
-            this.pnlCadDadosPessoais.Controls.Add(this.lblCadNomeCompleto);
+            this.pnlCadDadosPessoais.Controls.Add(this.lblCadEndereco);
             this.pnlCadDadosPessoais.Location = new System.Drawing.Point(-2, 62);
             this.pnlCadDadosPessoais.Name = "pnlCadDadosPessoais";
             this.pnlCadDadosPessoais.Size = new System.Drawing.Size(650, 296);
             this.pnlCadDadosPessoais.TabIndex = 5;
             // 
-            // txtBxCadNomeMae
-            // 
-            this.txtBxCadNomeMae.Location = new System.Drawing.Point(6, 243);
-            this.txtBxCadNomeMae.Name = "txtBxCadNomeMae";
-            this.txtBxCadNomeMae.Size = new System.Drawing.Size(301, 20);
-            this.txtBxCadNomeMae.TabIndex = 20;
-            // 
-            // lblCadNomeMae
-            // 
-            this.lblCadNomeMae.AutoSize = true;
-            this.lblCadNomeMae.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadNomeMae.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCadNomeMae.Location = new System.Drawing.Point(4, 226);
-            this.lblCadNomeMae.Name = "lblCadNomeMae";
-            this.lblCadNomeMae.Size = new System.Drawing.Size(98, 13);
-            this.lblCadNomeMae.TabIndex = 19;
-            this.lblCadNomeMae.Text = "NOME DA MÃE:";
-            // 
-            // txtBxCadWhatsApp
-            // 
-            this.txtBxCadWhatsApp.Location = new System.Drawing.Point(496, 129);
-            this.txtBxCadWhatsApp.Name = "txtBxCadWhatsApp";
-            this.txtBxCadWhatsApp.Size = new System.Drawing.Size(149, 20);
-            this.txtBxCadWhatsApp.TabIndex = 18;
-            // 
-            // lblCadWhatsApp
-            // 
-            this.lblCadWhatsApp.AutoSize = true;
-            this.lblCadWhatsApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadWhatsApp.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCadWhatsApp.Location = new System.Drawing.Point(494, 112);
-            this.lblCadWhatsApp.Name = "lblCadWhatsApp";
-            this.lblCadWhatsApp.Size = new System.Drawing.Size(80, 13);
-            this.lblCadWhatsApp.TabIndex = 17;
-            this.lblCadWhatsApp.Text = "WHATSAPP:";
-            // 
-            // txtBxCadTelefone
-            // 
-            this.txtBxCadTelefone.Location = new System.Drawing.Point(323, 129);
-            this.txtBxCadTelefone.Name = "txtBxCadTelefone";
-            this.txtBxCadTelefone.Size = new System.Drawing.Size(162, 20);
-            this.txtBxCadTelefone.TabIndex = 16;
-            // 
-            // lblCadTelefone
-            // 
-            this.lblCadTelefone.AutoSize = true;
-            this.lblCadTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadTelefone.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCadTelefone.Location = new System.Drawing.Point(321, 112);
-            this.lblCadTelefone.Name = "lblCadTelefone";
-            this.lblCadTelefone.Size = new System.Drawing.Size(75, 13);
-            this.lblCadTelefone.TabIndex = 15;
-            this.lblCadTelefone.Text = "TELEFONE:";
-            // 
-            // txtBxCadEmail
-            // 
-            this.txtBxCadEmail.Location = new System.Drawing.Point(7, 129);
-            this.txtBxCadEmail.Name = "txtBxCadEmail";
-            this.txtBxCadEmail.Size = new System.Drawing.Size(301, 20);
-            this.txtBxCadEmail.TabIndex = 14;
-            // 
-            // lblCadEmail
-            // 
-            this.lblCadEmail.AutoSize = true;
-            this.lblCadEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadEmail.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCadEmail.Location = new System.Drawing.Point(5, 112);
-            this.lblCadEmail.Name = "lblCadEmail";
-            this.lblCadEmail.Size = new System.Drawing.Size(52, 13);
-            this.lblCadEmail.TabIndex = 13;
-            this.lblCadEmail.Text = "E-MAIL:";
-            // 
-            // txtBxCadContato
-            // 
-            this.txtBxCadContato.Location = new System.Drawing.Point(495, 34);
-            this.txtBxCadContato.Name = "txtBxCadContato";
-            this.txtBxCadContato.Size = new System.Drawing.Size(149, 20);
-            this.txtBxCadContato.TabIndex = 12;
-            // 
-            // lblCadContato
-            // 
-            this.lblCadContato.AutoSize = true;
-            this.lblCadContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadContato.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCadContato.Location = new System.Drawing.Point(493, 17);
-            this.lblCadContato.Name = "lblCadContato";
-            this.lblCadContato.Size = new System.Drawing.Size(40, 13);
-            this.lblCadContato.TabIndex = 11;
-            this.lblCadContato.Text = "NISS:";
-            // 
             // txtBxCadCPF
             // 
-            this.txtBxCadCPF.Location = new System.Drawing.Point(322, 34);
+            this.txtBxCadCPF.Location = new System.Drawing.Point(570, 34);
             this.txtBxCadCPF.Name = "txtBxCadCPF";
-            this.txtBxCadCPF.Size = new System.Drawing.Size(162, 20);
+            this.txtBxCadCPF.Size = new System.Drawing.Size(73, 20);
             this.txtBxCadCPF.TabIndex = 10;
             // 
-            // lblCadCPF
+            // lblCadNumero
             // 
-            this.lblCadCPF.AutoSize = true;
-            this.lblCadCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCPF.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCadCPF.Location = new System.Drawing.Point(320, 17);
-            this.lblCadCPF.Name = "lblCadCPF";
-            this.lblCadCPF.Size = new System.Drawing.Size(34, 13);
-            this.lblCadCPF.TabIndex = 9;
-            this.lblCadCPF.Text = "CPF:";
+            this.lblCadNumero.AutoSize = true;
+            this.lblCadNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadNumero.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblCadNumero.Location = new System.Drawing.Point(567, 18);
+            this.lblCadNumero.Name = "lblCadNumero";
+            this.lblCadNumero.Size = new System.Drawing.Size(65, 13);
+            this.lblCadNumero.TabIndex = 9;
+            this.lblCadNumero.Text = "NÚMERO:";
             // 
             // txtBxCadNomeCompleto
             // 
             this.txtBxCadNomeCompleto.Location = new System.Drawing.Point(6, 34);
             this.txtBxCadNomeCompleto.Name = "txtBxCadNomeCompleto";
-            this.txtBxCadNomeCompleto.Size = new System.Drawing.Size(301, 20);
+            this.txtBxCadNomeCompleto.Size = new System.Drawing.Size(558, 20);
             this.txtBxCadNomeCompleto.TabIndex = 8;
             // 
-            // lblCadNomeCompleto
+            // lblCadEndereco
             // 
-            this.lblCadNomeCompleto.AutoSize = true;
-            this.lblCadNomeCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadNomeCompleto.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCadNomeCompleto.Location = new System.Drawing.Point(4, 17);
-            this.lblCadNomeCompleto.Name = "lblCadNomeCompleto";
-            this.lblCadNomeCompleto.Size = new System.Drawing.Size(118, 13);
-            this.lblCadNomeCompleto.TabIndex = 7;
-            this.lblCadNomeCompleto.Text = "NOME COMPLETO:";
+            this.lblCadEndereco.AutoSize = true;
+            this.lblCadEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadEndereco.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblCadEndereco.Location = new System.Drawing.Point(4, 17);
+            this.lblCadEndereco.Name = "lblCadEndereco";
+            this.lblCadEndereco.Size = new System.Drawing.Size(79, 13);
+            this.lblCadEndereco.TabIndex = 7;
+            this.lblCadEndereco.Text = "ENDEREÇO:";
             // 
             // lblCadastro
             // 
@@ -377,7 +285,81 @@
             this.lblCadastro.TabIndex = 0;
             this.lblCadastro.Text = "CADASTRO";
             // 
-            // FrmCadastro1de5
+            // txtBxCadComplemento
+            // 
+            this.txtBxCadComplemento.Location = new System.Drawing.Point(7, 129);
+            this.txtBxCadComplemento.Name = "txtBxCadComplemento";
+            this.txtBxCadComplemento.Size = new System.Drawing.Size(636, 20);
+            this.txtBxCadComplemento.TabIndex = 14;
+            // 
+            // lblCadComplemento
+            // 
+            this.lblCadComplemento.AutoSize = true;
+            this.lblCadComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadComplemento.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblCadComplemento.Location = new System.Drawing.Point(5, 112);
+            this.lblCadComplemento.Name = "lblCadComplemento";
+            this.lblCadComplemento.Size = new System.Drawing.Size(105, 13);
+            this.lblCadComplemento.TabIndex = 13;
+            this.lblCadComplemento.Text = "COMPLEMENTO:";
+            // 
+            // lblCadCidade
+            // 
+            this.lblCadCidade.AutoSize = true;
+            this.lblCadCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadCidade.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblCadCidade.Location = new System.Drawing.Point(240, 227);
+            this.lblCadCidade.Name = "lblCadCidade";
+            this.lblCadCidade.Size = new System.Drawing.Size(57, 13);
+            this.lblCadCidade.TabIndex = 15;
+            this.lblCadCidade.Text = "CIDADE:";
+            // 
+            // lblCadCEP
+            // 
+            this.lblCadCEP.AutoSize = true;
+            this.lblCadCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadCEP.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblCadCEP.Location = new System.Drawing.Point(487, 226);
+            this.lblCadCEP.Name = "lblCadCEP";
+            this.lblCadCEP.Size = new System.Drawing.Size(35, 13);
+            this.lblCadCEP.TabIndex = 17;
+            this.lblCadCEP.Text = "CEP:";
+            // 
+            // txtBxCadCep
+            // 
+            this.txtBxCadCep.Location = new System.Drawing.Point(489, 243);
+            this.txtBxCadCep.Name = "txtBxCadCep";
+            this.txtBxCadCep.Size = new System.Drawing.Size(149, 20);
+            this.txtBxCadCep.TabIndex = 18;
+            // 
+            // lblCadBairro
+            // 
+            this.lblCadBairro.AutoSize = true;
+            this.lblCadBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadBairro.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblCadBairro.Location = new System.Drawing.Point(4, 226);
+            this.lblCadBairro.Name = "lblCadBairro";
+            this.lblCadBairro.Size = new System.Drawing.Size(58, 13);
+            this.lblCadBairro.TabIndex = 19;
+            this.lblCadBairro.Text = "BAIRRO:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(8, 242);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(167, 21);
+            this.comboBox1.TabIndex = 21;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(243, 243);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(168, 21);
+            this.comboBox2.TabIndex = 22;
+            // 
+            // FrmCadastro2de5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -389,8 +371,8 @@
             this.Controls.Add(this.pnlLinksUteis);
             this.Controls.Add(this.lbLinksUteis);
             this.Controls.Add(this.pctBoxLogo);
-            this.Name = "FrmCadastro1de5";
-            this.Text = "FrmCadastro1de5";
+            this.Name = "FrmCadastro2de5";
+            this.Text = "FrmCadastro2de5";
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).EndInit();
             this.pnlLinksUteis.ResumeLayout(false);
             this.pnlCadastro1de5.ResumeLayout(false);
@@ -420,21 +402,19 @@
         private System.Windows.Forms.Button btnCadExcluir;
         private System.Windows.Forms.Button btnCadProximo;
         private System.Windows.Forms.Panel pnlCadDadosPessoais;
-        private System.Windows.Forms.Label lblCadNomeCompleto;
-        private System.Windows.Forms.TextBox txtBxCadContato;
-        private System.Windows.Forms.Label lblCadContato;
         private System.Windows.Forms.TextBox txtBxCadCPF;
-        private System.Windows.Forms.Label lblCadCPF;
+        private System.Windows.Forms.Label lblCadNumero;
         private System.Windows.Forms.TextBox txtBxCadNomeCompleto;
         private System.Windows.Forms.Label lblCadNumeroPag;
-        private System.Windows.Forms.TextBox txtBxCadNomeMae;
-        private System.Windows.Forms.Label lblCadNomeMae;
-        private System.Windows.Forms.TextBox txtBxCadWhatsApp;
-        private System.Windows.Forms.Label lblCadWhatsApp;
-        private System.Windows.Forms.TextBox txtBxCadTelefone;
-        private System.Windows.Forms.Label lblCadTelefone;
-        private System.Windows.Forms.TextBox txtBxCadEmail;
-        private System.Windows.Forms.Label lblCadEmail;
+        private System.Windows.Forms.Label lblCadEndereco;
+        private System.Windows.Forms.Label lblCadBairro;
+        private System.Windows.Forms.TextBox txtBxCadCep;
+        private System.Windows.Forms.Label lblCadCEP;
+        private System.Windows.Forms.Label lblCadCidade;
+        private System.Windows.Forms.TextBox txtBxCadComplemento;
+        private System.Windows.Forms.Label lblCadComplemento;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
