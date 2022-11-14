@@ -371,7 +371,7 @@
             this.lblCadastro.AutoSize = true;
             this.lblCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastro.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblCadastro.Location = new System.Drawing.Point(510, 0);
+            this.lblCadastro.Location = new System.Drawing.Point(510, 10);
             this.lblCadastro.Name = "lblCadastro";
             this.lblCadastro.Size = new System.Drawing.Size(133, 25);
             this.lblCadastro.TabIndex = 0;
