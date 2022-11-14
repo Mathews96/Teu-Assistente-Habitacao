@@ -1,6 +1,6 @@
 ﻿namespace Teu_Assistente_HABITACAO
 {
-    partial class FrmCadastro1de5
+    partial class FrmCadastroPag1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastro1de5));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroPag1));
             this.pctBoxLogo = new System.Windows.Forms.PictureBox();
             this.lbLinksUteis = new System.Windows.Forms.Label();
             this.pnlLinksUteis = new System.Windows.Forms.Panel();
@@ -37,7 +37,7 @@
             this.btnAgendar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.pnlCadastro1de5 = new System.Windows.Forms.Panel();
+            this.pnlCadastroPag1 = new System.Windows.Forms.Panel();
             this.lblCadNumeroPag = new System.Windows.Forms.Label();
             this.btnCadEditar = new System.Windows.Forms.Button();
             this.btnCadExcluir = new System.Windows.Forms.Button();
@@ -61,7 +61,7 @@
             this.lblCadastro = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
-            this.pnlCadastro1de5.SuspendLayout();
+            this.pnlCadastroPag1.SuspendLayout();
             this.pnlCadDadosPessoais.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,20 +148,20 @@
             this.btnConsultar.Text = "CONSULTAR";
             this.btnConsultar.UseVisualStyleBackColor = true;
             // 
-            // pnlCadastro1de5
+            // pnlCadastroPag1
             // 
-            this.pnlCadastro1de5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlCadastro1de5.Controls.Add(this.lblCadNumeroPag);
-            this.pnlCadastro1de5.Controls.Add(this.btnCadEditar);
-            this.pnlCadastro1de5.Controls.Add(this.btnCadExcluir);
-            this.pnlCadastro1de5.Controls.Add(this.btnCadProximo);
-            this.pnlCadastro1de5.Controls.Add(this.lblCadDadosPessoais);
-            this.pnlCadastro1de5.Controls.Add(this.pnlCadDadosPessoais);
-            this.pnlCadastro1de5.Controls.Add(this.lblCadastro);
-            this.pnlCadastro1de5.Location = new System.Drawing.Point(303, 12);
-            this.pnlCadastro1de5.Name = "pnlCadastro1de5";
-            this.pnlCadastro1de5.Size = new System.Drawing.Size(650, 414);
-            this.pnlCadastro1de5.TabIndex = 5;
+            this.pnlCadastroPag1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlCadastroPag1.Controls.Add(this.lblCadNumeroPag);
+            this.pnlCadastroPag1.Controls.Add(this.btnCadEditar);
+            this.pnlCadastroPag1.Controls.Add(this.btnCadExcluir);
+            this.pnlCadastroPag1.Controls.Add(this.btnCadProximo);
+            this.pnlCadastroPag1.Controls.Add(this.lblCadDadosPessoais);
+            this.pnlCadastroPag1.Controls.Add(this.pnlCadDadosPessoais);
+            this.pnlCadastroPag1.Controls.Add(this.lblCadastro);
+            this.pnlCadastroPag1.Location = new System.Drawing.Point(303, 12);
+            this.pnlCadastroPag1.Name = "pnlCadastroPag1";
+            this.pnlCadastroPag1.Size = new System.Drawing.Size(650, 414);
+            this.pnlCadastroPag1.TabIndex = 5;
             // 
             // lblCadNumeroPag
             // 
@@ -172,7 +172,7 @@
             this.lblCadNumeroPag.Name = "lblCadNumeroPag";
             this.lblCadNumeroPag.Size = new System.Drawing.Size(43, 25);
             this.lblCadNumeroPag.TabIndex = 9;
-            this.lblCadNumeroPag.Text = "1/5";
+            this.lblCadNumeroPag.Text = "1/3";
             // 
             // btnCadEditar
             // 
@@ -377,24 +377,24 @@
             this.lblCadastro.TabIndex = 0;
             this.lblCadastro.Text = "CADASTRO";
             // 
-            // FrmCadastro1de5
+            // FrmCadastroPag1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 450);
-            this.Controls.Add(this.pnlCadastro1de5);
+            this.Controls.Add(this.pnlCadastroPag1);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnAgendar);
             this.Controls.Add(this.pnlLinksUteis);
             this.Controls.Add(this.lbLinksUteis);
             this.Controls.Add(this.pctBoxLogo);
-            this.Name = "FrmCadastro1de5";
-            this.Text = "FrmCadastro1de5";
+            this.Name = "FrmCadastroPag1";
+            this.Text = "FrmCadastroPag1";
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).EndInit();
             this.pnlLinksUteis.ResumeLayout(false);
-            this.pnlCadastro1de5.ResumeLayout(false);
-            this.pnlCadastro1de5.PerformLayout();
+            this.pnlCadastroPag1.ResumeLayout(false);
+            this.pnlCadastroPag1.PerformLayout();
             this.pnlCadDadosPessoais.ResumeLayout(false);
             this.pnlCadDadosPessoais.PerformLayout();
             this.ResumeLayout(false);
@@ -413,7 +413,7 @@
         private System.Windows.Forms.Button btnAgendar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.Panel pnlCadastro1de5;
+        private System.Windows.Forms.Panel pnlCadastroPag1;
         private System.Windows.Forms.Label lblCadastro;
         private System.Windows.Forms.Label lblCadDadosPessoais;
         private System.Windows.Forms.Button btnCadEditar;

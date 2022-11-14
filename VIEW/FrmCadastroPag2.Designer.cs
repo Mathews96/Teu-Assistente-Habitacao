@@ -1,6 +1,6 @@
 ﻿namespace Teu_Assistente_HABITACAO
 {
-    partial class FrmCadastro2de5
+    partial class FrmCadastroPag2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastro2de5));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroPag2));
             this.pctBoxLogo = new System.Windows.Forms.PictureBox();
             this.lbLinksUteis = new System.Windows.Forms.Label();
             this.pnlLinksUteis = new System.Windows.Forms.Panel();
@@ -37,29 +37,29 @@
             this.btnAgendar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.pnlCadastro1de5 = new System.Windows.Forms.Panel();
+            this.pnlCadastroPag2 = new System.Windows.Forms.Panel();
             this.lblCadNumeroPag = new System.Windows.Forms.Label();
             this.btnCadEditar = new System.Windows.Forms.Button();
             this.btnCadExcluir = new System.Windows.Forms.Button();
             this.btnCadProximo = new System.Windows.Forms.Button();
             this.lblCadDadosPessoais = new System.Windows.Forms.Label();
             this.pnlCadDadosPessoais = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblCadBairro = new System.Windows.Forms.Label();
+            this.txtBxCadCep = new System.Windows.Forms.TextBox();
+            this.lblCadCEP = new System.Windows.Forms.Label();
+            this.lblCadCidade = new System.Windows.Forms.Label();
+            this.txtBxCadComplemento = new System.Windows.Forms.TextBox();
+            this.lblCadComplemento = new System.Windows.Forms.Label();
             this.txtBxCadCPF = new System.Windows.Forms.TextBox();
             this.lblCadNumero = new System.Windows.Forms.Label();
             this.txtBxCadNomeCompleto = new System.Windows.Forms.TextBox();
             this.lblCadEndereco = new System.Windows.Forms.Label();
             this.lblCadastro = new System.Windows.Forms.Label();
-            this.txtBxCadComplemento = new System.Windows.Forms.TextBox();
-            this.lblCadComplemento = new System.Windows.Forms.Label();
-            this.lblCadCidade = new System.Windows.Forms.Label();
-            this.lblCadCEP = new System.Windows.Forms.Label();
-            this.txtBxCadCep = new System.Windows.Forms.TextBox();
-            this.lblCadBairro = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
-            this.pnlCadastro1de5.SuspendLayout();
+            this.pnlCadastroPag2.SuspendLayout();
             this.pnlCadDadosPessoais.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,20 +146,20 @@
             this.btnConsultar.Text = "CONSULTAR";
             this.btnConsultar.UseVisualStyleBackColor = true;
             // 
-            // pnlCadastro1de5
+            // pnlCadastroPag2
             // 
-            this.pnlCadastro1de5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlCadastro1de5.Controls.Add(this.lblCadNumeroPag);
-            this.pnlCadastro1de5.Controls.Add(this.btnCadEditar);
-            this.pnlCadastro1de5.Controls.Add(this.btnCadExcluir);
-            this.pnlCadastro1de5.Controls.Add(this.btnCadProximo);
-            this.pnlCadastro1de5.Controls.Add(this.lblCadDadosPessoais);
-            this.pnlCadastro1de5.Controls.Add(this.pnlCadDadosPessoais);
-            this.pnlCadastro1de5.Controls.Add(this.lblCadastro);
-            this.pnlCadastro1de5.Location = new System.Drawing.Point(303, 12);
-            this.pnlCadastro1de5.Name = "pnlCadastro1de5";
-            this.pnlCadastro1de5.Size = new System.Drawing.Size(650, 414);
-            this.pnlCadastro1de5.TabIndex = 5;
+            this.pnlCadastroPag2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlCadastroPag2.Controls.Add(this.lblCadNumeroPag);
+            this.pnlCadastroPag2.Controls.Add(this.btnCadEditar);
+            this.pnlCadastroPag2.Controls.Add(this.btnCadExcluir);
+            this.pnlCadastroPag2.Controls.Add(this.btnCadProximo);
+            this.pnlCadastroPag2.Controls.Add(this.lblCadDadosPessoais);
+            this.pnlCadastroPag2.Controls.Add(this.pnlCadDadosPessoais);
+            this.pnlCadastroPag2.Controls.Add(this.lblCadastro);
+            this.pnlCadastroPag2.Location = new System.Drawing.Point(303, 12);
+            this.pnlCadastroPag2.Name = "pnlCadastroPag2";
+            this.pnlCadastroPag2.Size = new System.Drawing.Size(650, 414);
+            this.pnlCadastroPag2.TabIndex = 5;
             // 
             // lblCadNumeroPag
             // 
@@ -172,7 +172,7 @@
             this.lblCadNumeroPag.Name = "lblCadNumeroPag";
             this.lblCadNumeroPag.Size = new System.Drawing.Size(43, 25);
             this.lblCadNumeroPag.TabIndex = 9;
-            this.lblCadNumeroPag.Text = "2/5";
+            this.lblCadNumeroPag.Text = "2/3";
             // 
             // btnCadEditar
             // 
@@ -238,6 +238,80 @@
             this.pnlCadDadosPessoais.Size = new System.Drawing.Size(650, 296);
             this.pnlCadDadosPessoais.TabIndex = 5;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(243, 243);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(168, 21);
+            this.comboBox2.TabIndex = 22;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(8, 242);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(167, 21);
+            this.comboBox1.TabIndex = 21;
+            // 
+            // lblCadBairro
+            // 
+            this.lblCadBairro.AutoSize = true;
+            this.lblCadBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadBairro.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblCadBairro.Location = new System.Drawing.Point(4, 226);
+            this.lblCadBairro.Name = "lblCadBairro";
+            this.lblCadBairro.Size = new System.Drawing.Size(58, 13);
+            this.lblCadBairro.TabIndex = 19;
+            this.lblCadBairro.Text = "BAIRRO:";
+            // 
+            // txtBxCadCep
+            // 
+            this.txtBxCadCep.Location = new System.Drawing.Point(489, 243);
+            this.txtBxCadCep.Name = "txtBxCadCep";
+            this.txtBxCadCep.Size = new System.Drawing.Size(149, 20);
+            this.txtBxCadCep.TabIndex = 18;
+            // 
+            // lblCadCEP
+            // 
+            this.lblCadCEP.AutoSize = true;
+            this.lblCadCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadCEP.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblCadCEP.Location = new System.Drawing.Point(487, 226);
+            this.lblCadCEP.Name = "lblCadCEP";
+            this.lblCadCEP.Size = new System.Drawing.Size(35, 13);
+            this.lblCadCEP.TabIndex = 17;
+            this.lblCadCEP.Text = "CEP:";
+            // 
+            // lblCadCidade
+            // 
+            this.lblCadCidade.AutoSize = true;
+            this.lblCadCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadCidade.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblCadCidade.Location = new System.Drawing.Point(240, 227);
+            this.lblCadCidade.Name = "lblCadCidade";
+            this.lblCadCidade.Size = new System.Drawing.Size(57, 13);
+            this.lblCadCidade.TabIndex = 15;
+            this.lblCadCidade.Text = "CIDADE:";
+            // 
+            // txtBxCadComplemento
+            // 
+            this.txtBxCadComplemento.Location = new System.Drawing.Point(7, 129);
+            this.txtBxCadComplemento.Name = "txtBxCadComplemento";
+            this.txtBxCadComplemento.Size = new System.Drawing.Size(636, 20);
+            this.txtBxCadComplemento.TabIndex = 14;
+            // 
+            // lblCadComplemento
+            // 
+            this.lblCadComplemento.AutoSize = true;
+            this.lblCadComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadComplemento.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblCadComplemento.Location = new System.Drawing.Point(5, 112);
+            this.lblCadComplemento.Name = "lblCadComplemento";
+            this.lblCadComplemento.Size = new System.Drawing.Size(105, 13);
+            this.lblCadComplemento.TabIndex = 13;
+            this.lblCadComplemento.Text = "COMPLEMENTO:";
+            // 
             // txtBxCadCPF
             // 
             this.txtBxCadCPF.Location = new System.Drawing.Point(570, 34);
@@ -285,98 +359,24 @@
             this.lblCadastro.TabIndex = 0;
             this.lblCadastro.Text = "CADASTRO";
             // 
-            // txtBxCadComplemento
-            // 
-            this.txtBxCadComplemento.Location = new System.Drawing.Point(7, 129);
-            this.txtBxCadComplemento.Name = "txtBxCadComplemento";
-            this.txtBxCadComplemento.Size = new System.Drawing.Size(636, 20);
-            this.txtBxCadComplemento.TabIndex = 14;
-            // 
-            // lblCadComplemento
-            // 
-            this.lblCadComplemento.AutoSize = true;
-            this.lblCadComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadComplemento.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCadComplemento.Location = new System.Drawing.Point(5, 112);
-            this.lblCadComplemento.Name = "lblCadComplemento";
-            this.lblCadComplemento.Size = new System.Drawing.Size(105, 13);
-            this.lblCadComplemento.TabIndex = 13;
-            this.lblCadComplemento.Text = "COMPLEMENTO:";
-            // 
-            // lblCadCidade
-            // 
-            this.lblCadCidade.AutoSize = true;
-            this.lblCadCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCidade.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCadCidade.Location = new System.Drawing.Point(240, 227);
-            this.lblCadCidade.Name = "lblCadCidade";
-            this.lblCadCidade.Size = new System.Drawing.Size(57, 13);
-            this.lblCadCidade.TabIndex = 15;
-            this.lblCadCidade.Text = "CIDADE:";
-            // 
-            // lblCadCEP
-            // 
-            this.lblCadCEP.AutoSize = true;
-            this.lblCadCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCEP.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCadCEP.Location = new System.Drawing.Point(487, 226);
-            this.lblCadCEP.Name = "lblCadCEP";
-            this.lblCadCEP.Size = new System.Drawing.Size(35, 13);
-            this.lblCadCEP.TabIndex = 17;
-            this.lblCadCEP.Text = "CEP:";
-            // 
-            // txtBxCadCep
-            // 
-            this.txtBxCadCep.Location = new System.Drawing.Point(489, 243);
-            this.txtBxCadCep.Name = "txtBxCadCep";
-            this.txtBxCadCep.Size = new System.Drawing.Size(149, 20);
-            this.txtBxCadCep.TabIndex = 18;
-            // 
-            // lblCadBairro
-            // 
-            this.lblCadBairro.AutoSize = true;
-            this.lblCadBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadBairro.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCadBairro.Location = new System.Drawing.Point(4, 226);
-            this.lblCadBairro.Name = "lblCadBairro";
-            this.lblCadBairro.Size = new System.Drawing.Size(58, 13);
-            this.lblCadBairro.TabIndex = 19;
-            this.lblCadBairro.Text = "BAIRRO:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(8, 242);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 21);
-            this.comboBox1.TabIndex = 21;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(243, 243);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(168, 21);
-            this.comboBox2.TabIndex = 22;
-            // 
-            // FrmCadastro2de5
+            // FrmCadastroPag2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 450);
-            this.Controls.Add(this.pnlCadastro1de5);
+            this.Controls.Add(this.pnlCadastroPag2);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnAgendar);
             this.Controls.Add(this.pnlLinksUteis);
             this.Controls.Add(this.lbLinksUteis);
             this.Controls.Add(this.pctBoxLogo);
-            this.Name = "FrmCadastro2de5";
-            this.Text = "FrmCadastro2de5";
+            this.Name = "FrmCadastroPag2";
+            this.Text = "FrmCadastroPag2";
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).EndInit();
             this.pnlLinksUteis.ResumeLayout(false);
-            this.pnlCadastro1de5.ResumeLayout(false);
-            this.pnlCadastro1de5.PerformLayout();
+            this.pnlCadastroPag2.ResumeLayout(false);
+            this.pnlCadastroPag2.PerformLayout();
             this.pnlCadDadosPessoais.ResumeLayout(false);
             this.pnlCadDadosPessoais.PerformLayout();
             this.ResumeLayout(false);
@@ -395,7 +395,7 @@
         private System.Windows.Forms.Button btnAgendar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.Panel pnlCadastro1de5;
+        private System.Windows.Forms.Panel pnlCadastroPag2;
         private System.Windows.Forms.Label lblCadastro;
         private System.Windows.Forms.Label lblCadDadosPessoais;
         private System.Windows.Forms.Button btnCadEditar;

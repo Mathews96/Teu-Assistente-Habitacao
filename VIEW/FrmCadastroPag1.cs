@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Teu_Assistente_HABITACAO
 {
-    public partial class FrmCadastro2de5 : Form
+    public partial class FrmCadastroPag1 : Form
     {
-        public FrmCadastro2de5()
+        public FrmCadastroPag1()
         {
             InitializeComponent();
         }
