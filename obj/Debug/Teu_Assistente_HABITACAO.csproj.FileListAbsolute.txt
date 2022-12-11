@@ -10,5 +10,11 @@ C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\
 C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.csproj.CoreCompileInputs.cache
 C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.exe
 C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.pdb
-C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.FrmCadastro2de5.resources
-C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.FrmCadastro1de5.resources
+C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.FrmTelaLogin.resources
+C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.FrmConsultar.resources
+C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.FrmCadastroPag3.resources
+C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.FrmCadastroPag2.resources
+C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.FrmCadastroPag1.resources
+C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.csproj.CopyComplete
