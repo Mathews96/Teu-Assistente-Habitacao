@@ -2,7 +2,7 @@
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace Teu_Assistente_HABITACAO.MODEL
+namespace Teu_Assistente_HABITACAO
 {
     internal class BDAgendamento
     {
@@ -54,6 +54,8 @@ namespace Teu_Assistente_HABITACAO.MODEL
                 this.Situacao = reader["SITUACAO"].ToString();
                 this.Demanda = reader["DEMANDA"].ToString();
                 this.DataAgendamento = DateTime.Parse(reader["DATA_AGENDAMENTO"].ToString());
+                conexao.desconectar();
+                cmd.Parameters.Clear();
                 //Criar_loge
                 return true;
             }

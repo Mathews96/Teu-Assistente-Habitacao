@@ -2,19 +2,19 @@
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace Teu_Assistente_HABITACAO.MODEL
+namespace Teu_Assistente_HABITACAO
 {
     internal class BDCadastro
     {
-        private string NomeCompleto { get; set; }
-        private int Cpf { get; set; }
-        private int Nis { get; set; }
-        private DateTime DataDeNascimento { get; set; }
-        private string Email { get; set; }
-        private int Telefone { get; set; }
-        private int WhatsApp { get; set; }
-        private string NomeDaMae { get; set; }
-        private DateTime DataCadastro { get; set; }
+        internal string NomeCompleto { get; set; }
+        internal int Cpf { get; set; }
+        internal int Nis { get; set; }
+        internal DateTime DataDeNascimento { get; set; }
+        internal string Email { get; set; }
+        internal int Telefone { get; set; }
+        internal int WhatsApp { get; set; }
+        internal string NomeDaMae { get; set; }
+        internal DateTime DataCadastro { get; set; }
 
         public void inserirCadastro(int cpf)
         {
@@ -37,6 +37,7 @@ namespace Teu_Assistente_HABITACAO.MODEL
                 cmd.ExecuteNonQuery();
                 conexao.desconectar();
                 cmd.Parameters.Clear();
+                //Criar_log 
             }
             catch (SqlException)
             {
@@ -54,7 +55,7 @@ namespace Teu_Assistente_HABITACAO.MODEL
             SqlDataReader reader = cmd.ExecuteReader();
             if (!reader.Read())
             {
-                MessageBox.Show("Não existe nenhum agendamento\nreferente ao cpf:" + cpf, "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Não existe nenhum cadastro\nreferente ao cpf:" + cpf, "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //Criar_log
                 return false;
             }
@@ -69,6 +70,8 @@ namespace Teu_Assistente_HABITACAO.MODEL
                 this.WhatsApp = int.Parse(reader["WHATSAPP"].ToString());
                 this.NomeDaMae = reader["NOME_DA_MAE"].ToString();
                 this.DataCadastro = DateTime.Parse(reader["DATA_CADSATRO"].ToString());
+                conexao.desconectar();
+                cmd.Parameters.Clear();
                 //Criar_log
                 return true;
             }
@@ -99,6 +102,7 @@ namespace Teu_Assistente_HABITACAO.MODEL
                 cmd.ExecuteNonQuery();
                 conexao.desconectar();
                 cmd.Parameters.Clear();
+                //Criar_log
             }
             catch (SqlException)
             {

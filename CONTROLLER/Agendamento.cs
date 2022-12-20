@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Teu_Assistente_HABITACAO.MODEL
+namespace Teu_Assistente_HABITACAO
 {
-    internal class Agendamento : BDAgendamento
+    internal class Agendamento : SituacaoCadastral
     {
         public void agendar(int cpf, DateTime dataAgendado)
         {
-            if(getAgendamento(cpf))
+            if (!getAgendamento(cpf))
             {
-                MessageBox.Show("Já existe um agendamento para o CPF informado!\n" +
-                    "Deseja reagendar?","ATENÇÃO!", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+                inserirAgendamento(cpf, dataAgendado);
+                definirSituacao(cpf, "AGENDADO");
             }
-            inserirAgendamento(cpf, dataAgendado);
+            MessageBox.Show("Já existe um agendamento para o CPF informado!\n" +
+                "Deseja reagendar?", "ATENÇÃO!", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
         }
         public void desagendar(int cpf)
         {

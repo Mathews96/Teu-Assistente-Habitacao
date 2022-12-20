@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 
-namespace Teu_Assistente_HABITACAO.MODEL
+namespace Teu_Assistente_HABITACAO
 {
     internal class BDConexao
     {
