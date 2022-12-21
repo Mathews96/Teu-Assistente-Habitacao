@@ -1,4 +1,3 @@
-C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\bin\Debug\Teu_Assistente_HABITACAO.exe.config
 C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\bin\Debug\Teu_Assistente_HABITACAO.exe
 C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\bin\Debug\Teu_Assistente_HABITACAO.pdb
 C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.csproj.AssemblyReference.cache
