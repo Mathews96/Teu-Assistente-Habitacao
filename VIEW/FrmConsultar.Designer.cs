@@ -38,22 +38,22 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.pnlConsultar = new System.Windows.Forms.Panel();
-            this.btnCadEditar = new System.Windows.Forms.Button();
-            this.btnCadExcluir = new System.Windows.Forms.Button();
-            this.btnCadProximo = new System.Windows.Forms.Button();
-            this.lblCadastro = new System.Windows.Forms.Label();
-            this.txtBxCadConjugeNomeCompleto = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rdBtmConCadastro = new System.Windows.Forms.RadioButton();
+            this.rdBtmConAgendado = new System.Windows.Forms.RadioButton();
+            this.cmbBxConsultarPor = new System.Windows.Forms.ComboBox();
+            this.btnConConsultar = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.dtGrdViewConsultas = new System.Windows.Forms.DataGridView();
+            this.btnConEditar = new System.Windows.Forms.Button();
+            this.btnConExcluir = new System.Windows.Forms.Button();
+            this.txtBxConBarraConsulta = new System.Windows.Forms.TextBox();
+            this.lblCadastro = new System.Windows.Forms.Label();
+            this.lkLblConLinkedinDevMathews = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
             this.pnlConsultar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGrdViewConsultas)).BeginInit();
             this.SuspendLayout();
             // 
             // pctBoxLogo
@@ -118,6 +118,7 @@
             this.btnAgendar.TabIndex = 3;
             this.btnAgendar.Text = "AGENDAR";
             this.btnAgendar.UseVisualStyleBackColor = true;
+            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
             // btnCadastrar
             // 
@@ -128,6 +129,7 @@
             this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnConsultar
             // 
@@ -138,58 +140,123 @@
             this.btnConsultar.TabIndex = 5;
             this.btnConsultar.Text = "CONSULTAR";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // pnlConsultar
             // 
             this.pnlConsultar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlConsultar.Controls.Add(this.radioButton2);
-            this.pnlConsultar.Controls.Add(this.radioButton1);
-            this.pnlConsultar.Controls.Add(this.comboBox1);
-            this.pnlConsultar.Controls.Add(this.button1);
+            this.pnlConsultar.Controls.Add(this.rdBtmConCadastro);
+            this.pnlConsultar.Controls.Add(this.rdBtmConAgendado);
+            this.pnlConsultar.Controls.Add(this.cmbBxConsultarPor);
+            this.pnlConsultar.Controls.Add(this.btnConConsultar);
             this.pnlConsultar.Controls.Add(this.dataGridView2);
-            this.pnlConsultar.Controls.Add(this.dataGridView1);
-            this.pnlConsultar.Controls.Add(this.btnCadEditar);
-            this.pnlConsultar.Controls.Add(this.btnCadExcluir);
-            this.pnlConsultar.Controls.Add(this.txtBxCadConjugeNomeCompleto);
-            this.pnlConsultar.Controls.Add(this.btnCadProximo);
+            this.pnlConsultar.Controls.Add(this.dtGrdViewConsultas);
+            this.pnlConsultar.Controls.Add(this.btnConEditar);
+            this.pnlConsultar.Controls.Add(this.btnConExcluir);
+            this.pnlConsultar.Controls.Add(this.txtBxConBarraConsulta);
             this.pnlConsultar.Controls.Add(this.lblCadastro);
             this.pnlConsultar.Location = new System.Drawing.Point(303, 12);
             this.pnlConsultar.Name = "pnlConsultar";
             this.pnlConsultar.Size = new System.Drawing.Size(650, 414);
             this.pnlConsultar.TabIndex = 5;
             // 
-            // btnCadEditar
+            // rdBtmConCadastro
             // 
-            this.btnCadEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCadEditar.Location = new System.Drawing.Point(243, 364);
-            this.btnCadEditar.Name = "btnCadEditar";
-            this.btnCadEditar.Size = new System.Drawing.Size(168, 43);
-            this.btnCadEditar.TabIndex = 8;
-            this.btnCadEditar.Text = "EDITAR";
-            this.btnCadEditar.UseVisualStyleBackColor = true;
+            this.rdBtmConCadastro.AutoSize = true;
+            this.rdBtmConCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBtmConCadastro.Location = new System.Drawing.Point(520, 35);
+            this.rdBtmConCadastro.Name = "rdBtmConCadastro";
+            this.rdBtmConCadastro.Size = new System.Drawing.Size(92, 17);
+            this.rdBtmConCadastro.TabIndex = 24;
+            this.rdBtmConCadastro.TabStop = true;
+            this.rdBtmConCadastro.Text = "CADASTRO";
+            this.rdBtmConCadastro.UseVisualStyleBackColor = true;
             // 
-            // btnCadExcluir
+            // rdBtmConAgendado
             // 
-            this.btnCadExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadExcluir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCadExcluir.Location = new System.Drawing.Point(475, 364);
-            this.btnCadExcluir.Name = "btnCadExcluir";
-            this.btnCadExcluir.Size = new System.Drawing.Size(168, 43);
-            this.btnCadExcluir.TabIndex = 8;
-            this.btnCadExcluir.Text = "EXCLUIR";
-            this.btnCadExcluir.UseVisualStyleBackColor = true;
+            this.rdBtmConAgendado.AutoSize = true;
+            this.rdBtmConAgendado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBtmConAgendado.Location = new System.Drawing.Point(520, 11);
+            this.rdBtmConAgendado.Name = "rdBtmConAgendado";
+            this.rdBtmConAgendado.Size = new System.Drawing.Size(94, 17);
+            this.rdBtmConAgendado.TabIndex = 23;
+            this.rdBtmConAgendado.TabStop = true;
+            this.rdBtmConAgendado.Text = "AGENDADO";
+            this.rdBtmConAgendado.UseVisualStyleBackColor = true;
             // 
-            // btnCadProximo
+            // cmbBxConsultarPor
             // 
-            this.btnCadProximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadProximo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCadProximo.Location = new System.Drawing.Point(7, 364);
-            this.btnCadProximo.Name = "btnCadProximo";
-            this.btnCadProximo.Size = new System.Drawing.Size(168, 43);
-            this.btnCadProximo.TabIndex = 7;
-            this.btnCadProximo.Text = "PRÓXIMO";
-            this.btnCadProximo.UseVisualStyleBackColor = true;
+            this.cmbBxConsultarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBxConsultarPor.FormattingEnabled = true;
+            this.cmbBxConsultarPor.Items.AddRange(new object[] {
+            "NOME",
+            "CPF",
+            "TELEFONE",
+            "DEMANDA",
+            "DATA(AGENDAMENTO)",
+            "SITUAÇÃO(AGENDAMENTO)"});
+            this.cmbBxConsultarPor.Location = new System.Drawing.Point(497, 61);
+            this.cmbBxConsultarPor.Name = "cmbBxConsultarPor";
+            this.cmbBxConsultarPor.Size = new System.Drawing.Size(142, 21);
+            this.cmbBxConsultarPor.TabIndex = 22;
+            // 
+            // btnConConsultar
+            // 
+            this.btnConConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConConsultar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnConConsultar.Location = new System.Drawing.Point(368, 61);
+            this.btnConConsultar.Name = "btnConConsultar";
+            this.btnConConsultar.Size = new System.Drawing.Size(123, 21);
+            this.btnConConsultar.TabIndex = 21;
+            this.btnConConsultar.Text = "CONSULTAR";
+            this.btnConConsultar.UseVisualStyleBackColor = true;
+            this.btnConConsultar.Click += new System.EventHandler(this.btnConConsultar_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(645, 41);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView2.TabIndex = 20;
+            // 
+            // dtGrdViewConsultas
+            // 
+            this.dtGrdViewConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGrdViewConsultas.Location = new System.Drawing.Point(-2, 88);
+            this.dtGrdViewConsultas.Name = "dtGrdViewConsultas";
+            this.dtGrdViewConsultas.Size = new System.Drawing.Size(650, 270);
+            this.dtGrdViewConsultas.TabIndex = 19;
+            // 
+            // btnConEditar
+            // 
+            this.btnConEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnConEditar.Location = new System.Drawing.Point(471, 364);
+            this.btnConEditar.Name = "btnConEditar";
+            this.btnConEditar.Size = new System.Drawing.Size(168, 43);
+            this.btnConEditar.TabIndex = 8;
+            this.btnConEditar.Text = "EDITAR";
+            this.btnConEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnConExcluir
+            // 
+            this.btnConExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConExcluir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnConExcluir.Location = new System.Drawing.Point(8, 364);
+            this.btnConExcluir.Name = "btnConExcluir";
+            this.btnConExcluir.Size = new System.Drawing.Size(168, 43);
+            this.btnConExcluir.TabIndex = 8;
+            this.btnConExcluir.Text = "EXCLUIR";
+            this.btnConExcluir.UseVisualStyleBackColor = true;
+            // 
+            // txtBxConBarraConsulta
+            // 
+            this.txtBxConBarraConsulta.Location = new System.Drawing.Point(3, 62);
+            this.txtBxConBarraConsulta.MaxLength = 100;
+            this.txtBxConBarraConsulta.Name = "txtBxConBarraConsulta";
+            this.txtBxConBarraConsulta.Size = new System.Drawing.Size(359, 20);
+            this.txtBxConBarraConsulta.TabIndex = 18;
             // 
             // lblCadastro
             // 
@@ -202,84 +269,26 @@
             this.lblCadastro.TabIndex = 0;
             this.lblCadastro.Text = "CONSULTAR";
             // 
-            // txtBxCadConjugeNomeCompleto
+            // lkLblConLinkedinDevMathews
             // 
-            this.txtBxCadConjugeNomeCompleto.Location = new System.Drawing.Point(3, 62);
-            this.txtBxCadConjugeNomeCompleto.Name = "txtBxCadConjugeNomeCompleto";
-            this.txtBxCadConjugeNomeCompleto.Size = new System.Drawing.Size(359, 20);
-            this.txtBxCadConjugeNomeCompleto.TabIndex = 18;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-2, 88);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(650, 270);
-            this.dataGridView1.TabIndex = 19;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(645, 41);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView2.TabIndex = 20;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(368, 61);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 21);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "CONSULTAR";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "NOME",
-            "CPF",
-            "TELEFONE",
-            "DEMANDA",
-            "DATA(AGENDAMENTO)",
-            "SITUAÇÃO(AGENDAMENTO)"});
-            this.comboBox1.Location = new System.Drawing.Point(497, 61);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(142, 21);
-            this.comboBox1.TabIndex = 22;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(520, 11);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(94, 17);
-            this.radioButton1.TabIndex = 23;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "AGENDADO";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(520, 35);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(92, 17);
-            this.radioButton2.TabIndex = 24;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "CADASTRO";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.lkLblConLinkedinDevMathews.AutoSize = true;
+            this.lkLblConLinkedinDevMathews.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lkLblConLinkedinDevMathews.LinkColor = System.Drawing.Color.White;
+            this.lkLblConLinkedinDevMathews.Location = new System.Drawing.Point(783, 430);
+            this.lkLblConLinkedinDevMathews.Name = "lkLblConLinkedinDevMathews";
+            this.lkLblConLinkedinDevMathews.Size = new System.Drawing.Size(170, 13);
+            this.lkLblConLinkedinDevMathews.TabIndex = 25;
+            this.lkLblConLinkedinDevMathews.TabStop = true;
+            this.lkLblConLinkedinDevMathews.Text = "(82)9 9990-1016 - Freire M.B";
+            this.lkLblConLinkedinDevMathews.VisitedLinkColor = System.Drawing.Color.White;
+            this.lkLblConLinkedinDevMathews.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkLblConLinkedinDevMathews_LinkClicked);
             // 
             // FrmConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 450);
+            this.Controls.Add(this.lkLblConLinkedinDevMathews);
             this.Controls.Add(this.pnlConsultar);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastrar);
@@ -288,13 +297,14 @@
             this.Controls.Add(this.lbLinksUteis);
             this.Controls.Add(this.pctBoxLogo);
             this.Name = "FrmConsultar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmConsultar";
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).EndInit();
             this.pnlLinksUteis.ResumeLayout(false);
             this.pnlConsultar.ResumeLayout(false);
             this.pnlConsultar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGrdViewConsultas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,16 +323,16 @@
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Panel pnlConsultar;
         private System.Windows.Forms.Label lblCadastro;
-        private System.Windows.Forms.Button btnCadEditar;
-        private System.Windows.Forms.Button btnCadExcluir;
-        private System.Windows.Forms.Button btnCadProximo;
+        private System.Windows.Forms.Button btnConEditar;
+        private System.Windows.Forms.Button btnConExcluir;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtBxCadConjugeNomeCompleto;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.DataGridView dtGrdViewConsultas;
+        private System.Windows.Forms.TextBox txtBxConBarraConsulta;
+        private System.Windows.Forms.Button btnConConsultar;
+        private System.Windows.Forms.RadioButton rdBtmConAgendado;
+        private System.Windows.Forms.ComboBox cmbBxConsultarPor;
+        private System.Windows.Forms.RadioButton rdBtmConCadastro;
+        private System.Windows.Forms.LinkLabel lkLblConLinkedinDevMathews;
     }
 }
 

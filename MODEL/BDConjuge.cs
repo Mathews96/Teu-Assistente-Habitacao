@@ -3,25 +3,25 @@ using System.Data.SqlClient;
 
 namespace Teu_Assistente_HABITACAO
 {
-    internal class BDConjunge
+    internal class BDConjuge
     {
-        private string NomeCompleto { get; set; }
-        private int Cpf { get; set; }
-        private int Nis { get; set; }
-        private string Email { get; set; }
-        private int Telefone { get; set; }
-        private int Whatsapp { get; set; }
+        internal string NomeCompleto { get; set; }
+        internal long Cpf { get; set; }
+        internal long Nis { get; set; }
+        internal string Email { get; set; }
+        internal long Telefone { get; set; }
+        internal long Whatsapp { get; set; }
 
-        public void inserirComprovanteConjunge(int cpf)
+        public void inserirComprovanteConjunge(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO CONJUNGES(CPF, CPFSEC, NOME_COMPLETO, NIS, EMAIL, TELEFONE, WHATSAPP)" +
-                "VALUES(@CPF, @CPFSEC, @NOME_COMPLETO, @NIS, @EMAIL, @TELEFONE, @WHATSAPP) WHERE CPF=@CPF";
-            cmd.Parameters.AddWithValue("CPF", cpf);
+            cmd.CommandText = "INSERT INTO CONJUGES(CPFSEC, CPF, NIS, NOME_COMPLETO, EMAIL, TELEFONE, WHATSAPP)" +
+                "VALUES(@CPFSEC, @CPF, @NIS, @NOME_COMPLETO, @EMAIL, @TELEFONE, @WHATSAPP)";
             cmd.Parameters.AddWithValue("CPFSEC", cpf);
-            cmd.Parameters.AddWithValue("NOME_COMPLETO", this.NomeCompleto);
+            cmd.Parameters.AddWithValue("CPF", this.Cpf);
             cmd.Parameters.AddWithValue("NIS", this.Nis);
+            cmd.Parameters.AddWithValue("NOME_COMPLETO", this.NomeCompleto);
             cmd.Parameters.AddWithValue("EMAIL", this.Email);
             cmd.Parameters.AddWithValue("TELEFONE", this.Telefone);
             cmd.Parameters.AddWithValue("WHATSAPP", this.Whatsapp);
@@ -38,12 +38,12 @@ namespace Teu_Assistente_HABITACAO
                 //Criar_log
             }
         }
-        public bool getComprovanteConjunge(int cpf)
+        public bool getComprovanteConjunge(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT CPF, CPFSEC, NOME_COMPLETO, NIS, EMAIL, TELEFONE, WHATSAPP FROM CONJUNGES WHERE CPF=@CPF";
-            cmd.Parameters.AddWithValue("CPF", cpf);
+            cmd.CommandText = "SELECT CPFSEC, CPF, NIS, NOME_COMPLETO, EMAIL, TELEFONE, WHATSAPP FROM CONJUGES WHERE CPFSEC=@CPFSEC";
+            cmd.Parameters.AddWithValue("CPFSEC", cpf);
             cmd.Connection = conexao.conectar();
             SqlDataReader reader = cmd.ExecuteReader();
             if(!reader.Read())
@@ -55,8 +55,8 @@ namespace Teu_Assistente_HABITACAO
             try
             {
                 this.Cpf = int.Parse(reader["CPF"].ToString());
-                this.NomeCompleto = reader["NOME_COMPLETO"].ToString();
                 this.Nis = int.Parse(reader["NIS"].ToString());
+                this.NomeCompleto = reader["NOME_COMPLETO"].ToString();
                 this.Email = reader["EMAIL"].ToString();
                 this.Telefone = int.Parse(reader["TELEFONE"].ToString());
                 this.Whatsapp = int.Parse(reader["WHATSAPP"].ToString());
@@ -72,17 +72,17 @@ namespace Teu_Assistente_HABITACAO
                 return false;
             }
         }
-        public void setComprovanteConjunge(int cpf)
+        public void setComprovanteConjunge(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE CONJUNGES SET CPF=@CPF, CPFSEC=@CPFSEC, NOME_COMPLETO=@NOME_COMPLETO, NIS=@NIS, EMAIL=@EMAIL, TELEFONE=@TELEFONE, WHATSAPP=@WHATSAPP WHERE CPF=@CPF";
+            cmd.CommandText = "UPDATE CONJUGES SET CPFSEC=@CPFSEC, CPF=@CPF, NIS=@NIS, NOME_COMPLETO=@NOME_COMPLETO, EMAIL=@EMAIL, TELEFONE=@TELEFONE, WHATSAPP=@WHATSAPP WHERE CPFSEC=@CPFSEC";
             try
             {
-                cmd.Parameters.AddWithValue("CPF", cpf);
                 cmd.Parameters.AddWithValue("CPFSEC", cpf);
-                cmd.Parameters.AddWithValue("NOME_COMPLETO", this.NomeCompleto);
+                cmd.Parameters.AddWithValue("CPF", this.Cpf);
                 cmd.Parameters.AddWithValue("NIS", this.Nis);
+                cmd.Parameters.AddWithValue("NOME_COMPLETO", this.NomeCompleto);
                 cmd.Parameters.AddWithValue("EMAIL", this.Email);
                 cmd.Parameters.AddWithValue("TELEFONE", this.Telefone);
                 cmd.Parameters.AddWithValue("WHATSAPP", this.Whatsapp);
@@ -97,14 +97,14 @@ namespace Teu_Assistente_HABITACAO
                 //Criar_log
             }
         }
-        public void deletarComprovanteConjunge(int cpf)
+        public void deletarComprovanteConjunge(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "DELETE FROM CONJUNGES WHERE CPF=@CPF";
+            cmd.CommandText = "DELETE FROM CONJUGES WHERE CPFSEC=@CPFSEC";
             try
             {
-                cmd.Parameters.AddWithValue("CPF", cpf);
+                cmd.Parameters.AddWithValue("CPFSEC", cpf);
                 cmd.Connection = conexao.conectar();
                 cmd.ExecuteNonQuery();
                 conexao.desconectar();

@@ -1,6 +1,6 @@
 ﻿namespace Teu_Assistente_HABITACAO
 {
-    partial class FrmCadastroPag3
+    partial class FrmCadCompConjungePag3
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroPag3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadCompConjungePag3));
             this.pctBoxLogo = new System.Windows.Forms.PictureBox();
             this.lbLinksUteis = new System.Windows.Forms.Label();
             this.pnlLinksUteis = new System.Windows.Forms.Panel();
             this.btnNissLinkUteis = new System.Windows.Forms.Button();
             this.btnCadmutLinkUteis = new System.Windows.Forms.Button();
             this.btnAgendar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.pnlCadastroPag3 = new System.Windows.Forms.Panel();
             this.lblCadConjuge = new System.Windows.Forms.Label();
             this.pnlCadConjuge = new System.Windows.Forms.Panel();
-            this.txtBxCadConjugeWhatsApp = new System.Windows.Forms.TextBox();
+            this.mkdTxtBxCadConjugeTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.mkdTxtBxCadConjugeWhatsApp = new System.Windows.Forms.MaskedTextBox();
+            this.mkdTxtBxCadConjugeNIS = new System.Windows.Forms.MaskedTextBox();
+            this.mkdTxtBxCadConjugeCPF = new System.Windows.Forms.MaskedTextBox();
             this.lblCadConjugeWhatsApp = new System.Windows.Forms.Label();
-            this.txtBxCadConjugeTelefone = new System.Windows.Forms.TextBox();
             this.lblCadConjugeTelefone = new System.Windows.Forms.Label();
             this.txtBxCadConjugeEmail = new System.Windows.Forms.TextBox();
             this.lblCadConjugeEmail = new System.Windows.Forms.Label();
-            this.txtBxCadConjugeNISS = new System.Windows.Forms.TextBox();
             this.lblCadConjugeNiss = new System.Windows.Forms.Label();
-            this.txtBxCadConjugeCPF = new System.Windows.Forms.TextBox();
             this.lblCadConjugeCPF = new System.Windows.Forms.Label();
             this.txtBxCadConjugeNomeCompleto = new System.Windows.Forms.TextBox();
             this.lblCadConjugeNomeCompleto = new System.Windows.Forms.Label();
             this.lblCadNumeroPag = new System.Windows.Forms.Label();
-            this.btnCadEditar = new System.Windows.Forms.Button();
-            this.btnCadExcluir = new System.Windows.Forms.Button();
-            this.btnCadProximo = new System.Windows.Forms.Button();
+            this.btnCadVoltar = new System.Windows.Forms.Button();
+            this.btnCadCadastrar = new System.Windows.Forms.Button();
             this.lblCadComprovantes = new System.Windows.Forms.Label();
             this.pnlCadComprovantes = new System.Windows.Forms.Panel();
             this.cmbBxCadEstadoCivil = new System.Windows.Forms.ComboBox();
@@ -71,6 +69,8 @@
             this.lblCadCertNascimento = new System.Windows.Forms.Label();
             this.lblCadCarteiraDeTrabalho = new System.Windows.Forms.Label();
             this.lblCadastro = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.lkLblCadLinkedinDevMathews = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
             this.pnlCadastroPag3.SuspendLayout();
@@ -140,16 +140,7 @@
             this.btnAgendar.TabIndex = 3;
             this.btnAgendar.Text = "AGENDAR";
             this.btnAgendar.UseVisualStyleBackColor = true;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(12, 296);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(285, 62);
-            this.btnCadastrar.TabIndex = 4;
-            this.btnCadastrar.Text = "CADASTRAR";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
             // btnConsultar
             // 
@@ -160,6 +151,7 @@
             this.btnConsultar.TabIndex = 5;
             this.btnConsultar.Text = "CONSULTAR";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // pnlCadastroPag3
             // 
@@ -167,9 +159,8 @@
             this.pnlCadastroPag3.Controls.Add(this.lblCadConjuge);
             this.pnlCadastroPag3.Controls.Add(this.pnlCadConjuge);
             this.pnlCadastroPag3.Controls.Add(this.lblCadNumeroPag);
-            this.pnlCadastroPag3.Controls.Add(this.btnCadEditar);
-            this.pnlCadastroPag3.Controls.Add(this.btnCadExcluir);
-            this.pnlCadastroPag3.Controls.Add(this.btnCadProximo);
+            this.pnlCadastroPag3.Controls.Add(this.btnCadVoltar);
+            this.pnlCadastroPag3.Controls.Add(this.btnCadCadastrar);
             this.pnlCadastroPag3.Controls.Add(this.lblCadComprovantes);
             this.pnlCadastroPag3.Controls.Add(this.pnlCadComprovantes);
             this.pnlCadastroPag3.Controls.Add(this.lblCadastro);
@@ -192,15 +183,15 @@
             // pnlCadConjuge
             // 
             this.pnlCadConjuge.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlCadConjuge.Controls.Add(this.txtBxCadConjugeWhatsApp);
+            this.pnlCadConjuge.Controls.Add(this.mkdTxtBxCadConjugeTelefone);
+            this.pnlCadConjuge.Controls.Add(this.mkdTxtBxCadConjugeWhatsApp);
+            this.pnlCadConjuge.Controls.Add(this.mkdTxtBxCadConjugeNIS);
+            this.pnlCadConjuge.Controls.Add(this.mkdTxtBxCadConjugeCPF);
             this.pnlCadConjuge.Controls.Add(this.lblCadConjugeWhatsApp);
-            this.pnlCadConjuge.Controls.Add(this.txtBxCadConjugeTelefone);
             this.pnlCadConjuge.Controls.Add(this.lblCadConjugeTelefone);
             this.pnlCadConjuge.Controls.Add(this.txtBxCadConjugeEmail);
             this.pnlCadConjuge.Controls.Add(this.lblCadConjugeEmail);
-            this.pnlCadConjuge.Controls.Add(this.txtBxCadConjugeNISS);
             this.pnlCadConjuge.Controls.Add(this.lblCadConjugeNiss);
-            this.pnlCadConjuge.Controls.Add(this.txtBxCadConjugeCPF);
             this.pnlCadConjuge.Controls.Add(this.lblCadConjugeCPF);
             this.pnlCadConjuge.Controls.Add(this.txtBxCadConjugeNomeCompleto);
             this.pnlCadConjuge.Controls.Add(this.lblCadConjugeNomeCompleto);
@@ -209,12 +200,37 @@
             this.pnlCadConjuge.Size = new System.Drawing.Size(650, 98);
             this.pnlCadConjuge.TabIndex = 32;
             // 
-            // txtBxCadConjugeWhatsApp
+            // mkdTxtBxCadConjugeTelefone
             // 
-            this.txtBxCadConjugeWhatsApp.Location = new System.Drawing.Point(476, 71);
-            this.txtBxCadConjugeWhatsApp.Name = "txtBxCadConjugeWhatsApp";
-            this.txtBxCadConjugeWhatsApp.Size = new System.Drawing.Size(149, 20);
-            this.txtBxCadConjugeWhatsApp.TabIndex = 28;
+            this.mkdTxtBxCadConjugeTelefone.Location = new System.Drawing.Point(244, 71);
+            this.mkdTxtBxCadConjugeTelefone.Mask = "(99) 0 0000-0000";
+            this.mkdTxtBxCadConjugeTelefone.Name = "mkdTxtBxCadConjugeTelefone";
+            this.mkdTxtBxCadConjugeTelefone.Size = new System.Drawing.Size(148, 20);
+            this.mkdTxtBxCadConjugeTelefone.TabIndex = 32;
+            // 
+            // mkdTxtBxCadConjugeWhatsApp
+            // 
+            this.mkdTxtBxCadConjugeWhatsApp.Location = new System.Drawing.Point(477, 71);
+            this.mkdTxtBxCadConjugeWhatsApp.Mask = "(99) 0 0000-0000";
+            this.mkdTxtBxCadConjugeWhatsApp.Name = "mkdTxtBxCadConjugeWhatsApp";
+            this.mkdTxtBxCadConjugeWhatsApp.Size = new System.Drawing.Size(148, 20);
+            this.mkdTxtBxCadConjugeWhatsApp.TabIndex = 31;
+            // 
+            // mkdTxtBxCadConjugeNIS
+            // 
+            this.mkdTxtBxCadConjugeNIS.Location = new System.Drawing.Point(477, 20);
+            this.mkdTxtBxCadConjugeNIS.Mask = "0.000.000.000-0";
+            this.mkdTxtBxCadConjugeNIS.Name = "mkdTxtBxCadConjugeNIS";
+            this.mkdTxtBxCadConjugeNIS.Size = new System.Drawing.Size(148, 20);
+            this.mkdTxtBxCadConjugeNIS.TabIndex = 30;
+            // 
+            // mkdTxtBxCadConjugeCPF
+            // 
+            this.mkdTxtBxCadConjugeCPF.Location = new System.Drawing.Point(244, 20);
+            this.mkdTxtBxCadConjugeCPF.Mask = "000.000.000.-00";
+            this.mkdTxtBxCadConjugeCPF.Name = "mkdTxtBxCadConjugeCPF";
+            this.mkdTxtBxCadConjugeCPF.Size = new System.Drawing.Size(148, 20);
+            this.mkdTxtBxCadConjugeCPF.TabIndex = 29;
             // 
             // lblCadConjugeWhatsApp
             // 
@@ -226,13 +242,6 @@
             this.lblCadConjugeWhatsApp.Size = new System.Drawing.Size(80, 13);
             this.lblCadConjugeWhatsApp.TabIndex = 27;
             this.lblCadConjugeWhatsApp.Text = "WHATSAPP:";
-            // 
-            // txtBxCadConjugeTelefone
-            // 
-            this.txtBxCadConjugeTelefone.Location = new System.Drawing.Point(243, 71);
-            this.txtBxCadConjugeTelefone.Name = "txtBxCadConjugeTelefone";
-            this.txtBxCadConjugeTelefone.Size = new System.Drawing.Size(149, 20);
-            this.txtBxCadConjugeTelefone.TabIndex = 26;
             // 
             // lblCadConjugeTelefone
             // 
@@ -248,6 +257,7 @@
             // txtBxCadConjugeEmail
             // 
             this.txtBxCadConjugeEmail.Location = new System.Drawing.Point(15, 71);
+            this.txtBxCadConjugeEmail.MaxLength = 50;
             this.txtBxCadConjugeEmail.Name = "txtBxCadConjugeEmail";
             this.txtBxCadConjugeEmail.Size = new System.Drawing.Size(149, 20);
             this.txtBxCadConjugeEmail.TabIndex = 24;
@@ -263,13 +273,6 @@
             this.lblCadConjugeEmail.TabIndex = 23;
             this.lblCadConjugeEmail.Text = "E-MAIL:";
             // 
-            // txtBxCadConjugeNISS
-            // 
-            this.txtBxCadConjugeNISS.Location = new System.Drawing.Point(475, 20);
-            this.txtBxCadConjugeNISS.Name = "txtBxCadConjugeNISS";
-            this.txtBxCadConjugeNISS.Size = new System.Drawing.Size(149, 20);
-            this.txtBxCadConjugeNISS.TabIndex = 22;
-            // 
             // lblCadConjugeNiss
             // 
             this.lblCadConjugeNiss.AutoSize = true;
@@ -277,16 +280,9 @@
             this.lblCadConjugeNiss.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lblCadConjugeNiss.Location = new System.Drawing.Point(473, 3);
             this.lblCadConjugeNiss.Name = "lblCadConjugeNiss";
-            this.lblCadConjugeNiss.Size = new System.Drawing.Size(40, 13);
+            this.lblCadConjugeNiss.Size = new System.Drawing.Size(32, 13);
             this.lblCadConjugeNiss.TabIndex = 21;
-            this.lblCadConjugeNiss.Text = "NISS:";
-            // 
-            // txtBxCadConjugeCPF
-            // 
-            this.txtBxCadConjugeCPF.Location = new System.Drawing.Point(243, 20);
-            this.txtBxCadConjugeCPF.Name = "txtBxCadConjugeCPF";
-            this.txtBxCadConjugeCPF.Size = new System.Drawing.Size(149, 20);
-            this.txtBxCadConjugeCPF.TabIndex = 20;
+            this.lblCadConjugeNiss.Text = "NIS:";
             // 
             // lblCadConjugeCPF
             // 
@@ -302,6 +298,7 @@
             // txtBxCadConjugeNomeCompleto
             // 
             this.txtBxCadConjugeNomeCompleto.Location = new System.Drawing.Point(14, 23);
+            this.txtBxCadConjugeNomeCompleto.MaxLength = 100;
             this.txtBxCadConjugeNomeCompleto.Name = "txtBxCadConjugeNomeCompleto";
             this.txtBxCadConjugeNomeCompleto.Size = new System.Drawing.Size(149, 20);
             this.txtBxCadConjugeNomeCompleto.TabIndex = 18;
@@ -330,38 +327,28 @@
             this.lblCadNumeroPag.TabIndex = 9;
             this.lblCadNumeroPag.Text = "3/3";
             // 
-            // btnCadEditar
+            // btnCadVoltar
             // 
-            this.btnCadEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCadEditar.Location = new System.Drawing.Point(243, 364);
-            this.btnCadEditar.Name = "btnCadEditar";
-            this.btnCadEditar.Size = new System.Drawing.Size(168, 43);
-            this.btnCadEditar.TabIndex = 8;
-            this.btnCadEditar.Text = "EDITAR";
-            this.btnCadEditar.UseVisualStyleBackColor = true;
+            this.btnCadVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadVoltar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCadVoltar.Location = new System.Drawing.Point(8, 364);
+            this.btnCadVoltar.Name = "btnCadVoltar";
+            this.btnCadVoltar.Size = new System.Drawing.Size(168, 43);
+            this.btnCadVoltar.TabIndex = 8;
+            this.btnCadVoltar.Text = "VOLTAR";
+            this.btnCadVoltar.UseVisualStyleBackColor = true;
             // 
-            // btnCadExcluir
+            // btnCadCadastrar
             // 
-            this.btnCadExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadExcluir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCadExcluir.Location = new System.Drawing.Point(475, 364);
-            this.btnCadExcluir.Name = "btnCadExcluir";
-            this.btnCadExcluir.Size = new System.Drawing.Size(168, 43);
-            this.btnCadExcluir.TabIndex = 8;
-            this.btnCadExcluir.Text = "EXCLUIR";
-            this.btnCadExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnCadProximo
-            // 
-            this.btnCadProximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadProximo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCadProximo.Location = new System.Drawing.Point(7, 364);
-            this.btnCadProximo.Name = "btnCadProximo";
-            this.btnCadProximo.Size = new System.Drawing.Size(168, 43);
-            this.btnCadProximo.TabIndex = 7;
-            this.btnCadProximo.Text = "PRÓXIMO";
-            this.btnCadProximo.UseVisualStyleBackColor = true;
+            this.btnCadCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadCadastrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCadCadastrar.Location = new System.Drawing.Point(472, 364);
+            this.btnCadCadastrar.Name = "btnCadCadastrar";
+            this.btnCadCadastrar.Size = new System.Drawing.Size(168, 43);
+            this.btnCadCadastrar.TabIndex = 7;
+            this.btnCadCadastrar.Text = "CADASTRAR";
+            this.btnCadCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadCadastrar.Click += new System.EventHandler(this.btnCadCadastrar_Click);
             // 
             // lblCadComprovantes
             // 
@@ -396,6 +383,7 @@
             // 
             // cmbBxCadEstadoCivil
             // 
+            this.cmbBxCadEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBxCadEstadoCivil.FormattingEnabled = true;
             this.cmbBxCadEstadoCivil.Items.AddRange(new object[] {
             "SOLTEIRO(A)",
@@ -415,9 +403,9 @@
             this.lblCadEstadoCivil.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lblCadEstadoCivil.Location = new System.Drawing.Point(472, 113);
             this.lblCadEstadoCivil.Name = "lblCadEstadoCivil";
-            this.lblCadEstadoCivil.Size = new System.Drawing.Size(96, 13);
+            this.lblCadEstadoCivil.Size = new System.Drawing.Size(101, 13);
             this.lblCadEstadoCivil.TabIndex = 30;
-            this.lblCadEstadoCivil.Text = "ESTADO CIVIL:";
+            this.lblCadEstadoCivil.Text = "*ESTADO CIVIL:";
             // 
             // btnCadEstadoCiv
             // 
@@ -540,11 +528,37 @@
             this.lblCadastro.TabIndex = 0;
             this.lblCadastro.Text = "CADASTRO";
             // 
-            // FrmCadastroPag3
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(12, 296);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(285, 62);
+            this.btnCadastrar.TabIndex = 4;
+            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // lkLblCadLinkedinDevMathews
+            // 
+            this.lkLblCadLinkedinDevMathews.AutoSize = true;
+            this.lkLblCadLinkedinDevMathews.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lkLblCadLinkedinDevMathews.LinkColor = System.Drawing.Color.White;
+            this.lkLblCadLinkedinDevMathews.Location = new System.Drawing.Point(783, 430);
+            this.lkLblCadLinkedinDevMathews.Name = "lkLblCadLinkedinDevMathews";
+            this.lkLblCadLinkedinDevMathews.Size = new System.Drawing.Size(170, 13);
+            this.lkLblCadLinkedinDevMathews.TabIndex = 9;
+            this.lkLblCadLinkedinDevMathews.TabStop = true;
+            this.lkLblCadLinkedinDevMathews.Text = "(82)9 9990-1016 - Freire M.B";
+            this.lkLblCadLinkedinDevMathews.VisitedLinkColor = System.Drawing.Color.White;
+            this.lkLblCadLinkedinDevMathews.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkLblCadLinkedinDevMathews_LinkClicked);
+            // 
+            // FrmCadCompConjungePag3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 450);
+            this.Controls.Add(this.lkLblCadLinkedinDevMathews);
             this.Controls.Add(this.pnlCadastroPag3);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastrar);
@@ -552,7 +566,8 @@
             this.Controls.Add(this.pnlLinksUteis);
             this.Controls.Add(this.lbLinksUteis);
             this.Controls.Add(this.pctBoxLogo);
-            this.Name = "FrmCadastroPag3";
+            this.Name = "FrmCadCompConjungePag3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCadastroPag3";
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).EndInit();
             this.pnlLinksUteis.ResumeLayout(false);
@@ -576,29 +591,23 @@
         private System.Windows.Forms.Button btnNissLinkUteis;
         private System.Windows.Forms.Button btnCadmutLinkUteis;
         private System.Windows.Forms.Button btnAgendar;
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Panel pnlCadastroPag3;
         private System.Windows.Forms.Label lblCadastro;
         private System.Windows.Forms.Label lblCadComprovantes;
-        private System.Windows.Forms.Button btnCadEditar;
-        private System.Windows.Forms.Button btnCadExcluir;
-        private System.Windows.Forms.Button btnCadProximo;
+        private System.Windows.Forms.Button btnCadVoltar;
+        private System.Windows.Forms.Button btnCadCadastrar;
         private System.Windows.Forms.Panel pnlCadComprovantes;
         private System.Windows.Forms.Label lblCadCarteiraDeTrabalho;
         private System.Windows.Forms.Label lblCadCertNascimento;
         private System.Windows.Forms.Label lblCadNumeroPag;
         private System.Windows.Forms.Label lblCadConjuge;
         private System.Windows.Forms.Panel pnlCadConjuge;
-        private System.Windows.Forms.TextBox txtBxCadConjugeWhatsApp;
         private System.Windows.Forms.Label lblCadConjugeWhatsApp;
-        private System.Windows.Forms.TextBox txtBxCadConjugeTelefone;
         private System.Windows.Forms.Label lblCadConjugeTelefone;
         private System.Windows.Forms.TextBox txtBxCadConjugeEmail;
         private System.Windows.Forms.Label lblCadConjugeEmail;
-        private System.Windows.Forms.TextBox txtBxCadConjugeNISS;
         private System.Windows.Forms.Label lblCadConjugeNiss;
-        private System.Windows.Forms.TextBox txtBxCadConjugeCPF;
         private System.Windows.Forms.Label lblCadConjugeCPF;
         private System.Windows.Forms.TextBox txtBxCadConjugeNomeCompleto;
         private System.Windows.Forms.Label lblCadConjugeNomeCompleto;
@@ -612,6 +621,12 @@
         private System.Windows.Forms.Button btnCadRenda;
         private System.Windows.Forms.Label lblCadRenda;
         private System.Windows.Forms.Button btnCadCarteiraDeTrabalho;
+        private System.Windows.Forms.MaskedTextBox mkdTxtBxCadConjugeTelefone;
+        private System.Windows.Forms.MaskedTextBox mkdTxtBxCadConjugeWhatsApp;
+        private System.Windows.Forms.MaskedTextBox mkdTxtBxCadConjugeNIS;
+        private System.Windows.Forms.MaskedTextBox mkdTxtBxCadConjugeCPF;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.LinkLabel lkLblCadLinkedinDevMathews;
     }
 }
 

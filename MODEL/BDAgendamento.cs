@@ -6,22 +6,26 @@ namespace Teu_Assistente_HABITACAO
 {
     internal class BDAgendamento
     {
-        protected int Cpf { get; set; }
-        protected string NomeCompleto { get; set; }
-        protected DateTime DataAgendamento { get; set; }
-        protected string Situacao { get; set; }
-        protected string Demanda { get; set; }
+        internal long Cpf { get; set; }
+        internal string NomeCompleto { get; set; }
+        internal long Contato { get; set; }
+        internal string Situacao { get; set; }
+        internal string Demanda { get; set; }
+        internal long Numero { get; set; }
+        internal DateTime DataAgendamento { get; set; }
 
-        public void inserirAgendamento(int cpf, DateTime dataAgendado)
+        public void inserirAgendamento(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO AGENDADOS(CPF, NOME_COMPLETO, SITUACAO, DEMANDA, DATA_AGENDAMENTO) VALUES(@CPF, @NOME_COMPLETO, @SITUACAO, @DEMANDA, @DATA_AGENDAMENTO) WHERE CPF!=@CPF";
+            cmd.CommandText = "INSERT INTO AGENDADOS(CPF, NOME_COMPLETO, CONTATO, SITUACAO, DEMANDA, NUMERO, DATA_AGENDAMENTO) VALUES(@CPF, @NOME_COMPLETO, @CONTATO, @SITUACAO, @DEMANDA, @NUMERO, @DATA_AGENDAMENTO)";
             cmd.Parameters.AddWithValue("@CPF", this.Cpf);
             cmd.Parameters.AddWithValue("@NOME_COMPLETO", this.NomeCompleto);
+            cmd.Parameters.AddWithValue("@CONTATO", this.Contato);
             cmd.Parameters.AddWithValue("@SITUACAO", this.Situacao);
             cmd.Parameters.AddWithValue("@DEMANDA", this.Demanda);
-            cmd.Parameters.AddWithValue("@DATA_AGENDAMENTO", dataAgendado);
+            cmd.Parameters.AddWithValue("NUMERO", this.Numero);
+            cmd.Parameters.AddWithValue("@DATA_AGENDAMENTO", this.DataAgendamento);
             try
             {
                 cmd.Connection = conexao.conectar();
@@ -34,48 +38,49 @@ namespace Teu_Assistente_HABITACAO
                 //Criar_log
             }
         }
-        public bool getAgendamento(int cpf)
+        public void getAgendamento(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT NOME_COMPLETO, SITUACAO, DEMANDA, DATA_AGENDAMENTO FROM AGENDADOS WHERE CPF=@CPF";
+            cmd.CommandText = "SELECT NOME_COMPLETO, CONTATO, SITUACAO, DEMANDA, NUMERO, DATA_AGENDAMENTO FROM AGENDADOS WHERE CPF=@CPF";
             cmd.Parameters.AddWithValue("@CPF", cpf);
             cmd.Connection = conexao.conectar();
             SqlDataReader reader = cmd.ExecuteReader();
-            if(!reader.Read())
+            if(reader.Read())
             {
-                MessageBox.Show("Não existe nenhum agendamento\nreferente ao cpf:" + cpf, "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //Criar_log
-                return false;
-            }
-            try
-            {
-                this.NomeCompleto = reader["NOME_COMPLETO"].ToString();
-                this.Situacao = reader["SITUACAO"].ToString();
-                this.Demanda = reader["DEMANDA"].ToString();
-                this.DataAgendamento = DateTime.Parse(reader["DATA_AGENDAMENTO"].ToString());
-                conexao.desconectar();
-                cmd.Parameters.Clear();
-                //Criar_loge
-                return true;
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Erro ao se conectar com o Banco de Dados\nErro: BDAgendamento\ncontate o DESENVOLVEDOR", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //Criar_log
-                return false;
+                try
+                {
+                    this.Cpf = cpf;
+                    this.NomeCompleto = reader["NOME_COMPLETO"].ToString();
+                    this.Contato = long.Parse(reader["CONTATO"].ToString());
+                    this.Situacao = reader["SITUACAO"].ToString();
+                    this.Demanda = reader["DEMANDA"].ToString();
+                    this.Numero = long.Parse(reader["NUMERO"].ToString());
+                    this.DataAgendamento = DateTime.Parse(reader["DATA_AGENDAMENTO"].ToString());
+                    conexao.desconectar();
+                    cmd.Parameters.Clear();
+                    //Criar_loge               
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Erro ao se conectar com o Banco de Dados\nErro: BDAgendamento\ncontate o DESENVOLVEDOR", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Situacao = "ERRO BD";
+                    //Criar_log
+                }                
             }
         }
-        public void setAgendamento(int cpf)
+        public void setAgendamento(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE AGENDADOS SET NOME_COMPLETO=@NOME_COMPLETO, SITUACAO=@SITUACAO, DEMANDA=@DEMANDA, DATA_AGENDAMENTO=@DATA_AGENDAMENTO WHERE CPF=@CPF";
+            cmd.CommandText = "UPDATE AGENDADOS SET NOME_COMPLETO=@NOME_COMPLETO, CONTATO=@CONTATO, SITUACAO=@SITUACAO, DEMANDA=@DEMANDA, NUMERO=@NUMERO, DATA_AGENDAMENTO=@DATA_AGENDAMENTO WHERE CPF=@CPF";
             try
             {
                 cmd.Parameters.AddWithValue("NOME_COMPLETO", this.NomeCompleto);
+                cmd.Parameters.AddWithValue("CONTATO", this.Contato);
                 cmd.Parameters.AddWithValue("@SITUACAO", this.Situacao);
                 cmd.Parameters.AddWithValue("@DEMANDA", this.Demanda);
+                cmd.Parameters.AddWithValue("NUMERO", this.Numero);
                 cmd.Parameters.AddWithValue("@DATA_AGENDAMENTO", this.DataAgendamento);
                 cmd.Parameters.AddWithValue("@CPF", cpf);
                 cmd.Connection = conexao.conectar();
@@ -89,7 +94,7 @@ namespace Teu_Assistente_HABITACAO
                 //Criar_log
             }
         }
-        public void deletarAgendamento(int cpf)
+        public void deletarAgendamento(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();

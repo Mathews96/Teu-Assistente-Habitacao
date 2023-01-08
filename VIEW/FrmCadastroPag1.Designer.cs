@@ -35,30 +35,31 @@
             this.btnNissLinkUteis = new System.Windows.Forms.Button();
             this.btnCadmutLinkUteis = new System.Windows.Forms.Button();
             this.btnAgendar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.pnlCadastroPag1 = new System.Windows.Forms.Panel();
             this.lblCadNumeroPag = new System.Windows.Forms.Label();
-            this.btnCadEditar = new System.Windows.Forms.Button();
-            this.btnCadExcluir = new System.Windows.Forms.Button();
             this.btnCadProximo = new System.Windows.Forms.Button();
             this.lblCadDadosPessoais = new System.Windows.Forms.Label();
             this.pnlCadDadosPessoais = new System.Windows.Forms.Panel();
+            this.mkdTxtBxCadNIS = new System.Windows.Forms.MaskedTextBox();
+            this.mkdTxtBxCadCPF = new System.Windows.Forms.MaskedTextBox();
+            this.mkdTxtBxCadWhatsApp = new System.Windows.Forms.MaskedTextBox();
+            this.mkdTxtBxCadTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.dtTmPckCadNascimento = new System.Windows.Forms.DateTimePicker();
+            this.lblCadNascimento = new System.Windows.Forms.Label();
             this.txtBxCadNomeMae = new System.Windows.Forms.TextBox();
             this.lblCadNomeMae = new System.Windows.Forms.Label();
-            this.txtBxCadWhatsApp = new System.Windows.Forms.TextBox();
             this.lblCadWhatsApp = new System.Windows.Forms.Label();
-            this.txtBxCadTelefone = new System.Windows.Forms.TextBox();
             this.lblCadTelefone = new System.Windows.Forms.Label();
             this.txtBxCadEmail = new System.Windows.Forms.TextBox();
             this.lblCadEmail = new System.Windows.Forms.Label();
-            this.txtBxCadContato = new System.Windows.Forms.TextBox();
             this.lblCadContato = new System.Windows.Forms.Label();
-            this.txtBxCadCPF = new System.Windows.Forms.TextBox();
             this.lblCadCPF = new System.Windows.Forms.Label();
             this.txtBxCadNomeCompleto = new System.Windows.Forms.TextBox();
             this.lblCadNomeCompleto = new System.Windows.Forms.Label();
             this.lblCadastro = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.lkLblCadLinkedinDevMathews = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
             this.pnlCadastroPag1.SuspendLayout();
@@ -127,16 +128,7 @@
             this.btnAgendar.TabIndex = 3;
             this.btnAgendar.Text = "AGENDAR";
             this.btnAgendar.UseVisualStyleBackColor = true;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(12, 296);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(285, 62);
-            this.btnCadastrar.TabIndex = 4;
-            this.btnCadastrar.Text = "CADASTRAR";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
             // btnConsultar
             // 
@@ -147,13 +139,12 @@
             this.btnConsultar.TabIndex = 5;
             this.btnConsultar.Text = "CONSULTAR";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // pnlCadastroPag1
             // 
             this.pnlCadastroPag1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlCadastroPag1.Controls.Add(this.lblCadNumeroPag);
-            this.pnlCadastroPag1.Controls.Add(this.btnCadEditar);
-            this.pnlCadastroPag1.Controls.Add(this.btnCadExcluir);
             this.pnlCadastroPag1.Controls.Add(this.btnCadProximo);
             this.pnlCadastroPag1.Controls.Add(this.lblCadDadosPessoais);
             this.pnlCadastroPag1.Controls.Add(this.pnlCadDadosPessoais);
@@ -174,38 +165,17 @@
             this.lblCadNumeroPag.TabIndex = 9;
             this.lblCadNumeroPag.Text = "1/3";
             // 
-            // btnCadEditar
-            // 
-            this.btnCadEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCadEditar.Location = new System.Drawing.Point(243, 364);
-            this.btnCadEditar.Name = "btnCadEditar";
-            this.btnCadEditar.Size = new System.Drawing.Size(168, 43);
-            this.btnCadEditar.TabIndex = 8;
-            this.btnCadEditar.Text = "EDITAR";
-            this.btnCadEditar.UseVisualStyleBackColor = true;
-            // 
-            // btnCadExcluir
-            // 
-            this.btnCadExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadExcluir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCadExcluir.Location = new System.Drawing.Point(475, 364);
-            this.btnCadExcluir.Name = "btnCadExcluir";
-            this.btnCadExcluir.Size = new System.Drawing.Size(168, 43);
-            this.btnCadExcluir.TabIndex = 8;
-            this.btnCadExcluir.Text = "EXCLUIR";
-            this.btnCadExcluir.UseVisualStyleBackColor = true;
-            // 
             // btnCadProximo
             // 
             this.btnCadProximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadProximo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCadProximo.Location = new System.Drawing.Point(7, 364);
+            this.btnCadProximo.Location = new System.Drawing.Point(471, 364);
             this.btnCadProximo.Name = "btnCadProximo";
             this.btnCadProximo.Size = new System.Drawing.Size(168, 43);
             this.btnCadProximo.TabIndex = 7;
             this.btnCadProximo.Text = "PRÓXIMO";
             this.btnCadProximo.UseVisualStyleBackColor = true;
+            this.btnCadProximo.Click += new System.EventHandler(this.btnCadProximo_Click);
             // 
             // lblCadDadosPessoais
             // 
@@ -221,17 +191,19 @@
             // pnlCadDadosPessoais
             // 
             this.pnlCadDadosPessoais.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlCadDadosPessoais.Controls.Add(this.mkdTxtBxCadNIS);
+            this.pnlCadDadosPessoais.Controls.Add(this.mkdTxtBxCadCPF);
+            this.pnlCadDadosPessoais.Controls.Add(this.mkdTxtBxCadWhatsApp);
+            this.pnlCadDadosPessoais.Controls.Add(this.mkdTxtBxCadTelefone);
+            this.pnlCadDadosPessoais.Controls.Add(this.dtTmPckCadNascimento);
+            this.pnlCadDadosPessoais.Controls.Add(this.lblCadNascimento);
             this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadNomeMae);
             this.pnlCadDadosPessoais.Controls.Add(this.lblCadNomeMae);
-            this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadWhatsApp);
             this.pnlCadDadosPessoais.Controls.Add(this.lblCadWhatsApp);
-            this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadTelefone);
             this.pnlCadDadosPessoais.Controls.Add(this.lblCadTelefone);
             this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadEmail);
             this.pnlCadDadosPessoais.Controls.Add(this.lblCadEmail);
-            this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadContato);
             this.pnlCadDadosPessoais.Controls.Add(this.lblCadContato);
-            this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadCPF);
             this.pnlCadDadosPessoais.Controls.Add(this.lblCadCPF);
             this.pnlCadDadosPessoais.Controls.Add(this.txtBxCadNomeCompleto);
             this.pnlCadDadosPessoais.Controls.Add(this.lblCadNomeCompleto);
@@ -240,9 +212,66 @@
             this.pnlCadDadosPessoais.Size = new System.Drawing.Size(650, 296);
             this.pnlCadDadosPessoais.TabIndex = 5;
             // 
+            // mkdTxtBxCadNIS
+            // 
+            this.mkdTxtBxCadNIS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkdTxtBxCadNIS.Location = new System.Drawing.Point(495, 34);
+            this.mkdTxtBxCadNIS.Mask = "0.000.000.000-0";
+            this.mkdTxtBxCadNIS.Name = "mkdTxtBxCadNIS";
+            this.mkdTxtBxCadNIS.Size = new System.Drawing.Size(148, 21);
+            this.mkdTxtBxCadNIS.TabIndex = 27;
+            // 
+            // mkdTxtBxCadCPF
+            // 
+            this.mkdTxtBxCadCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkdTxtBxCadCPF.Location = new System.Drawing.Point(316, 34);
+            this.mkdTxtBxCadCPF.Mask = "000.000.000-00";
+            this.mkdTxtBxCadCPF.Name = "mkdTxtBxCadCPF";
+            this.mkdTxtBxCadCPF.Size = new System.Drawing.Size(148, 21);
+            this.mkdTxtBxCadCPF.TabIndex = 26;
+            // 
+            // mkdTxtBxCadWhatsApp
+            // 
+            this.mkdTxtBxCadWhatsApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkdTxtBxCadWhatsApp.Location = new System.Drawing.Point(495, 167);
+            this.mkdTxtBxCadWhatsApp.Mask = "(99)0 0000-0000";
+            this.mkdTxtBxCadWhatsApp.Name = "mkdTxtBxCadWhatsApp";
+            this.mkdTxtBxCadWhatsApp.Size = new System.Drawing.Size(148, 21);
+            this.mkdTxtBxCadWhatsApp.TabIndex = 25;
+            // 
+            // mkdTxtBxCadTelefone
+            // 
+            this.mkdTxtBxCadTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkdTxtBxCadTelefone.Location = new System.Drawing.Point(324, 167);
+            this.mkdTxtBxCadTelefone.Mask = "(99)0 0000-0000";
+            this.mkdTxtBxCadTelefone.Name = "mkdTxtBxCadTelefone";
+            this.mkdTxtBxCadTelefone.Size = new System.Drawing.Size(148, 21);
+            this.mkdTxtBxCadTelefone.TabIndex = 24;
+            // 
+            // dtTmPckCadNascimento
+            // 
+            this.dtTmPckCadNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtTmPckCadNascimento.Location = new System.Drawing.Point(8, 95);
+            this.dtTmPckCadNascimento.Name = "dtTmPckCadNascimento";
+            this.dtTmPckCadNascimento.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtTmPckCadNascimento.Size = new System.Drawing.Size(152, 20);
+            this.dtTmPckCadNascimento.TabIndex = 23;
+            // 
+            // lblCadNascimento
+            // 
+            this.lblCadNascimento.AutoSize = true;
+            this.lblCadNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadNascimento.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lblCadNascimento.Location = new System.Drawing.Point(4, 79);
+            this.lblCadNascimento.Name = "lblCadNascimento";
+            this.lblCadNascimento.Size = new System.Drawing.Size(161, 13);
+            this.lblCadNascimento.TabIndex = 21;
+            this.lblCadNascimento.Text = "*DATA_DE_NASCIMENTO:";
+            // 
             // txtBxCadNomeMae
             // 
             this.txtBxCadNomeMae.Location = new System.Drawing.Point(6, 243);
+            this.txtBxCadNomeMae.MaxLength = 100;
             this.txtBxCadNomeMae.Name = "txtBxCadNomeMae";
             this.txtBxCadNomeMae.Size = new System.Drawing.Size(301, 20);
             this.txtBxCadNomeMae.TabIndex = 20;
@@ -254,49 +283,36 @@
             this.lblCadNomeMae.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lblCadNomeMae.Location = new System.Drawing.Point(4, 226);
             this.lblCadNomeMae.Name = "lblCadNomeMae";
-            this.lblCadNomeMae.Size = new System.Drawing.Size(98, 13);
+            this.lblCadNomeMae.Size = new System.Drawing.Size(103, 13);
             this.lblCadNomeMae.TabIndex = 19;
-            this.lblCadNomeMae.Text = "NOME DA MÃE:";
-            // 
-            // txtBxCadWhatsApp
-            // 
-            this.txtBxCadWhatsApp.Location = new System.Drawing.Point(496, 129);
-            this.txtBxCadWhatsApp.Name = "txtBxCadWhatsApp";
-            this.txtBxCadWhatsApp.Size = new System.Drawing.Size(149, 20);
-            this.txtBxCadWhatsApp.TabIndex = 18;
+            this.lblCadNomeMae.Text = "*NOME DA MÃE:";
             // 
             // lblCadWhatsApp
             // 
             this.lblCadWhatsApp.AutoSize = true;
             this.lblCadWhatsApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadWhatsApp.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCadWhatsApp.Location = new System.Drawing.Point(494, 112);
+            this.lblCadWhatsApp.Location = new System.Drawing.Point(494, 150);
             this.lblCadWhatsApp.Name = "lblCadWhatsApp";
             this.lblCadWhatsApp.Size = new System.Drawing.Size(80, 13);
             this.lblCadWhatsApp.TabIndex = 17;
             this.lblCadWhatsApp.Text = "WHATSAPP:";
-            // 
-            // txtBxCadTelefone
-            // 
-            this.txtBxCadTelefone.Location = new System.Drawing.Point(323, 129);
-            this.txtBxCadTelefone.Name = "txtBxCadTelefone";
-            this.txtBxCadTelefone.Size = new System.Drawing.Size(162, 20);
-            this.txtBxCadTelefone.TabIndex = 16;
             // 
             // lblCadTelefone
             // 
             this.lblCadTelefone.AutoSize = true;
             this.lblCadTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadTelefone.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCadTelefone.Location = new System.Drawing.Point(321, 112);
+            this.lblCadTelefone.Location = new System.Drawing.Point(321, 150);
             this.lblCadTelefone.Name = "lblCadTelefone";
-            this.lblCadTelefone.Size = new System.Drawing.Size(75, 13);
+            this.lblCadTelefone.Size = new System.Drawing.Size(80, 13);
             this.lblCadTelefone.TabIndex = 15;
-            this.lblCadTelefone.Text = "TELEFONE:";
+            this.lblCadTelefone.Text = "*TELEFONE:";
             // 
             // txtBxCadEmail
             // 
-            this.txtBxCadEmail.Location = new System.Drawing.Point(7, 129);
+            this.txtBxCadEmail.Location = new System.Drawing.Point(7, 167);
+            this.txtBxCadEmail.MaxLength = 50;
             this.txtBxCadEmail.Name = "txtBxCadEmail";
             this.txtBxCadEmail.Size = new System.Drawing.Size(301, 20);
             this.txtBxCadEmail.TabIndex = 14;
@@ -306,18 +322,11 @@
             this.lblCadEmail.AutoSize = true;
             this.lblCadEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadEmail.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblCadEmail.Location = new System.Drawing.Point(5, 112);
+            this.lblCadEmail.Location = new System.Drawing.Point(5, 150);
             this.lblCadEmail.Name = "lblCadEmail";
             this.lblCadEmail.Size = new System.Drawing.Size(52, 13);
             this.lblCadEmail.TabIndex = 13;
             this.lblCadEmail.Text = "E-MAIL:";
-            // 
-            // txtBxCadContato
-            // 
-            this.txtBxCadContato.Location = new System.Drawing.Point(495, 34);
-            this.txtBxCadContato.Name = "txtBxCadContato";
-            this.txtBxCadContato.Size = new System.Drawing.Size(149, 20);
-            this.txtBxCadContato.TabIndex = 12;
             // 
             // lblCadContato
             // 
@@ -326,16 +335,9 @@
             this.lblCadContato.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lblCadContato.Location = new System.Drawing.Point(493, 17);
             this.lblCadContato.Name = "lblCadContato";
-            this.lblCadContato.Size = new System.Drawing.Size(40, 13);
+            this.lblCadContato.Size = new System.Drawing.Size(37, 13);
             this.lblCadContato.TabIndex = 11;
-            this.lblCadContato.Text = "NISS:";
-            // 
-            // txtBxCadCPF
-            // 
-            this.txtBxCadCPF.Location = new System.Drawing.Point(322, 34);
-            this.txtBxCadCPF.Name = "txtBxCadCPF";
-            this.txtBxCadCPF.Size = new System.Drawing.Size(162, 20);
-            this.txtBxCadCPF.TabIndex = 10;
+            this.lblCadContato.Text = "*NIS:";
             // 
             // lblCadCPF
             // 
@@ -344,13 +346,14 @@
             this.lblCadCPF.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lblCadCPF.Location = new System.Drawing.Point(320, 17);
             this.lblCadCPF.Name = "lblCadCPF";
-            this.lblCadCPF.Size = new System.Drawing.Size(34, 13);
+            this.lblCadCPF.Size = new System.Drawing.Size(39, 13);
             this.lblCadCPF.TabIndex = 9;
-            this.lblCadCPF.Text = "CPF:";
+            this.lblCadCPF.Text = "*CPF:";
             // 
             // txtBxCadNomeCompleto
             // 
             this.txtBxCadNomeCompleto.Location = new System.Drawing.Point(6, 34);
+            this.txtBxCadNomeCompleto.MaxLength = 100;
             this.txtBxCadNomeCompleto.Name = "txtBxCadNomeCompleto";
             this.txtBxCadNomeCompleto.Size = new System.Drawing.Size(301, 20);
             this.txtBxCadNomeCompleto.TabIndex = 8;
@@ -362,9 +365,9 @@
             this.lblCadNomeCompleto.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lblCadNomeCompleto.Location = new System.Drawing.Point(4, 17);
             this.lblCadNomeCompleto.Name = "lblCadNomeCompleto";
-            this.lblCadNomeCompleto.Size = new System.Drawing.Size(118, 13);
+            this.lblCadNomeCompleto.Size = new System.Drawing.Size(123, 13);
             this.lblCadNomeCompleto.TabIndex = 7;
-            this.lblCadNomeCompleto.Text = "NOME COMPLETO:";
+            this.lblCadNomeCompleto.Text = "*NOME COMPLETO:";
             // 
             // lblCadastro
             // 
@@ -377,11 +380,37 @@
             this.lblCadastro.TabIndex = 0;
             this.lblCadastro.Text = "CADASTRO";
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(12, 296);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(285, 62);
+            this.btnCadastrar.TabIndex = 4;
+            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // lkLblCadLinkedinDevMathews
+            // 
+            this.lkLblCadLinkedinDevMathews.AutoSize = true;
+            this.lkLblCadLinkedinDevMathews.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lkLblCadLinkedinDevMathews.LinkColor = System.Drawing.Color.White;
+            this.lkLblCadLinkedinDevMathews.Location = new System.Drawing.Point(783, 430);
+            this.lkLblCadLinkedinDevMathews.Name = "lkLblCadLinkedinDevMathews";
+            this.lkLblCadLinkedinDevMathews.Size = new System.Drawing.Size(170, 13);
+            this.lkLblCadLinkedinDevMathews.TabIndex = 8;
+            this.lkLblCadLinkedinDevMathews.TabStop = true;
+            this.lkLblCadLinkedinDevMathews.Text = "(82)9 9990-1016 - Freire M.B";
+            this.lkLblCadLinkedinDevMathews.VisitedLinkColor = System.Drawing.Color.White;
+            this.lkLblCadLinkedinDevMathews.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkLblCadLinkedinDevMathews_LinkClicked);
+            // 
             // FrmCadastroPag1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 450);
+            this.Controls.Add(this.lkLblCadLinkedinDevMathews);
             this.Controls.Add(this.pnlCadastroPag1);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastrar);
@@ -390,6 +419,7 @@
             this.Controls.Add(this.lbLinksUteis);
             this.Controls.Add(this.pctBoxLogo);
             this.Name = "FrmCadastroPag1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCadastroPag1";
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).EndInit();
             this.pnlLinksUteis.ResumeLayout(false);
@@ -411,30 +441,31 @@
         private System.Windows.Forms.Button btnNissLinkUteis;
         private System.Windows.Forms.Button btnCadmutLinkUteis;
         private System.Windows.Forms.Button btnAgendar;
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Panel pnlCadastroPag1;
         private System.Windows.Forms.Label lblCadastro;
         private System.Windows.Forms.Label lblCadDadosPessoais;
-        private System.Windows.Forms.Button btnCadEditar;
-        private System.Windows.Forms.Button btnCadExcluir;
         private System.Windows.Forms.Button btnCadProximo;
         private System.Windows.Forms.Panel pnlCadDadosPessoais;
         private System.Windows.Forms.Label lblCadNomeCompleto;
-        private System.Windows.Forms.TextBox txtBxCadContato;
         private System.Windows.Forms.Label lblCadContato;
-        private System.Windows.Forms.TextBox txtBxCadCPF;
         private System.Windows.Forms.Label lblCadCPF;
         private System.Windows.Forms.TextBox txtBxCadNomeCompleto;
         private System.Windows.Forms.Label lblCadNumeroPag;
         private System.Windows.Forms.TextBox txtBxCadNomeMae;
         private System.Windows.Forms.Label lblCadNomeMae;
-        private System.Windows.Forms.TextBox txtBxCadWhatsApp;
         private System.Windows.Forms.Label lblCadWhatsApp;
-        private System.Windows.Forms.TextBox txtBxCadTelefone;
         private System.Windows.Forms.Label lblCadTelefone;
         private System.Windows.Forms.TextBox txtBxCadEmail;
         private System.Windows.Forms.Label lblCadEmail;
+        private System.Windows.Forms.Label lblCadNascimento;
+        private System.Windows.Forms.DateTimePicker dtTmPckCadNascimento;
+        private System.Windows.Forms.MaskedTextBox mkdTxtBxCadTelefone;
+        private System.Windows.Forms.MaskedTextBox mkdTxtBxCadWhatsApp;
+        private System.Windows.Forms.MaskedTextBox mkdTxtBxCadNIS;
+        private System.Windows.Forms.MaskedTextBox mkdTxtBxCadCPF;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.LinkLabel lkLblCadLinkedinDevMathews;
     }
 }
 

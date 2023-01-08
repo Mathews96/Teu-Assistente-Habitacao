@@ -32,11 +32,12 @@
             this.pctBoxLogo = new System.Windows.Forms.PictureBox();
             this.lbLinksUteis = new System.Windows.Forms.Label();
             this.pnlLinksUteis = new System.Windows.Forms.Panel();
-            this.btnCadmutLinkUteis = new System.Windows.Forms.Button();
             this.btnNissLinkUteis = new System.Windows.Forms.Button();
+            this.btnCadmutLinkUteis = new System.Windows.Forms.Button();
             this.btnAgendar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
+            this.lkLblInicialLinkedinDevMathews = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
             this.SuspendLayout();
@@ -73,16 +74,6 @@
             this.pnlLinksUteis.Size = new System.Drawing.Size(285, 53);
             this.pnlLinksUteis.TabIndex = 2;
             // 
-            // btnCadmutLinkUteis
-            // 
-            this.btnCadmutLinkUteis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadmutLinkUteis.Location = new System.Drawing.Point(15, 8);
-            this.btnCadmutLinkUteis.Name = "btnCadmutLinkUteis";
-            this.btnCadmutLinkUteis.Size = new System.Drawing.Size(84, 33);
-            this.btnCadmutLinkUteis.TabIndex = 3;
-            this.btnCadmutLinkUteis.Text = "CADMUT";
-            this.btnCadmutLinkUteis.UseVisualStyleBackColor = true;
-            // 
             // btnNissLinkUteis
             // 
             this.btnNissLinkUteis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,6 +83,16 @@
             this.btnNissLinkUteis.TabIndex = 4;
             this.btnNissLinkUteis.Text = "NISS";
             this.btnNissLinkUteis.UseVisualStyleBackColor = true;
+            // 
+            // btnCadmutLinkUteis
+            // 
+            this.btnCadmutLinkUteis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadmutLinkUteis.Location = new System.Drawing.Point(15, 8);
+            this.btnCadmutLinkUteis.Name = "btnCadmutLinkUteis";
+            this.btnCadmutLinkUteis.Size = new System.Drawing.Size(84, 33);
+            this.btnCadmutLinkUteis.TabIndex = 3;
+            this.btnCadmutLinkUteis.Text = "CADMUT";
+            this.btnCadmutLinkUteis.UseVisualStyleBackColor = true;
             // 
             // btnAgendar
             // 
@@ -103,6 +104,7 @@
             this.btnAgendar.TabIndex = 3;
             this.btnAgendar.Text = "AGENDAR";
             this.btnAgendar.UseVisualStyleBackColor = true;
+            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
             // btnCadastrar
             // 
@@ -113,6 +115,7 @@
             this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnConsultar
             // 
@@ -123,12 +126,28 @@
             this.btnConsultar.TabIndex = 5;
             this.btnConsultar.Text = "CONSULTAR";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // lkLblInicialLinkedinDevMathews
+            // 
+            this.lkLblInicialLinkedinDevMathews.AutoSize = true;
+            this.lkLblInicialLinkedinDevMathews.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lkLblInicialLinkedinDevMathews.LinkColor = System.Drawing.Color.White;
+            this.lkLblInicialLinkedinDevMathews.Location = new System.Drawing.Point(71, 429);
+            this.lkLblInicialLinkedinDevMathews.Name = "lkLblInicialLinkedinDevMathews";
+            this.lkLblInicialLinkedinDevMathews.Size = new System.Drawing.Size(170, 13);
+            this.lkLblInicialLinkedinDevMathews.TabIndex = 8;
+            this.lkLblInicialLinkedinDevMathews.TabStop = true;
+            this.lkLblInicialLinkedinDevMathews.Text = "(82)9 9990-1016 - Freire M.B";
+            this.lkLblInicialLinkedinDevMathews.VisitedLinkColor = System.Drawing.Color.White;
+            this.lkLblInicialLinkedinDevMathews.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkLblInicialLinkedinDevMathews_LinkClicked);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(309, 450);
+            this.Controls.Add(this.lkLblInicialLinkedinDevMathews);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnAgendar);
@@ -136,6 +155,7 @@
             this.Controls.Add(this.lbLinksUteis);
             this.Controls.Add(this.pctBoxLogo);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).EndInit();
             this.pnlLinksUteis.ResumeLayout(false);
@@ -155,6 +175,7 @@
         private System.Windows.Forms.Button btnAgendar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.LinkLabel lkLblInicialLinkedinDevMathews;
     }
 }
 

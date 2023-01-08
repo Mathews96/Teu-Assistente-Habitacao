@@ -50,18 +50,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CONTROLLER\Agendamento.cs" />
-    <Compile Include="CONTROLLER\CadastroHabitaciona.cs" />
-    <Compile Include="CONTROLLER\Conjunge.cs" />
+    <Compile Include="CONTROLLER\CadastroHabitacional.cs" />
+    <Compile Include="CONTROLLER\Conjuge.cs" />
     <Compile Include="CONTROLLER\EstadoCivil.cs" />
     <Compile Include="CONTROLLER\Renda.cs" />
     <Compile Include="CONTROLLER\Endereco.cs" />
     <Compile Include="CONTROLLER\Filho.cs" />
     <Compile Include="CONTROLLER\SituacaoCadastral.cs" />
     <Compile Include="CONTROLLER\Deficiente.cs" />
+    <Compile Include="CONTROLLER\VarGlobaisFrmCadastro.cs" />
+    <Compile Include="CONTROLLER\TratarDados.cs" />
     <Compile Include="MODEL\BDAgendamento.cs" />
     <Compile Include="MODEL\BDCadastro.cs" />
     <Compile Include="MODEL\BDConexao.cs" />
-    <Compile Include="MODEL\BDConjunge.cs" />
+    <Compile Include="MODEL\BDConjuge.cs" />
     <Compile Include="MODEL\BDEndereco.cs" />
     <Compile Include="MODEL\BDComprovantes.cs" />
     <Compile Include="VIEW\FrmTelaLogin.cs">

@@ -5,19 +5,19 @@ namespace Teu_Assistente_HABITACAO
 {
     internal class Filho : BDComprovantes
     {
-        public void anexarCertidaoDeNascimento(int cpf, string nomenClatura)
+        public void anexarCertidaoDeNascimento(int cpf, string nome)
         {
             switch(getComprovante(cpf))
             {
                 case false:
                     {
-                        inserirComprovante(cpf);
+                        inserirComprovante(cpf, nome);
                         //Criar_log
                         break;
                     }
                 case true:
                     {
-                        setComprovante(cpf);
+                        setComprovante(cpf, nome);
                         //Criar_log
                         break;
                     }

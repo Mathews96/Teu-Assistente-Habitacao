@@ -4,7 +4,7 @@ namespace Teu_Assistente_HABITACAO
 {
     internal class Endereco : BDEndereco
     {
-        public void definirEndereco(int cpf)
+        public void definirEndereco(long cpf)
         {
             switch (getEndereco(cpf))
             {

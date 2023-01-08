@@ -4,19 +4,19 @@ namespace Teu_Assistente_HABITACAO
 {
     internal class Renda : BDComprovantes
     {
-        public void anexarComprovanteTrabalho(int cpf, string nomeClatura)
+        public void anexarComprovanteTrabalho(int cpf, string nome)
         {
             switch(getComprovante(cpf))
             {
                 case false:
                     {
-                        inserirComprovante(cpf);
+                        inserirComprovante(cpf, nome);
                         //Criar_log
                         break;
                     }
                 case true:
                     {
-                        setComprovante(cpf);
+                        setComprovante(cpf, nome);
                         //Criar_log
                         break;
                     }

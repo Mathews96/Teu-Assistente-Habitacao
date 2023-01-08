@@ -5,31 +5,34 @@ namespace Teu_Assistente_HABITACAO
 {
     internal class Agendamento : SituacaoCadastral
     {
-        public void agendar(int cpf, DateTime dataAgendado)
+        public void agendar(long cpf)
         {
-            if (!getAgendamento(cpf))
-            {
-                inserirAgendamento(cpf, dataAgendado);
-                definirSituacao(cpf, "AGENDADO");
-            }
-            MessageBox.Show("Já existe um agendamento para o CPF informado!\n" +
-                "Deseja reagendar?", "ATENÇÃO!", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            inserirAgendamento(cpf);
         }
-        public void desagendar(int cpf)
+        public void desagendar(long cpf)
         {
-            if (getAgendamento(cpf))
+            /*if (getAgendamento(cpf))
             {
                 deletarAgendamento(cpf);
-            }
+            }*/
         }
-        public void consultar(int cpf)
+        public string consultar(long cpf)
         {
-            if (getAgendamento(cpf))
+            consultarSituacao(cpf);
+            string situacao = this.Situacao;
+            if(!string.IsNullOrEmpty(this.Situacao) && this.Situacao != "CADASTRADO" && this.DataAgendamento < DateTime.Now)
             {
-                MessageBox.Show("ESTE CPF JÁ FOI AGENDADO:"+"Nome: "+ this.NomeCompleto +
-                    "CPF: "+ this.Cpf+"Demanda: "+this.Demanda+"Situação: "+ this.Situacao +
-                    "Data: "+ this.DataAgendamento,"AGENDADO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                situacao = "FALTOSO";
             }
+            else if (!string.IsNullOrEmpty(this.Situacao) && this.Situacao != "CADASTRADO" && this.DataAgendamento >= DateTime.Now)
+            {
+                situacao = "AGENDADO";
+            }
+            else if(!string.IsNullOrEmpty(this.Situacao))
+            {
+                situacao = this.Situacao;
+            }
+            return situacao;
         }
         public void downloadAgendamento()
         {

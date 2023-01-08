@@ -7,24 +7,26 @@ namespace Teu_Assistente_HABITACAO
     internal class BDCadastro
     {
         internal string NomeCompleto { get; set; }
-        internal int Cpf { get; set; }
-        internal int Nis { get; set; }
+        internal string EstadoCivil { get; set; }
+        internal long Cpf { get; set; }
+        internal long Nis { get; set; }
         internal DateTime DataDeNascimento { get; set; }
         internal string Email { get; set; }
-        internal int Telefone { get; set; }
-        internal int WhatsApp { get; set; }
+        internal long Telefone { get; set; }
+        internal long WhatsApp { get; set; }
         internal string NomeDaMae { get; set; }
         internal DateTime DataCadastro { get; set; }
 
-        public void inserirCadastro(int cpf)
+        public void inserirCadastro(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO CADASTRADOS(CPF, NIS, NOME_COMPLETO, DATA_DE_NASCIMENTO, EMAIL, TELEFONE, WHATSAPP, NOME_DA_MAE, DATA_CADASTRO)" +
-                "VALUES(@CPF, @NIS, @NOME_COMPLETO, @DATA_DE_NASCIMENTO, @EMAIL, @TELEFONE, @WHATSAPP, @NOME_DA_MAE, @DATA_CADASTRO) WHERE CPF!=@CPF";
+            cmd.CommandText = "INSERT INTO CADASTRADOS(CPF, NIS, NOME_COMPLETO, ESTADO_CIVIL, DATA_DE_NASCIMENTO, EMAIL, TELEFONE, WHATSAPP, NOME_DA_MAE, DATA_CADASTRO)" +
+                "VALUES(@CPF, @NIS, @NOME_COMPLETO, @ESTADO_CIVIL, @DATA_DE_NASCIMENTO, @EMAIL, @TELEFONE, @WHATSAPP, @NOME_DA_MAE, @DATA_CADASTRO)";
             cmd.Parameters.AddWithValue("@CPF", cpf);
             cmd.Parameters.AddWithValue("@NIS", this.Nis);
             cmd.Parameters.AddWithValue("@NOME_COMPLETO", this.NomeCompleto);
+            cmd.Parameters.AddWithValue("@ESTADO_CIVIL", this.EstadoCivil);
             cmd.Parameters.AddWithValue("@DATA_DE_NASCIMENTO", this.DataDeNascimento);
             cmd.Parameters.AddWithValue("@EMAIL", this.Email);
             cmd.Parameters.AddWithValue("@TELEFONE", this.Telefone);
@@ -45,7 +47,7 @@ namespace Teu_Assistente_HABITACAO
                 //Criar_log                
             }
         }
-        public bool getCadastro(int cpf)
+        public bool getCadastro(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
@@ -55,21 +57,21 @@ namespace Teu_Assistente_HABITACAO
             SqlDataReader reader = cmd.ExecuteReader();
             if (!reader.Read())
             {
-                MessageBox.Show("Não existe nenhum cadastro\nreferente ao cpf:" + cpf, "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Não existe nenhum cadastro\nreferente ao cpf:" + cpf, "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //Criar_log
                 return false;
             }
             try
             {
-                this.Cpf = int.Parse(reader["CPF"].ToString());
-                this.Nis = int.Parse(reader["NIS"].ToString());
+                this.Cpf = long.Parse(reader["CPF"].ToString());
+                this.Nis = long.Parse(reader["NIS"].ToString());
                 this.NomeCompleto = reader["NOME_COMPLETO"].ToString();
                 this.DataDeNascimento = DateTime.Parse(reader["DATA_DE_NASCIMENTO"].ToString());
                 this.Email = reader["EMAIL"].ToString(); ;
-                this.Telefone = int.Parse(reader["TELEFONE"].ToString());
-                this.WhatsApp = int.Parse(reader["WHATSAPP"].ToString());
+                this.Telefone = long.Parse(reader["TELEFONE"].ToString());
+                this.WhatsApp = long.Parse(reader["WHATSAPP"].ToString());
                 this.NomeDaMae = reader["NOME_DA_MAE"].ToString();
-                this.DataCadastro = DateTime.Parse(reader["DATA_CADSATRO"].ToString());
+                this.DataCadastro = DateTime.Parse(reader["DATA_CADASTRO"].ToString());
                 conexao.desconectar();
                 cmd.Parameters.Clear();
                 //Criar_log
@@ -82,7 +84,7 @@ namespace Teu_Assistente_HABITACAO
                 return false;
             }
         }
-        public void setCadastro(int cpf)
+        public void setCadastro(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
@@ -110,7 +112,7 @@ namespace Teu_Assistente_HABITACAO
                 //Criar_log
             }
         }
-        public void deletarCadastro(int cpf)
+        public void deletarCadastro(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();

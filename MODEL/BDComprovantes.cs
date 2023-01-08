@@ -8,14 +8,14 @@ namespace Teu_Assistente_HABITACAO
         private string TipoDeComprovante { get; set; }
         private string SalvoNoDestino { get; set; }
         private string DataSalvamento { get; set; }
-        public void inserirComprovante(int cpf)
+        public void inserirComprovante(int cpf, string nome)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "INSERT INTO COMPROVANTES(CPF, TIPO_DE_COMPROVANTE, SALVO_NO_DESTINO, DATA_SAVALMENTO)" +
                 "VALUES(@CPF, @TIPO_DE_COMPROVANTE, @SALVO_NO_DESTINO, @DATA_SAVALMENTO) WHERE CPF=@CPF";
             cmd.Parameters.AddWithValue("@CPF", cpf);
-            cmd.Parameters.AddWithValue("@TIPO_DE_COMPROVANTE", this.TipoDeComprovante);
+            cmd.Parameters.AddWithValue("@TIPO_DE_COMPROVANTE", this.TipoDeComprovante + nome);
             cmd.Parameters.AddWithValue("@SALVO_NO_DESTINO", this.SalvoNoDestino);
             cmd.Parameters.AddWithValue("@DATA_SAVALMENTO", this.DataSalvamento);
             try
@@ -63,7 +63,7 @@ namespace Teu_Assistente_HABITACAO
                 return false;
             }
         }
-        public void setComprovante(int cpf)
+        public void setComprovante(int cpf, string nome)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
@@ -71,7 +71,7 @@ namespace Teu_Assistente_HABITACAO
             try
             {
                 cmd.Parameters.AddWithValue("@CPF", cpf);
-                cmd.Parameters.AddWithValue("@TIPO_DE_COMPROVANTE", this.TipoDeComprovante);
+                cmd.Parameters.AddWithValue("@TIPO_DE_COMPROVANTE", this.TipoDeComprovante + nome);
                 cmd.Parameters.AddWithValue("@SALVO_NO_DESTINO", this.SalvoNoDestino);
                 cmd.Parameters.AddWithValue("@DATA_SAVALMENTO", this.DataSalvamento);
                 cmd.Connection = conexao.conectar();

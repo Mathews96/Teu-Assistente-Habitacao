@@ -1,10 +1,10 @@
 ﻿using System.Windows.Forms;
 
-namespace Teu_Assistente_HABITACAO.CONTROLLER
+namespace Teu_Assistente_HABITACAO
 {
-    internal class Conjunge : BDConjunge
+    internal class Conjuge : BDConjuge
     {
-        public void definirEndereco(int cpf)
+        public void definirComprovanteConjunge(int cpf)
         {
             switch (getComprovanteConjunge(cpf))
             {
@@ -22,7 +22,7 @@ namespace Teu_Assistente_HABITACAO.CONTROLLER
                     }
                 default:
                     {
-                        MessageBox.Show("Erro no comprovante cônjunge\nContate o Desenvolvedor", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Erro no comprovante do cônjunge\nContate o Desenvolvedor", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         //Criar_log
                         break;
                     }

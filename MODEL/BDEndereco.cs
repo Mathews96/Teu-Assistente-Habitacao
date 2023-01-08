@@ -5,20 +5,20 @@ namespace Teu_Assistente_HABITACAO
 {
     internal class BDEndereco
     {
-        private int Cep { get; set; }
-        private string Endereco { get; set; }
-        private int Numero { get; set; }
-        private string Complemento { get; set; }
-        private string Bairro { get; set; }
-        private string Cidade { get; set; }
-        private string Uf { get; set; }
-        public void inserirEndereco(int cpf)
+        internal int Cep { get; set; }
+        internal string Endereco { get; set; }
+        internal int Numero { get; set; }
+        internal string Complemento { get; set; }
+        internal string Bairro { get; set; }
+        internal string Cidade { get; set; }
+        internal string Uf { get; set; }
+        public void inserirEndereco(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO ENDERECOS(CPF, CEP, ENDERECO, NUMERO, COMPLEMENTO, BAIRRO, CIDADE, UF)" +
-                "VALUES(@CPF, @CEP, @ENDERECO, @NUMERO, @COMPLEMENTO, @BAIRRO, @CIDADE, @UF); WHERE=@CPF";
-            cmd.Parameters.AddWithValue("@CPF", cpf);
+            cmd.CommandText = "INSERT INTO ENDERECOS(CPFSEC, CEP, ENDERECO, NUMERO, COMPLEMENTO, BAIRRO, CIDADE, UF)" +
+                "VALUES(@CPFSEC, @CEP, @ENDERECO, @NUMERO, @COMPLEMENTO, @BAIRRO, @CIDADE, @UF);";
+            cmd.Parameters.AddWithValue("@CPFSEC", cpf);
             cmd.Parameters.AddWithValue("CEP", this.Cep);
             cmd.Parameters.AddWithValue("@ENDERECO", this.Endereco);
             cmd.Parameters.AddWithValue("@NUMERO", this.Numero);
@@ -40,12 +40,12 @@ namespace Teu_Assistente_HABITACAO
                 //Criar_log                            
             }
         }
-        public bool getEndereco(int cpf)
+        public bool getEndereco(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT CPF, CEP, ENDERECO, NUMERO, COMPLEMENTO, BAIRRO, CIDADE, UF FROM ENDERECOS WHERE CPF=@CPF";
-            cmd.Parameters.AddWithValue("@CPF", cpf);
+            cmd.CommandText = "SELECT CPFSEC, CEP, ENDERECO, NUMERO, COMPLEMENTO, BAIRRO, CIDADE, UF FROM ENDERECOS WHERE CPFSEC=@CPFSEC";
+            cmd.Parameters.AddWithValue("@CPFSEC", cpf);
             SqlDataReader reader = cmd.ExecuteReader();
             if (!reader.Read())
             {
@@ -74,14 +74,14 @@ namespace Teu_Assistente_HABITACAO
                 return false;
             }
         }
-        public void setEndereco(int cpf)
+        public void setEndereco(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE ENDERECOS SET CPF=@CPF, CEP=@CEP, ENDERECO=@ENDERECO, NUMERO=@NUMERO, COMPLEMENTO=@COMPLEMENTO, BAIRRO=@BAIRRO, CIDADE=@CIDADE, UF=@UF WHERE CPF=@CPF";
+            cmd.CommandText = "UPDATE ENDERECOS SET CPFSEC=@CPFSEC, CEP=@CEP, ENDERECO=@ENDERECO, NUMERO=@NUMERO, COMPLEMENTO=@COMPLEMENTO, BAIRRO=@BAIRRO, CIDADE=@CIDADE, UF=@UF WHERE CPF=@CPF";
             try
             {
-                cmd.Parameters.AddWithValue("@CPF", cpf);
+                cmd.Parameters.AddWithValue("@CPFSEC", cpf);
                 cmd.Parameters.AddWithValue("@CEP", this.Cep);
                 cmd.Parameters.AddWithValue("@ENDERECO", this.Endereco);
                 cmd.Parameters.AddWithValue("@NUMERO", this.Numero);
@@ -99,14 +99,14 @@ namespace Teu_Assistente_HABITACAO
                 //Criar_log
             }
         }
-        public void deletarEndereco(int cpf)
+        public void deletarEndereco(long cpf)
         {
             BDConexao conexao = new BDConexao();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "DELETE FROM ENDERECOS WHERE CPF=@CPF";
+            cmd.CommandText = "DELETE FROM ENDERECOS WHERE CPFSEC=@CPFSEC";
             try
             {
-                cmd.Parameters.AddWithValue("@CPF", cpf);
+                cmd.Parameters.AddWithValue("@CPFSEC", cpf);
                 cmd.Connection = conexao.conectar();
                 cmd.ExecuteNonQuery();
                 conexao.desconectar();

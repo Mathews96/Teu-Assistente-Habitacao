@@ -4,19 +4,19 @@ namespace Teu_Assistente_HABITACAO
 {
     internal class Deficiente : BDComprovantes
     {
-        public void anexarComprovanteDeficiencia(int cpf, string nomeclatura)
+        public void anexarComprovanteDeficiencia(int cpf, string nome)
         {
             switch(getComprovante(cpf))
             {
                 case false:
                     {
-                        inserirComprovante(cpf);
+                        inserirComprovante(cpf, nome);
                         //Criar_log
                         break;
                     }
                 case true:
                     {
-                        setComprovante(cpf);
+                        setComprovante(cpf, nome);
                         //Criar_log                        
                         break;
                     }

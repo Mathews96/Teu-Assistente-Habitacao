@@ -34,23 +34,21 @@
             this.pnlLinksUteis = new System.Windows.Forms.Panel();
             this.btnNissLinkUteis = new System.Windows.Forms.Button();
             this.btnCadmutLinkUteis = new System.Windows.Forms.Button();
-            this.btnAgendar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.pnlAgendamento = new System.Windows.Forms.Panel();
-            this.btnAgEditar = new System.Windows.Forms.Button();
-            this.btnAgExcluir = new System.Windows.Forms.Button();
+            this.btnCadEditar = new System.Windows.Forms.Button();
             this.btnAgAgendar = new System.Windows.Forms.Button();
             this.lblDadosPessoais = new System.Windows.Forms.Label();
             this.pnlAgAgendamento = new System.Windows.Forms.Panel();
+            this.dtTmPickrDataAg = new System.Windows.Forms.DateTimePicker();
             this.cmbBoxAgSituacao = new System.Windows.Forms.ComboBox();
             this.lblAgSituacao = new System.Windows.Forms.Label();
-            this.txtBoxAgDataAg = new System.Windows.Forms.TextBox();
             this.lblagDataAg = new System.Windows.Forms.Label();
             this.pnlAgDadosPessoais = new System.Windows.Forms.Panel();
-            this.txtBxAgContato = new System.Windows.Forms.TextBox();
+            this.mkdTxtBxAgCPF = new System.Windows.Forms.MaskedTextBox();
+            this.mkdTxtBxAgContato = new System.Windows.Forms.MaskedTextBox();
             this.lblAgContato = new System.Windows.Forms.Label();
-            this.txtBxAgCPF = new System.Windows.Forms.TextBox();
             this.lblAgCPF = new System.Windows.Forms.Label();
             this.txtBxAgNomeCompleto = new System.Windows.Forms.TextBox();
             this.lblAgNomeCompleto = new System.Windows.Forms.Label();
@@ -58,10 +56,12 @@
             this.lblDemanda = new System.Windows.Forms.Label();
             this.lblAgendamento = new System.Windows.Forms.Label();
             this.pnlAgDemanda = new System.Windows.Forms.Panel();
+            this.mkdTxtBxAgNumero = new System.Windows.Forms.MaskedTextBox();
             this.cmbBxAgDemanda = new System.Windows.Forms.ComboBox();
-            this.txtBxAgNumero = new System.Windows.Forms.TextBox();
             this.lblAgNumero = new System.Windows.Forms.Label();
             this.lblAgDemanda = new System.Windows.Forms.Label();
+            this.btnAgendar = new System.Windows.Forms.Button();
+            this.lkLblAgLinkedinDevMathews = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
             this.pnlAgendamento.SuspendLayout();
@@ -122,17 +122,6 @@
             this.btnCadmutLinkUteis.Text = "CADMUT";
             this.btnCadmutLinkUteis.UseVisualStyleBackColor = true;
             // 
-            // btnAgendar
-            // 
-            this.btnAgendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgendar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAgendar.Location = new System.Drawing.Point(12, 228);
-            this.btnAgendar.Name = "btnAgendar";
-            this.btnAgendar.Size = new System.Drawing.Size(285, 62);
-            this.btnAgendar.TabIndex = 3;
-            this.btnAgendar.Text = "AGENDAR";
-            this.btnAgendar.UseVisualStyleBackColor = true;
-            // 
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,6 +131,7 @@
             this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnConsultar
             // 
@@ -152,12 +142,12 @@
             this.btnConsultar.TabIndex = 5;
             this.btnConsultar.Text = "CONSULTAR";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // pnlAgendamento
             // 
             this.pnlAgendamento.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlAgendamento.Controls.Add(this.btnAgEditar);
-            this.pnlAgendamento.Controls.Add(this.btnAgExcluir);
+            this.pnlAgendamento.Controls.Add(this.btnCadEditar);
             this.pnlAgendamento.Controls.Add(this.btnAgAgendar);
             this.pnlAgendamento.Controls.Add(this.lblDadosPessoais);
             this.pnlAgendamento.Controls.Add(this.pnlAgAgendamento);
@@ -170,38 +160,30 @@
             this.pnlAgendamento.Size = new System.Drawing.Size(650, 414);
             this.pnlAgendamento.TabIndex = 5;
             // 
-            // btnAgEditar
+            // btnCadEditar
             // 
-            this.btnAgEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAgEditar.Location = new System.Drawing.Point(243, 364);
-            this.btnAgEditar.Name = "btnAgEditar";
-            this.btnAgEditar.Size = new System.Drawing.Size(168, 43);
-            this.btnAgEditar.TabIndex = 8;
-            this.btnAgEditar.Text = "EDITAR";
-            this.btnAgEditar.UseVisualStyleBackColor = true;
-            // 
-            // btnAgExcluir
-            // 
-            this.btnAgExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgExcluir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAgExcluir.Location = new System.Drawing.Point(475, 364);
-            this.btnAgExcluir.Name = "btnAgExcluir";
-            this.btnAgExcluir.Size = new System.Drawing.Size(168, 43);
-            this.btnAgExcluir.TabIndex = 8;
-            this.btnAgExcluir.Text = "EXCLUIR";
-            this.btnAgExcluir.UseVisualStyleBackColor = true;
+            this.btnCadEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCadEditar.Location = new System.Drawing.Point(243, 364);
+            this.btnCadEditar.Name = "btnCadEditar";
+            this.btnCadEditar.Size = new System.Drawing.Size(168, 43);
+            this.btnCadEditar.TabIndex = 9;
+            this.btnCadEditar.Text = "EDITAR";
+            this.btnCadEditar.UseVisualStyleBackColor = true;
+            this.btnCadEditar.Visible = false;
+            this.btnCadEditar.Click += new System.EventHandler(this.btnCadEditar_Click);
             // 
             // btnAgAgendar
             // 
             this.btnAgAgendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgAgendar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAgAgendar.Location = new System.Drawing.Point(7, 364);
+            this.btnAgAgendar.Location = new System.Drawing.Point(473, 364);
             this.btnAgAgendar.Name = "btnAgAgendar";
             this.btnAgAgendar.Size = new System.Drawing.Size(168, 43);
             this.btnAgAgendar.TabIndex = 7;
             this.btnAgAgendar.Text = "AGENDAR";
             this.btnAgAgendar.UseVisualStyleBackColor = true;
+            this.btnAgAgendar.Click += new System.EventHandler(this.btnAgAgendar_Click);
             // 
             // lblDadosPessoais
             // 
@@ -217,17 +199,29 @@
             // pnlAgAgendamento
             // 
             this.pnlAgAgendamento.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlAgAgendamento.Controls.Add(this.dtTmPickrDataAg);
             this.pnlAgAgendamento.Controls.Add(this.cmbBoxAgSituacao);
             this.pnlAgAgendamento.Controls.Add(this.lblAgSituacao);
-            this.pnlAgAgendamento.Controls.Add(this.txtBoxAgDataAg);
             this.pnlAgAgendamento.Controls.Add(this.lblagDataAg);
             this.pnlAgAgendamento.Location = new System.Drawing.Point(-2, 277);
             this.pnlAgAgendamento.Name = "pnlAgAgendamento";
             this.pnlAgAgendamento.Size = new System.Drawing.Size(650, 81);
             this.pnlAgAgendamento.TabIndex = 7;
             // 
+            // dtTmPickrDataAg
+            // 
+            this.dtTmPickrDataAg.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtTmPickrDataAg.Location = new System.Drawing.Point(7, 34);
+            this.dtTmPickrDataAg.Name = "dtTmPickrDataAg";
+            this.dtTmPickrDataAg.Size = new System.Drawing.Size(300, 20);
+            this.dtTmPickrDataAg.TabIndex = 8;
+            // 
             // cmbBoxAgSituacao
             // 
+            this.cmbBoxAgSituacao.AllowDrop = true;
+            this.cmbBoxAgSituacao.BackColor = System.Drawing.SystemColors.Window;
+            this.cmbBoxAgSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBoxAgSituacao.Enabled = false;
             this.cmbBoxAgSituacao.FormattingEnabled = true;
             this.cmbBoxAgSituacao.Items.AddRange(new object[] {
             "AGENDADO",
@@ -249,13 +243,6 @@
             this.lblAgSituacao.TabIndex = 19;
             this.lblAgSituacao.Text = "SITUAÇÃO:";
             // 
-            // txtBoxAgDataAg
-            // 
-            this.txtBoxAgDataAg.Location = new System.Drawing.Point(6, 33);
-            this.txtBoxAgDataAg.Name = "txtBoxAgDataAg";
-            this.txtBoxAgDataAg.Size = new System.Drawing.Size(301, 20);
-            this.txtBoxAgDataAg.TabIndex = 18;
-            // 
             // lblagDataAg
             // 
             this.lblagDataAg.AutoSize = true;
@@ -263,16 +250,16 @@
             this.lblagDataAg.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lblagDataAg.Location = new System.Drawing.Point(4, 16);
             this.lblagDataAg.Name = "lblagDataAg";
-            this.lblagDataAg.Size = new System.Drawing.Size(143, 13);
+            this.lblagDataAg.Size = new System.Drawing.Size(148, 13);
             this.lblagDataAg.TabIndex = 17;
-            this.lblagDataAg.Text = "DATA AGENDAMENTO:";
+            this.lblagDataAg.Text = "*DATA AGENDAMENTO:";
             // 
             // pnlAgDadosPessoais
             // 
             this.pnlAgDadosPessoais.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlAgDadosPessoais.Controls.Add(this.txtBxAgContato);
+            this.pnlAgDadosPessoais.Controls.Add(this.mkdTxtBxAgCPF);
+            this.pnlAgDadosPessoais.Controls.Add(this.mkdTxtBxAgContato);
             this.pnlAgDadosPessoais.Controls.Add(this.lblAgContato);
-            this.pnlAgDadosPessoais.Controls.Add(this.txtBxAgCPF);
             this.pnlAgDadosPessoais.Controls.Add(this.lblAgCPF);
             this.pnlAgDadosPessoais.Controls.Add(this.txtBxAgNomeCompleto);
             this.pnlAgDadosPessoais.Controls.Add(this.lblAgNomeCompleto);
@@ -281,12 +268,23 @@
             this.pnlAgDadosPessoais.Size = new System.Drawing.Size(650, 81);
             this.pnlAgDadosPessoais.TabIndex = 5;
             // 
-            // txtBxAgContato
+            // mkdTxtBxAgCPF
             // 
-            this.txtBxAgContato.Location = new System.Drawing.Point(495, 34);
-            this.txtBxAgContato.Name = "txtBxAgContato";
-            this.txtBxAgContato.Size = new System.Drawing.Size(149, 20);
-            this.txtBxAgContato.TabIndex = 12;
+            this.mkdTxtBxAgCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkdTxtBxAgCPF.Location = new System.Drawing.Point(323, 34);
+            this.mkdTxtBxAgCPF.Mask = "000.000.000-00";
+            this.mkdTxtBxAgCPF.Name = "mkdTxtBxAgCPF";
+            this.mkdTxtBxAgCPF.Size = new System.Drawing.Size(148, 21);
+            this.mkdTxtBxAgCPF.TabIndex = 27;
+            // 
+            // mkdTxtBxAgContato
+            // 
+            this.mkdTxtBxAgContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkdTxtBxAgContato.Location = new System.Drawing.Point(492, 34);
+            this.mkdTxtBxAgContato.Mask = "(99)0 0000-0000";
+            this.mkdTxtBxAgContato.Name = "mkdTxtBxAgContato";
+            this.mkdTxtBxAgContato.Size = new System.Drawing.Size(148, 21);
+            this.mkdTxtBxAgContato.TabIndex = 25;
             // 
             // lblAgContato
             // 
@@ -295,16 +293,9 @@
             this.lblAgContato.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lblAgContato.Location = new System.Drawing.Point(493, 17);
             this.lblAgContato.Name = "lblAgContato";
-            this.lblAgContato.Size = new System.Drawing.Size(70, 13);
+            this.lblAgContato.Size = new System.Drawing.Size(75, 13);
             this.lblAgContato.TabIndex = 11;
-            this.lblAgContato.Text = "CONTATO:";
-            // 
-            // txtBxAgCPF
-            // 
-            this.txtBxAgCPF.Location = new System.Drawing.Point(322, 34);
-            this.txtBxAgCPF.Name = "txtBxAgCPF";
-            this.txtBxAgCPF.Size = new System.Drawing.Size(162, 20);
-            this.txtBxAgCPF.TabIndex = 10;
+            this.lblAgContato.Text = "*CONTATO:";
             // 
             // lblAgCPF
             // 
@@ -313,13 +304,14 @@
             this.lblAgCPF.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lblAgCPF.Location = new System.Drawing.Point(320, 17);
             this.lblAgCPF.Name = "lblAgCPF";
-            this.lblAgCPF.Size = new System.Drawing.Size(34, 13);
+            this.lblAgCPF.Size = new System.Drawing.Size(39, 13);
             this.lblAgCPF.TabIndex = 9;
-            this.lblAgCPF.Text = "CPF:";
+            this.lblAgCPF.Text = "*CPF:";
             // 
             // txtBxAgNomeCompleto
             // 
             this.txtBxAgNomeCompleto.Location = new System.Drawing.Point(6, 34);
+            this.txtBxAgNomeCompleto.MaxLength = 100;
             this.txtBxAgNomeCompleto.Name = "txtBxAgNomeCompleto";
             this.txtBxAgNomeCompleto.Size = new System.Drawing.Size(301, 20);
             this.txtBxAgNomeCompleto.TabIndex = 8;
@@ -331,9 +323,9 @@
             this.lblAgNomeCompleto.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lblAgNomeCompleto.Location = new System.Drawing.Point(4, 17);
             this.lblAgNomeCompleto.Name = "lblAgNomeCompleto";
-            this.lblAgNomeCompleto.Size = new System.Drawing.Size(118, 13);
+            this.lblAgNomeCompleto.Size = new System.Drawing.Size(123, 13);
             this.lblAgNomeCompleto.TabIndex = 7;
-            this.lblAgNomeCompleto.Text = "NOME COMPLETO:";
+            this.lblAgNomeCompleto.Text = "*NOME COMPLETO:";
             // 
             // lblAgenda
             // 
@@ -371,8 +363,8 @@
             // pnlAgDemanda
             // 
             this.pnlAgDemanda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlAgDemanda.Controls.Add(this.mkdTxtBxAgNumero);
             this.pnlAgDemanda.Controls.Add(this.cmbBxAgDemanda);
-            this.pnlAgDemanda.Controls.Add(this.txtBxAgNumero);
             this.pnlAgDemanda.Controls.Add(this.lblAgNumero);
             this.pnlAgDemanda.Controls.Add(this.lblAgDemanda);
             this.pnlAgDemanda.Location = new System.Drawing.Point(303, 183);
@@ -380,10 +372,23 @@
             this.pnlAgDemanda.Size = new System.Drawing.Size(650, 81);
             this.pnlAgDemanda.TabIndex = 6;
             // 
+            // mkdTxtBxAgNumero
+            // 
+            this.mkdTxtBxAgNumero.Location = new System.Drawing.Point(338, 34);
+            this.mkdTxtBxAgNumero.Mask = "00000000000000000000";
+            this.mkdTxtBxAgNumero.Name = "mkdTxtBxAgNumero";
+            this.mkdTxtBxAgNumero.Size = new System.Drawing.Size(305, 20);
+            this.mkdTxtBxAgNumero.TabIndex = 21;
+            this.mkdTxtBxAgNumero.ValidatingType = typeof(int);
+            // 
             // cmbBxAgDemanda
             // 
+            this.cmbBxAgDemanda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBxAgDemanda.FormattingEnabled = true;
             this.cmbBxAgDemanda.Items.AddRange(new object[] {
+            "SUPE - DEFENSORIA",
+            "SUPE - MINISTÉRIO PÚBLICO",
+            "SUPE - DEFENSORIA DA UNIÃO",
             "DEFENSORIA",
             "MINISTÉRIO PÚBLICO",
             "DEFENSORIA DA UNIÃO",
@@ -395,13 +400,6 @@
             this.cmbBxAgDemanda.Name = "cmbBxAgDemanda";
             this.cmbBxAgDemanda.Size = new System.Drawing.Size(304, 21);
             this.cmbBxAgDemanda.TabIndex = 20;
-            // 
-            // txtBxAgNumero
-            // 
-            this.txtBxAgNumero.Location = new System.Drawing.Point(337, 33);
-            this.txtBxAgNumero.Name = "txtBxAgNumero";
-            this.txtBxAgNumero.Size = new System.Drawing.Size(304, 20);
-            this.txtBxAgNumero.TabIndex = 16;
             // 
             // lblAgNumero
             // 
@@ -421,15 +419,42 @@
             this.lblAgDemanda.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lblAgDemanda.Location = new System.Drawing.Point(4, 16);
             this.lblAgDemanda.Name = "lblAgDemanda";
-            this.lblAgDemanda.Size = new System.Drawing.Size(72, 13);
+            this.lblAgDemanda.Size = new System.Drawing.Size(77, 13);
             this.lblAgDemanda.TabIndex = 13;
-            this.lblAgDemanda.Text = "DEMANDA:";
+            this.lblAgDemanda.Text = "*DEMANDA:";
+            // 
+            // btnAgendar
+            // 
+            this.btnAgendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgendar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAgendar.Location = new System.Drawing.Point(12, 228);
+            this.btnAgendar.Name = "btnAgendar";
+            this.btnAgendar.Size = new System.Drawing.Size(285, 62);
+            this.btnAgendar.TabIndex = 3;
+            this.btnAgendar.Text = "AGENDAR";
+            this.btnAgendar.UseVisualStyleBackColor = true;
+            this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
+            // 
+            // lkLblAgLinkedinDevMathews
+            // 
+            this.lkLblAgLinkedinDevMathews.AutoSize = true;
+            this.lkLblAgLinkedinDevMathews.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lkLblAgLinkedinDevMathews.LinkColor = System.Drawing.Color.White;
+            this.lkLblAgLinkedinDevMathews.Location = new System.Drawing.Point(783, 431);
+            this.lkLblAgLinkedinDevMathews.Name = "lkLblAgLinkedinDevMathews";
+            this.lkLblAgLinkedinDevMathews.Size = new System.Drawing.Size(170, 13);
+            this.lkLblAgLinkedinDevMathews.TabIndex = 7;
+            this.lkLblAgLinkedinDevMathews.TabStop = true;
+            this.lkLblAgLinkedinDevMathews.Text = "(82)9 9990-1016 - Freire M.B";
+            this.lkLblAgLinkedinDevMathews.VisitedLinkColor = System.Drawing.Color.White;
+            this.lkLblAgLinkedinDevMathews.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // FrmAgendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 450);
+            this.Controls.Add(this.lkLblAgLinkedinDevMathews);
             this.Controls.Add(this.pnlAgDemanda);
             this.Controls.Add(this.pnlAgendamento);
             this.Controls.Add(this.btnConsultar);
@@ -439,6 +464,7 @@
             this.Controls.Add(this.lbLinksUteis);
             this.Controls.Add(this.pctBoxLogo);
             this.Name = "FrmAgendar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAgendar";
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).EndInit();
             this.pnlLinksUteis.ResumeLayout(false);
@@ -463,14 +489,11 @@
         private System.Windows.Forms.Panel pnlLinksUteis;
         private System.Windows.Forms.Button btnNissLinkUteis;
         private System.Windows.Forms.Button btnCadmutLinkUteis;
-        private System.Windows.Forms.Button btnAgendar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Panel pnlAgendamento;
         private System.Windows.Forms.Label lblAgendamento;
         private System.Windows.Forms.Label lblDadosPessoais;
-        private System.Windows.Forms.Button btnAgEditar;
-        private System.Windows.Forms.Button btnAgExcluir;
         private System.Windows.Forms.Button btnAgAgendar;
         private System.Windows.Forms.Panel pnlAgAgendamento;
         private System.Windows.Forms.Panel pnlAgDadosPessoais;
@@ -478,19 +501,22 @@
         private System.Windows.Forms.Label lblAgenda;
         private System.Windows.Forms.Label lblDemanda;
         private System.Windows.Forms.Panel pnlAgDemanda;
-        private System.Windows.Forms.TextBox txtBxAgContato;
         private System.Windows.Forms.Label lblAgContato;
-        private System.Windows.Forms.TextBox txtBxAgCPF;
         private System.Windows.Forms.Label lblAgCPF;
         private System.Windows.Forms.TextBox txtBxAgNomeCompleto;
         private System.Windows.Forms.Label lblAgDemanda;
-        private System.Windows.Forms.TextBox txtBoxAgDataAg;
         private System.Windows.Forms.Label lblagDataAg;
-        private System.Windows.Forms.TextBox txtBxAgNumero;
         private System.Windows.Forms.Label lblAgNumero;
         private System.Windows.Forms.Label lblAgSituacao;
         private System.Windows.Forms.ComboBox cmbBoxAgSituacao;
         private System.Windows.Forms.ComboBox cmbBxAgDemanda;
+        private System.Windows.Forms.DateTimePicker dtTmPickrDataAg;
+        private System.Windows.Forms.MaskedTextBox mkdTxtBxAgNumero;
+        private System.Windows.Forms.MaskedTextBox mkdTxtBxAgContato;
+        private System.Windows.Forms.MaskedTextBox mkdTxtBxAgCPF;
+        private System.Windows.Forms.Button btnCadEditar;
+        private System.Windows.Forms.Button btnAgendar;
+        private System.Windows.Forms.LinkLabel lkLblAgLinkedinDevMathews;
     }
 }
 
