@@ -49,10 +49,23 @@ namespace Teu_Assistente_HABITACAO
             }
             return texto;
         }
-        public bool aceitarQntNumeros(int quantidade, string numero)
+        public bool aceitarNumeros(int qnt, string texto)
         {
             bool resultado = false;
-            return numero.Length != quantidade ? true : false;
+            int qntCaracter = 0;
+            for(int passarCaracter = 0; passarCaracter < texto.Length; passarCaracter++)
+            {
+                if(char.IsNumber(texto, passarCaracter))
+                {
+                    qntCaracter++;
+                    if(qntCaracter == qnt)
+                    {
+                        resultado = true;
+                        break;
+                    }
+                }
+            }
+            return resultado;
         }
     }
 }

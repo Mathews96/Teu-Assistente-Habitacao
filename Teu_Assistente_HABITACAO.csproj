@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="CONTROLLER\Agendamento.cs" />
     <Compile Include="CONTROLLER\CadastroHabitacional.cs" />
+    <Compile Include="CONTROLLER\CadastroUsuario.cs" />
     <Compile Include="CONTROLLER\Conjuge.cs" />
     <Compile Include="CONTROLLER\EstadoCivil.cs" />
     <Compile Include="CONTROLLER\Renda.cs" />
@@ -62,8 +63,11 @@
     <Compile Include="CONTROLLER\TratarDados.cs" />
     <Compile Include="MODEL\BDAgendamento.cs" />
     <Compile Include="MODEL\BDCadastro.cs" />
+    <Compile Include="MODEL\BDCadastroUsuario.cs" />
     <Compile Include="MODEL\BDConexao.cs" />
     <Compile Include="MODEL\BDConjuge.cs" />
+    <Compile Include="MODEL\BDDataGridViewAgendamento.cs" />
+    <Compile Include="MODEL\BDDataGridViewCadastro.cs" />
     <Compile Include="MODEL\BDEndereco.cs" />
     <Compile Include="MODEL\BDComprovantes.cs" />
     <Compile Include="VIEW\FrmTelaLogin.cs">

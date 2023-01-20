@@ -54,12 +54,12 @@ namespace Teu_Assistente_HABITACAO
             }
             try
             {
-                this.Cpf = int.Parse(reader["CPF"].ToString());
-                this.Nis = int.Parse(reader["NIS"].ToString());
+                this.Cpf = long.Parse(reader["CPF"].ToString());
+                this.Nis = long.Parse(reader["NIS"].ToString());
                 this.NomeCompleto = reader["NOME_COMPLETO"].ToString();
                 this.Email = reader["EMAIL"].ToString();
-                this.Telefone = int.Parse(reader["TELEFONE"].ToString());
-                this.Whatsapp = int.Parse(reader["WHATSAPP"].ToString());
+                this.Telefone = long.Parse(reader["TELEFONE"].ToString());
+                this.Whatsapp = long.Parse(reader["WHATSAPP"].ToString());
                 conexao.desconectar();
                 cmd.Parameters.Clear();
                 //Criar_log

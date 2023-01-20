@@ -59,7 +59,6 @@
             this.lblCadNomeCompleto = new System.Windows.Forms.Label();
             this.lblCadastro = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.lkLblCadLinkedinDevMathews = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
             this.pnlCadastroPag1.SuspendLayout();
@@ -100,6 +99,7 @@
             // 
             // btnNissLinkUteis
             // 
+            this.btnNissLinkUteis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNissLinkUteis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNissLinkUteis.Location = new System.Drawing.Point(185, 8);
             this.btnNissLinkUteis.Name = "btnNissLinkUteis";
@@ -110,6 +110,7 @@
             // 
             // btnCadmutLinkUteis
             // 
+            this.btnCadmutLinkUteis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadmutLinkUteis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadmutLinkUteis.Location = new System.Drawing.Point(15, 8);
             this.btnCadmutLinkUteis.Name = "btnCadmutLinkUteis";
@@ -120,24 +121,26 @@
             // 
             // btnAgendar
             // 
+            this.btnAgendar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgendar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAgendar.Location = new System.Drawing.Point(12, 228);
             this.btnAgendar.Name = "btnAgendar";
             this.btnAgendar.Size = new System.Drawing.Size(285, 62);
             this.btnAgendar.TabIndex = 3;
-            this.btnAgendar.Text = "AGENDAR";
+            this.btnAgendar.Text = "AGENDA";
             this.btnAgendar.UseVisualStyleBackColor = true;
             this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
             // btnConsultar
             // 
+            this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.Location = new System.Drawing.Point(12, 364);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(285, 62);
             this.btnConsultar.TabIndex = 5;
-            this.btnConsultar.Text = "CONSULTAR";
+            this.btnConsultar.Text = "CONSULTA";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
@@ -167,6 +170,7 @@
             // 
             // btnCadProximo
             // 
+            this.btnCadProximo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadProximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadProximo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCadProximo.Location = new System.Drawing.Point(471, 364);
@@ -250,6 +254,7 @@
             // 
             // dtTmPckCadNascimento
             // 
+            this.dtTmPckCadNascimento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtTmPckCadNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtTmPckCadNascimento.Location = new System.Drawing.Point(8, 95);
             this.dtTmPckCadNascimento.Name = "dtTmPckCadNascimento";
@@ -382,35 +387,21 @@
             // 
             // btnCadastrar
             // 
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.Location = new System.Drawing.Point(12, 296);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(285, 62);
             this.btnCadastrar.TabIndex = 4;
-            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.Text = "CADASTRO";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // lkLblCadLinkedinDevMathews
-            // 
-            this.lkLblCadLinkedinDevMathews.AutoSize = true;
-            this.lkLblCadLinkedinDevMathews.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lkLblCadLinkedinDevMathews.LinkColor = System.Drawing.Color.White;
-            this.lkLblCadLinkedinDevMathews.Location = new System.Drawing.Point(783, 430);
-            this.lkLblCadLinkedinDevMathews.Name = "lkLblCadLinkedinDevMathews";
-            this.lkLblCadLinkedinDevMathews.Size = new System.Drawing.Size(170, 13);
-            this.lkLblCadLinkedinDevMathews.TabIndex = 8;
-            this.lkLblCadLinkedinDevMathews.TabStop = true;
-            this.lkLblCadLinkedinDevMathews.Text = "(82)9 9990-1016 - Freire M.B";
-            this.lkLblCadLinkedinDevMathews.VisitedLinkColor = System.Drawing.Color.White;
-            this.lkLblCadLinkedinDevMathews.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkLblCadLinkedinDevMathews_LinkClicked);
             // 
             // FrmCadastroPag1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 450);
-            this.Controls.Add(this.lkLblCadLinkedinDevMathews);
             this.Controls.Add(this.pnlCadastroPag1);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastrar);
@@ -465,7 +456,6 @@
         private System.Windows.Forms.MaskedTextBox mkdTxtBxCadNIS;
         private System.Windows.Forms.MaskedTextBox mkdTxtBxCadCPF;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.LinkLabel lkLblCadLinkedinDevMathews;
     }
 }
 

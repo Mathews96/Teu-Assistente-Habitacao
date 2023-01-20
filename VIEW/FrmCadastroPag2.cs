@@ -15,51 +15,97 @@ namespace Teu_Assistente_HABITACAO
         public FrmCadEnderecoPag2()
         {
             InitializeComponent();
+            this.retornarDados();
+        }
+        private void retornarDados()
+        {
+            txtBxCadEndereco.Text = VarGlobaisFrmCadastro.dadosCadPag2Endereco;
+            txtBxCadEndComplemento.Text = VarGlobaisFrmCadastro.dadosCadPag2Complemento;
+            mkdTxtBxCadEndNumero.Text = VarGlobaisFrmCadastro.dadosCadPag2Numero.ToString();
+            comboBoxCadEndBairro.Text = VarGlobaisFrmCadastro.dadosCadPag2Bairro;
+            comboBoxCadEndCidade.Text = VarGlobaisFrmCadastro.dadosCadPag2Cidade;
+            comboBoxCadEndUf.Text = VarGlobaisFrmCadastro.dadosCadPag2Uf;
+            mkdTxtBxCadEndCep.Text = VarGlobaisFrmCadastro.dadosCadPag2Cep.ToString();
+        }
+        private void guardarDados()
+        {
+            TratarDados tratarDados = new TratarDados();
+            VarGlobaisFrmCadastro.dadosCadPag2Endereco = txtBxCadEndereco.Text;
+            VarGlobaisFrmCadastro.dadosCadPag2Complemento = txtBxCadEndComplemento.Text;
+            //VarGlobaisFrmCadastro.dadosCadPag2Numero = int.Parse(tratarDados.retirarLetrasECaracteres(mkdTxtBxCadEndNumero.Text));
+            if (string.IsNullOrEmpty(tratarDados.retirarLetrasECaracteres(mkdTxtBxCadEndNumero.Text)))
+            {
+                VarGlobaisFrmCadastro.dadosCadPag2Numero = null;
+            }
+            else
+            {
+                VarGlobaisFrmCadastro.dadosCadPag2Numero = int.Parse(tratarDados.retirarLetrasECaracteres(mkdTxtBxCadEndNumero.Text));
+            }
+            VarGlobaisFrmCadastro.dadosCadPag2Bairro = comboBoxCadEndBairro.Text;
+            VarGlobaisFrmCadastro.dadosCadPag2Cidade = comboBoxCadEndCidade.Text;
+            VarGlobaisFrmCadastro.dadosCadPag2Uf = comboBoxCadEndUf.Text;
+            //VarGlobaisFrmCadastro.dadosCadPag2Cep = int.Parse(tratarDados.retirarLetrasECaracteres(mkdTxtBxCadEndCep.Text));
+            if (string.IsNullOrEmpty(tratarDados.retirarLetrasECaracteres(mkdTxtBxCadEndCep.Text)))
+            {
+                VarGlobaisFrmCadastro.dadosCadPag2Cep = null;
+            }
+            else
+            {
+                VarGlobaisFrmCadastro.dadosCadPag2Cep = int.Parse(tratarDados.retirarLetrasECaracteres(mkdTxtBxCadEndCep.Text));
+            }
         }
         private void btnCadProximo_Click(object sender, EventArgs e)
         {
-            TratarDados tratarDados = new TratarDados();         
-            if(tratarDados.naoAceitaNuloOuVazio(txtBxCadEndereco.Text))
+            TratarDados tratarDados = new TratarDados();
+            if (!tratarDados.aceitarNumeros(1, mkdTxtBxCadEndNumero.Text))
             {
-                MessageBox.Show("CAMPO OBRIGATÓRIO:\n- ENDEREÇO", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("CAMPO OBRIGATÓRIO:\n- NÚMERO", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if(tratarDados.naoAceitaNumero(txtBxCadEndereco.Text))
-            {
-                MessageBox.Show("DIGITE APENAS LETRAS NO CAMPO:\n- ENDEREÇO", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }        
-            else if (tratarDados.naoAceitaNuloOuVazio(comboBoxCadEndBairro.Text))
-            {
-                MessageBox.Show("CAMPO OBRIGATÓRIO:\n- BAIRRO", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (tratarDados.naoAceitaNumero(comboBoxCadEndBairro.Text))
-            {
-                MessageBox.Show("DIGITE APENAS LETRAS NO CAMPO:\n- BAIRRO", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (tratarDados.naoAceitaNuloOuVazio(comboBoxCadEndCidade.Text))
-            {
-                MessageBox.Show("CAMPO OBRIGATÓRIO:\n- CIDADE", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (tratarDados.naoAceitaNumero(comboBoxCadEndCidade.Text))
-            {
-                MessageBox.Show("DIGITE APENAS LETRAS NO CIDADE:\n- BAIRRO", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }            
-            else if (tratarDados.naoAceitaNuloOuVazio(mkdTxtBxCadEndCep.Text))
+            else if (!tratarDados.aceitarNumeros(8, mkdTxtBxCadEndCep.Text))
             {
                 MessageBox.Show("CAMPO OBRIGATÓRIO:\n- CEP", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                VarGlobaisFrmCadastro.dadosCadPag2Endereco = txtBxCadEndereco.Text;
-                VarGlobaisFrmCadastro.dadosCadPag2Complemento = txtBxCadEndComplemento.Text;
-                VarGlobaisFrmCadastro.dadosCadPag2Numero = int.Parse(tratarDados.retirarLetrasECaracteres(mkdTxtBxCadEndNumero.Text));
-                VarGlobaisFrmCadastro.dadosCadPag2Bairro = comboBoxCadEndBairro.Text;
-                VarGlobaisFrmCadastro.dadosCadPag2Cidade = comboBoxCadEndCidade.Text;
-                VarGlobaisFrmCadastro.dadosCadPag2Uf = comboBoxCadEndUf.Text;
-                VarGlobaisFrmCadastro.dadosCadPag2Cep = int.Parse(tratarDados.retirarLetrasECaracteres(mkdTxtBxCadEndCep.Text));
-
-                Hide();
-                FrmCadCompConjungePag3 frmCadCompConjungePag3 = new FrmCadCompConjungePag3();
-                frmCadCompConjungePag3.ShowDialog();
+                if (tratarDados.naoAceitaNuloOuVazio(txtBxCadEndereco.Text))
+                {
+                    MessageBox.Show("CAMPO OBRIGATÓRIO:\n- ENDEREÇO", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if(tratarDados.naoAceitaNumero(txtBxCadEndereco.Text))
+                {
+                    MessageBox.Show("DIGITE APENAS LETRAS NO CAMPO:\n- ENDEREÇO", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }        
+                else if (tratarDados.naoAceitaNuloOuVazio(comboBoxCadEndBairro.Text))
+                {
+                    MessageBox.Show("CAMPO OBRIGATÓRIO:\n- BAIRRO", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (tratarDados.naoAceitaNumero(comboBoxCadEndBairro.Text))
+                {
+                    MessageBox.Show("DIGITE APENAS LETRAS NO CAMPO:\n- BAIRRO", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (tratarDados.naoAceitaNuloOuVazio(comboBoxCadEndCidade.Text))
+                {
+                    MessageBox.Show("CAMPO OBRIGATÓRIO:\n- CIDADE", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (tratarDados.naoAceitaNumero(comboBoxCadEndCidade.Text))
+                {
+                    MessageBox.Show("DIGITE APENAS LETRAS NO CIDADE:\n- CIDADE", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (tratarDados.naoAceitaNuloOuVazio(comboBoxCadEndUf.Text))
+                {
+                    MessageBox.Show("CAMPO OBRIGATÓRIO:\n- UF", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (tratarDados.naoAceitaNumero(comboBoxCadEndUf.Text))
+                {
+                    MessageBox.Show("DIGITE APENAS LETRAS NO UF:\n- CIDADE", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    this. guardarDados();
+                    Hide();
+                    FrmCadCompConjungePag3 frmCadCompConjungePag3 = new FrmCadCompConjungePag3();
+                    frmCadCompConjungePag3.ShowDialog();
+                }
             }
         }
         private void btnAgendar_Click(object sender, EventArgs e)
@@ -83,15 +129,15 @@ namespace Teu_Assistente_HABITACAO
 
         private void lkLblCadLinkedinDevMathews_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            try
-            {
-                lkLblCadLinkedinDevMathews.LinkVisited = true;
-                System.Diagnostics.Process.Start("https://www.linkedin.com/in/mathews-freire-02654211a/");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("NÃO FOI POSSÍVEL ACEESAR O LINK, ALGO DEU ERRADO", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+        }
+
+        private void btnCadVoltar_Click(object sender, EventArgs e)
+        {
+            this.guardarDados();
+            Hide();
+            FrmCadastroPag1 frmCadastroPag1 = new FrmCadastroPag1();
+            frmCadastroPag1.ShowDialog();
         }
     }
 }

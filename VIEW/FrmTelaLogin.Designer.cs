@@ -32,12 +32,13 @@
             this.pctBoxLogo = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pnlLinksUteis = new System.Windows.Forms.Panel();
-            this.lkLblLogLinkedinDevMathews = new System.Windows.Forms.LinkLabel();
+            this.btnInfoContato = new System.Windows.Forms.Button();
+            this.lblVersao = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.btnEsqueciSenha = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
             this.SuspendLayout();
@@ -67,8 +68,9 @@
             // pnlLinksUteis
             // 
             this.pnlLinksUteis.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlLinksUteis.Controls.Add(this.btnInfoContato);
+            this.pnlLinksUteis.Controls.Add(this.lblVersao);
             this.pnlLinksUteis.Controls.Add(this.maskedTextBox1);
-            this.pnlLinksUteis.Controls.Add(this.lkLblLogLinkedinDevMathews);
             this.pnlLinksUteis.Controls.Add(this.textBox2);
             this.pnlLinksUteis.Controls.Add(this.lblSenha);
             this.pnlLinksUteis.Controls.Add(this.lblUsuario);
@@ -77,27 +79,46 @@
             this.pnlLinksUteis.Size = new System.Drawing.Size(285, 153);
             this.pnlLinksUteis.TabIndex = 2;
             // 
-            // lkLblLogLinkedinDevMathews
+            // btnInfoContato
             // 
-            this.lkLblLogLinkedinDevMathews.AutoSize = true;
-            this.lkLblLogLinkedinDevMathews.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lkLblLogLinkedinDevMathews.LinkColor = System.Drawing.Color.White;
-            this.lkLblLogLinkedinDevMathews.Location = new System.Drawing.Point(113, -1);
-            this.lkLblLogLinkedinDevMathews.Name = "lkLblLogLinkedinDevMathews";
-            this.lkLblLogLinkedinDevMathews.Size = new System.Drawing.Size(170, 13);
-            this.lkLblLogLinkedinDevMathews.TabIndex = 26;
-            this.lkLblLogLinkedinDevMathews.TabStop = true;
-            this.lkLblLogLinkedinDevMathews.Text = "(82)9 9990-1016 - Freire M.B";
-            this.lkLblLogLinkedinDevMathews.VisitedLinkColor = System.Drawing.Color.White;
-            this.lkLblLogLinkedinDevMathews.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkLblLogLinkedinDevMathews_LinkClicked);
+            this.btnInfoContato.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInfoContato.Font = new System.Drawing.Font("Segoe UI Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfoContato.Location = new System.Drawing.Point(252, -2);
+            this.btnInfoContato.Name = "btnInfoContato";
+            this.btnInfoContato.Size = new System.Drawing.Size(31, 30);
+            this.btnInfoContato.TabIndex = 6;
+            this.btnInfoContato.Text = "?";
+            this.btnInfoContato.UseVisualStyleBackColor = true;
+            this.btnInfoContato.Click += new System.EventHandler(this.btnInfoContato_Click);
+            // 
+            // lblVersao
+            // 
+            this.lblVersao.AutoSize = true;
+            this.lblVersao.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVersao.Location = new System.Drawing.Point(0, 135);
+            this.lblVersao.Name = "lblVersao";
+            this.lblVersao.Size = new System.Drawing.Size(29, 13);
+            this.lblVersao.TabIndex = 6;
+            this.lblVersao.Text = "v1.0";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(3, 50);
+            this.maskedTextBox1.Mask = "000.000.000.-00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(271, 22);
+            this.maskedTextBox1.TabIndex = 27;
+            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
             // 
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox2.Location = new System.Drawing.Point(3, 107);
             this.textBox2.MaxLength = 20;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(271, 20);
+            this.textBox2.Size = new System.Drawing.Size(271, 22);
             this.textBox2.TabIndex = 4;
             this.textBox2.Text = "DIGITE SUA SENHA...";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -116,7 +137,8 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntrar.Font = new System.Drawing.Font("Segoe UI Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.Location = new System.Drawing.Point(12, 275);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(285, 30);
@@ -127,22 +149,14 @@
             // 
             // btnEsqueciSenha
             // 
-            this.btnEsqueciSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEsqueciSenha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEsqueciSenha.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEsqueciSenha.Location = new System.Drawing.Point(12, 311);
             this.btnEsqueciSenha.Name = "btnEsqueciSenha";
             this.btnEsqueciSenha.Size = new System.Drawing.Size(285, 30);
             this.btnEsqueciSenha.TabIndex = 5;
             this.btnEsqueciSenha.Text = "ESQUECI A SENHA";
             this.btnEsqueciSenha.UseVisualStyleBackColor = true;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(3, 50);
-            this.maskedTextBox1.Mask = "000.000.000.-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(271, 20);
-            this.maskedTextBox1.TabIndex = 27;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FrmTelaLogin
             // 
@@ -173,8 +187,9 @@
         private System.Windows.Forms.Button btnEsqueciSenha;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.LinkLabel lkLblLogLinkedinDevMathews;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label lblVersao;
+        private System.Windows.Forms.Button btnInfoContato;
     }
 }
 

@@ -6,7 +6,13 @@ namespace Teu_Assistente_HABITACAO
 
     internal class CadastroHabitacional : BDCadastro
     {
-        internal Endereco Endereco { get; set; }
+        public CadastroHabitacional()
+        {
+            this.Endereco = new Endereco();
+            this.Conjuge = new Conjuge();
+        }
+        //internal Endereco Endereco { get; set; }
+        internal Endereco Endereco;
 
         internal Conjuge Conjuge { get; set; }
         //internal Deficiente ComprovanteDeficiente { get; set; }
@@ -62,8 +68,9 @@ namespace Teu_Assistente_HABITACAO
         }
         public void consultar(long cpf)
         {
-            this.getCadastro(cpf);
+            this.getCadastro(cpf);            
             this.Endereco.getEndereco(cpf);
+            this.Conjuge.getComprovanteConjunge(cpf);
         }
         public void download(long cpf)
         {

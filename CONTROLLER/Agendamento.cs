@@ -9,6 +9,10 @@ namespace Teu_Assistente_HABITACAO
         {
             inserirAgendamento(cpf);
         }
+        public void reagendar(long cpf)
+        {
+            this.setAgendamento(cpf);
+        }
         public void desagendar(long cpf)
         {
             /*if (getAgendamento(cpf))

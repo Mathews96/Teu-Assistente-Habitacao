@@ -46,6 +46,7 @@ namespace Teu_Assistente_HABITACAO
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT CPFSEC, CEP, ENDERECO, NUMERO, COMPLEMENTO, BAIRRO, CIDADE, UF FROM ENDERECOS WHERE CPFSEC=@CPFSEC";
             cmd.Parameters.AddWithValue("@CPFSEC", cpf);
+            cmd.Connection = conexao.conectar();
             SqlDataReader reader = cmd.ExecuteReader();
             if (!reader.Read())
             {

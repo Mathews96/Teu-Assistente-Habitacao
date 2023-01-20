@@ -38,7 +38,7 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.pnlConsultar = new System.Windows.Forms.Panel();
-            this.rdBtmConCadastro = new System.Windows.Forms.RadioButton();
+            this.rdBtmConCadastrado = new System.Windows.Forms.RadioButton();
             this.rdBtmConAgendado = new System.Windows.Forms.RadioButton();
             this.cmbBxConsultarPor = new System.Windows.Forms.ComboBox();
             this.btnConConsultar = new System.Windows.Forms.Button();
@@ -48,7 +48,6 @@
             this.btnConExcluir = new System.Windows.Forms.Button();
             this.txtBxConBarraConsulta = new System.Windows.Forms.TextBox();
             this.lblCadastro = new System.Windows.Forms.Label();
-            this.lkLblConLinkedinDevMathews = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
             this.pnlConsultar.SuspendLayout();
@@ -90,6 +89,7 @@
             // 
             // btnNissLinkUteis
             // 
+            this.btnNissLinkUteis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNissLinkUteis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNissLinkUteis.Location = new System.Drawing.Point(185, 8);
             this.btnNissLinkUteis.Name = "btnNissLinkUteis";
@@ -97,9 +97,11 @@
             this.btnNissLinkUteis.TabIndex = 4;
             this.btnNissLinkUteis.Text = "NISS";
             this.btnNissLinkUteis.UseVisualStyleBackColor = true;
+            this.btnNissLinkUteis.Click += new System.EventHandler(this.btnNissLinkUteis_Click);
             // 
             // btnCadmutLinkUteis
             // 
+            this.btnCadmutLinkUteis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadmutLinkUteis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadmutLinkUteis.Location = new System.Drawing.Point(15, 8);
             this.btnCadmutLinkUteis.Name = "btnCadmutLinkUteis";
@@ -107,45 +109,49 @@
             this.btnCadmutLinkUteis.TabIndex = 3;
             this.btnCadmutLinkUteis.Text = "CADMUT";
             this.btnCadmutLinkUteis.UseVisualStyleBackColor = true;
+            this.btnCadmutLinkUteis.Click += new System.EventHandler(this.btnCadmutLinkUteis_Click);
             // 
             // btnAgendar
             // 
+            this.btnAgendar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgendar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAgendar.Location = new System.Drawing.Point(12, 228);
             this.btnAgendar.Name = "btnAgendar";
             this.btnAgendar.Size = new System.Drawing.Size(285, 62);
             this.btnAgendar.TabIndex = 3;
-            this.btnAgendar.Text = "AGENDAR";
+            this.btnAgendar.Text = "AGENDA";
             this.btnAgendar.UseVisualStyleBackColor = true;
             this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
             // btnCadastrar
             // 
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.Location = new System.Drawing.Point(12, 296);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(285, 62);
             this.btnCadastrar.TabIndex = 4;
-            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.Text = "CADASTRO";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnConsultar
             // 
+            this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.Location = new System.Drawing.Point(12, 364);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(285, 62);
             this.btnConsultar.TabIndex = 5;
-            this.btnConsultar.Text = "CONSULTAR";
+            this.btnConsultar.Text = "CONSULTA";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // pnlConsultar
             // 
             this.pnlConsultar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlConsultar.Controls.Add(this.rdBtmConCadastro);
+            this.pnlConsultar.Controls.Add(this.rdBtmConCadastrado);
             this.pnlConsultar.Controls.Add(this.rdBtmConAgendado);
             this.pnlConsultar.Controls.Add(this.cmbBxConsultarPor);
             this.pnlConsultar.Controls.Add(this.btnConConsultar);
@@ -160,41 +166,51 @@
             this.pnlConsultar.Size = new System.Drawing.Size(650, 414);
             this.pnlConsultar.TabIndex = 5;
             // 
-            // rdBtmConCadastro
+            // rdBtmConCadastrado
             // 
-            this.rdBtmConCadastro.AutoSize = true;
-            this.rdBtmConCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdBtmConCadastro.Location = new System.Drawing.Point(520, 35);
-            this.rdBtmConCadastro.Name = "rdBtmConCadastro";
-            this.rdBtmConCadastro.Size = new System.Drawing.Size(92, 17);
-            this.rdBtmConCadastro.TabIndex = 24;
-            this.rdBtmConCadastro.TabStop = true;
-            this.rdBtmConCadastro.Text = "CADASTRO";
-            this.rdBtmConCadastro.UseVisualStyleBackColor = true;
+            this.rdBtmConCadastrado.AutoSize = true;
+            this.rdBtmConCadastrado.Checked = true;
+            this.rdBtmConCadastrado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdBtmConCadastrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBtmConCadastrado.Location = new System.Drawing.Point(520, 35);
+            this.rdBtmConCadastrado.Name = "rdBtmConCadastrado";
+            this.rdBtmConCadastrado.Size = new System.Drawing.Size(109, 17);
+            this.rdBtmConCadastrado.TabIndex = 24;
+            this.rdBtmConCadastrado.TabStop = true;
+            this.rdBtmConCadastrado.Text = "CADASTRADO";
+            this.rdBtmConCadastrado.UseVisualStyleBackColor = false;
+            this.rdBtmConCadastrado.CheckedChanged += new System.EventHandler(this.rdBtmConCadastrado_CheckedChanged);
             // 
             // rdBtmConAgendado
             // 
             this.rdBtmConAgendado.AutoSize = true;
+            this.rdBtmConAgendado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdBtmConAgendado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdBtmConAgendado.Location = new System.Drawing.Point(520, 11);
             this.rdBtmConAgendado.Name = "rdBtmConAgendado";
             this.rdBtmConAgendado.Size = new System.Drawing.Size(94, 17);
             this.rdBtmConAgendado.TabIndex = 23;
-            this.rdBtmConAgendado.TabStop = true;
             this.rdBtmConAgendado.Text = "AGENDADO";
             this.rdBtmConAgendado.UseVisualStyleBackColor = true;
+            this.rdBtmConAgendado.CheckedChanged += new System.EventHandler(this.rdBtmConAgendado_CheckedChanged);
             // 
             // cmbBxConsultarPor
             // 
+            this.cmbBxConsultarPor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbBxConsultarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBxConsultarPor.FormattingEnabled = true;
             this.cmbBxConsultarPor.Items.AddRange(new object[] {
-            "NOME",
+            "",
             "CPF",
+            "NIS",
+            "NOME_COMPLETO",
+            "DATA_DE_NASCIMENTO",
+            "ESTADO_CIVIL",
+            "EMAIL",
             "TELEFONE",
-            "DEMANDA",
-            "DATA(AGENDAMENTO)",
-            "SITUAÇÃO(AGENDAMENTO)"});
+            "WHATSAPP",
+            "NOME_DA_MAE",
+            "DATA_CADASTRO"});
             this.cmbBxConsultarPor.Location = new System.Drawing.Point(497, 61);
             this.cmbBxConsultarPor.Name = "cmbBxConsultarPor";
             this.cmbBxConsultarPor.Size = new System.Drawing.Size(142, 21);
@@ -202,6 +218,7 @@
             // 
             // btnConConsultar
             // 
+            this.btnConConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConConsultar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnConConsultar.Location = new System.Drawing.Point(368, 61);
@@ -223,13 +240,16 @@
             // dtGrdViewConsultas
             // 
             this.dtGrdViewConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGrdViewConsultas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtGrdViewConsultas.Location = new System.Drawing.Point(-2, 88);
             this.dtGrdViewConsultas.Name = "dtGrdViewConsultas";
             this.dtGrdViewConsultas.Size = new System.Drawing.Size(650, 270);
             this.dtGrdViewConsultas.TabIndex = 19;
+            this.dtGrdViewConsultas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGrdViewConsultas_CellClick);
             // 
             // btnConEditar
             // 
+            this.btnConEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnConEditar.Location = new System.Drawing.Point(471, 364);
@@ -238,9 +258,11 @@
             this.btnConEditar.TabIndex = 8;
             this.btnConEditar.Text = "EDITAR";
             this.btnConEditar.UseVisualStyleBackColor = true;
+            this.btnConEditar.Click += new System.EventHandler(this.btnConEditar_Click);
             // 
             // btnConExcluir
             // 
+            this.btnConExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConExcluir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnConExcluir.Location = new System.Drawing.Point(8, 364);
@@ -249,6 +271,7 @@
             this.btnConExcluir.TabIndex = 8;
             this.btnConExcluir.Text = "EXCLUIR";
             this.btnConExcluir.UseVisualStyleBackColor = true;
+            this.btnConExcluir.Click += new System.EventHandler(this.btnConExcluir_Click);
             // 
             // txtBxConBarraConsulta
             // 
@@ -269,26 +292,11 @@
             this.lblCadastro.TabIndex = 0;
             this.lblCadastro.Text = "CONSULTAR";
             // 
-            // lkLblConLinkedinDevMathews
-            // 
-            this.lkLblConLinkedinDevMathews.AutoSize = true;
-            this.lkLblConLinkedinDevMathews.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lkLblConLinkedinDevMathews.LinkColor = System.Drawing.Color.White;
-            this.lkLblConLinkedinDevMathews.Location = new System.Drawing.Point(783, 430);
-            this.lkLblConLinkedinDevMathews.Name = "lkLblConLinkedinDevMathews";
-            this.lkLblConLinkedinDevMathews.Size = new System.Drawing.Size(170, 13);
-            this.lkLblConLinkedinDevMathews.TabIndex = 25;
-            this.lkLblConLinkedinDevMathews.TabStop = true;
-            this.lkLblConLinkedinDevMathews.Text = "(82)9 9990-1016 - Freire M.B";
-            this.lkLblConLinkedinDevMathews.VisitedLinkColor = System.Drawing.Color.White;
-            this.lkLblConLinkedinDevMathews.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkLblConLinkedinDevMathews_LinkClicked);
-            // 
             // FrmConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 450);
-            this.Controls.Add(this.lkLblConLinkedinDevMathews);
             this.Controls.Add(this.pnlConsultar);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastrar);
@@ -331,8 +339,7 @@
         private System.Windows.Forms.Button btnConConsultar;
         private System.Windows.Forms.RadioButton rdBtmConAgendado;
         private System.Windows.Forms.ComboBox cmbBxConsultarPor;
-        private System.Windows.Forms.RadioButton rdBtmConCadastro;
-        private System.Windows.Forms.LinkLabel lkLblConLinkedinDevMathews;
+        private System.Windows.Forms.RadioButton rdBtmConCadastrado;
     }
 }
 
