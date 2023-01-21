@@ -62,7 +62,9 @@ namespace Teu_Assistente_HABITACAO
 
         private void btnConfUsuario_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            FrmCadastroUsuario frmCadastroUsuario = new FrmCadastroUsuario();
+            frmCadastroUsuario.ShowDialog();
         }
     }
 }

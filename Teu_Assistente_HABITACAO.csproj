@@ -61,6 +61,7 @@
     <Compile Include="CONTROLLER\Deficiente.cs" />
     <Compile Include="CONTROLLER\VarGlobaisFrmCadastro.cs" />
     <Compile Include="CONTROLLER\TratarDados.cs" />
+    <Compile Include="CONTROLLER\varGlobaisFrmCadastroUsuario.cs" />
     <Compile Include="MODEL\BDAgendamento.cs" />
     <Compile Include="MODEL\BDCadastro.cs" />
     <Compile Include="MODEL\BDCadastroUsuario.cs" />
@@ -70,6 +71,12 @@
     <Compile Include="MODEL\BDDataGridViewCadastro.cs" />
     <Compile Include="MODEL\BDEndereco.cs" />
     <Compile Include="MODEL\BDComprovantes.cs" />
+    <Compile Include="VIEW\FrmCadastroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmCadastroUsuario.Designer.cs">
+      <DependentUpon>FrmCadastroUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\FrmTelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +130,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VIEW\FrmCadastroUsuario.resx">
+      <DependentUpon>FrmCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VIEW\FrmTelaLogin.resx">
       <DependentUpon>FrmTelaLogin.cs</DependentUpon>
     </EmbeddedResource>

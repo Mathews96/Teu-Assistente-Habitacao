@@ -11,7 +11,6 @@ namespace Teu_Assistente_HABITACAO
             this.Endereco = new Endereco();
             this.Conjuge = new Conjuge();
         }
-        //internal Endereco Endereco { get; set; }
         internal Endereco Endereco;
 
         internal Conjuge Conjuge { get; set; }

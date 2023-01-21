@@ -17,3 +17,4 @@ C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\
 C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.FrmCadCompConjungePag3.resources
 C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.FrmCadEnderecoPag2.resources
 C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.FrmCadastroPag1.resources
+C:\Users\Mathews\source\repos\Teu_Assistente_HABITACAO\Teu_Assistente_HABITACAO\obj\Debug\Teu_Assistente_HABITACAO.FrmCadastroUsuario.resources

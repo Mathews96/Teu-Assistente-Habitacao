@@ -120,7 +120,7 @@ namespace Teu_Assistente_HABITACAO
                 }
                 else
                 {
-                    var confirmarEdicao = MessageBox.Show("Já existe um cadastro com esse número de CPF: " + mkdTxtBxCadCPF.Text + "Deseja continuar?", "ATENÇÃO", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    var confirmarEdicao = MessageBox.Show("Já existe um cadastro com esse número de CPF:\n " + this.mkdTxtBxCadCPF.Text + "\n\nDESEJA EDITAR?", "ATENÇÃO", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                     if(confirmarEdicao == DialogResult.OK)
                     {
                         this.proximaPagina();

@@ -48,6 +48,7 @@
             this.btnConExcluir = new System.Windows.Forms.Button();
             this.txtBxConBarraConsulta = new System.Windows.Forms.TextBox();
             this.lblCadastro = new System.Windows.Forms.Label();
+            this.btnConVoltarFrm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
             this.pnlConsultar.SuspendLayout();
@@ -292,11 +293,22 @@
             this.lblCadastro.TabIndex = 0;
             this.lblCadastro.Text = "CONSULTAR";
             // 
+            // btnConVoltarFrm
+            // 
+            this.btnConVoltarFrm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConVoltarFrm.Location = new System.Drawing.Point(952, 198);
+            this.btnConVoltarFrm.Name = "btnConVoltarFrm";
+            this.btnConVoltarFrm.Size = new System.Drawing.Size(12, 32);
+            this.btnConVoltarFrm.TabIndex = 25;
+            this.btnConVoltarFrm.Text = "<";
+            this.btnConVoltarFrm.UseVisualStyleBackColor = true;
+            // 
             // FrmConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 450);
+            this.Controls.Add(this.btnConVoltarFrm);
             this.Controls.Add(this.pnlConsultar);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastrar);
@@ -340,6 +352,7 @@
         private System.Windows.Forms.RadioButton rdBtmConAgendado;
         private System.Windows.Forms.ComboBox cmbBxConsultarPor;
         private System.Windows.Forms.RadioButton rdBtmConCadastrado;
+        private System.Windows.Forms.Button btnConVoltarFrm;
     }
 }
 

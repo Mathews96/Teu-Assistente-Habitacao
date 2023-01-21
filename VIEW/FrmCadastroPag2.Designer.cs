@@ -58,6 +58,7 @@
             this.lblCadEndereco = new System.Windows.Forms.Label();
             this.lblCadastro = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnCadVoltarFrm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
             this.pnlCadastroPag2.SuspendLayout();
@@ -450,11 +451,22 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // btnCadVoltarFrm
+            // 
+            this.btnCadVoltarFrm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadVoltarFrm.Location = new System.Drawing.Point(952, 198);
+            this.btnCadVoltarFrm.Name = "btnCadVoltarFrm";
+            this.btnCadVoltarFrm.Size = new System.Drawing.Size(12, 32);
+            this.btnCadVoltarFrm.TabIndex = 27;
+            this.btnCadVoltarFrm.Text = "<";
+            this.btnCadVoltarFrm.UseVisualStyleBackColor = true;
+            // 
             // FrmCadEnderecoPag2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 450);
+            this.Controls.Add(this.btnCadVoltarFrm);
             this.Controls.Add(this.pnlCadastroPag2);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastrar);
@@ -508,6 +520,7 @@
         private System.Windows.Forms.MaskedTextBox mkdTxtBxCadEndNumero;
         private System.Windows.Forms.Button btnCadVoltar;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnCadVoltarFrm;
     }
 }
 

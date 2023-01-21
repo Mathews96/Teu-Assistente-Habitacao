@@ -62,6 +62,7 @@
             this.lblAgNumero = new System.Windows.Forms.Label();
             this.lblAgDemanda = new System.Windows.Forms.Label();
             this.btnAgendar = new System.Windows.Forms.Button();
+            this.btnAgVoltarFrm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
             this.pnlAgendamento.SuspendLayout();
@@ -461,11 +462,22 @@
             this.btnAgendar.UseVisualStyleBackColor = true;
             this.btnAgendar.Click += new System.EventHandler(this.btnAgendar_Click);
             // 
+            // btnAgVoltarFrm
+            // 
+            this.btnAgVoltarFrm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgVoltarFrm.Location = new System.Drawing.Point(952, 198);
+            this.btnAgVoltarFrm.Name = "btnAgVoltarFrm";
+            this.btnAgVoltarFrm.Size = new System.Drawing.Size(12, 32);
+            this.btnAgVoltarFrm.TabIndex = 27;
+            this.btnAgVoltarFrm.Text = "<";
+            this.btnAgVoltarFrm.UseVisualStyleBackColor = true;
+            // 
             // FrmAgendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 450);
+            this.Controls.Add(this.btnAgVoltarFrm);
             this.Controls.Add(this.pnlAgDemanda);
             this.Controls.Add(this.pnlAgendamento);
             this.Controls.Add(this.btnConsultar);
@@ -528,6 +540,7 @@
         private System.Windows.Forms.Button btnCadEditar;
         private System.Windows.Forms.Button btnAgendar;
         private System.Windows.Forms.Button btnCadCancelar;
+        private System.Windows.Forms.Button btnAgVoltarFrm;
     }
 }
 

@@ -7,18 +7,18 @@ namespace Teu_Assistente_HABITACAO
 {
     internal class BDCadastroUsuario
     {
-        internal long Cpf { get; set; }
+        internal long? Cpf { get; set; }
         internal string NomeCompleto { get; set; }
         internal DateTime DataDeNascimento { get; set; }
-        internal long Matricula { get; set; }
+        internal long? Matricula { get; set; }
         internal string Entidade { get; set; }
         internal string Setor { get; set; }
         internal string Cargo { get; set; }
-        internal long Telefone { get; set; }
-        internal long Whatsapp { get; set; }
+        internal long? Telefone { get; set; }
+        internal long? Whatsapp { get; set; }
         internal string Email { get; set; }
         internal string Senha { get; set; }
-        internal int Nivel { get; set; }
+        internal int? Nivel { get; set; }
         internal DateTime DataCadastro { get; set; }
         public void inserirCadastroUsu(long cpf)
         {

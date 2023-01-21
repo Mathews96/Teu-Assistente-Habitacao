@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTelaLogin));
             this.pctBoxLogo = new System.Windows.Forms.PictureBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblTelaLoginUsuario = new System.Windows.Forms.Label();
             this.pnlLinksUteis = new System.Windows.Forms.Panel();
-            this.btnInfoContato = new System.Windows.Forms.Button();
+            this.btnTelaLoginInfoContato = new System.Windows.Forms.Button();
             this.lblVersao = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblSenha = new System.Windows.Forms.Label();
-            this.btnEntrar = new System.Windows.Forms.Button();
-            this.btnEsqueciSenha = new System.Windows.Forms.Button();
+            this.mkdTxtBxTelaLoginUsuario = new System.Windows.Forms.MaskedTextBox();
+            this.txtBxTelaLoginSenha = new System.Windows.Forms.TextBox();
+            this.lblTelaLoginSenha = new System.Windows.Forms.Label();
+            this.btnTelaLoginEntrar = new System.Windows.Forms.Button();
+            this.btnTelaLoginEsqueciSenha = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxLogo)).BeginInit();
             this.pnlLinksUteis.SuspendLayout();
             this.SuspendLayout();
@@ -54,42 +54,42 @@
             this.pctBoxLogo.TabIndex = 0;
             this.pctBoxLogo.TabStop = false;
             // 
-            // lblUsuario
+            // lblTelaLoginUsuario
             // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblUsuario.Location = new System.Drawing.Point(84, 27);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(115, 21);
-            this.lblUsuario.TabIndex = 1;
-            this.lblUsuario.Text = "USUÁRIO(A):";
+            this.lblTelaLoginUsuario.AutoSize = true;
+            this.lblTelaLoginUsuario.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelaLoginUsuario.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.lblTelaLoginUsuario.Location = new System.Drawing.Point(84, 27);
+            this.lblTelaLoginUsuario.Name = "lblTelaLoginUsuario";
+            this.lblTelaLoginUsuario.Size = new System.Drawing.Size(115, 21);
+            this.lblTelaLoginUsuario.TabIndex = 1;
+            this.lblTelaLoginUsuario.Text = "USUÁRIO(A):";
             // 
             // pnlLinksUteis
             // 
             this.pnlLinksUteis.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlLinksUteis.Controls.Add(this.btnInfoContato);
+            this.pnlLinksUteis.Controls.Add(this.btnTelaLoginInfoContato);
             this.pnlLinksUteis.Controls.Add(this.lblVersao);
-            this.pnlLinksUteis.Controls.Add(this.maskedTextBox1);
-            this.pnlLinksUteis.Controls.Add(this.textBox2);
-            this.pnlLinksUteis.Controls.Add(this.lblSenha);
-            this.pnlLinksUteis.Controls.Add(this.lblUsuario);
+            this.pnlLinksUteis.Controls.Add(this.mkdTxtBxTelaLoginUsuario);
+            this.pnlLinksUteis.Controls.Add(this.txtBxTelaLoginSenha);
+            this.pnlLinksUteis.Controls.Add(this.lblTelaLoginSenha);
+            this.pnlLinksUteis.Controls.Add(this.lblTelaLoginUsuario);
             this.pnlLinksUteis.Location = new System.Drawing.Point(12, 114);
             this.pnlLinksUteis.Name = "pnlLinksUteis";
             this.pnlLinksUteis.Size = new System.Drawing.Size(285, 153);
             this.pnlLinksUteis.TabIndex = 2;
             // 
-            // btnInfoContato
+            // btnTelaLoginInfoContato
             // 
-            this.btnInfoContato.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInfoContato.Font = new System.Drawing.Font("Segoe UI Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInfoContato.Location = new System.Drawing.Point(252, -2);
-            this.btnInfoContato.Name = "btnInfoContato";
-            this.btnInfoContato.Size = new System.Drawing.Size(31, 30);
-            this.btnInfoContato.TabIndex = 6;
-            this.btnInfoContato.Text = "?";
-            this.btnInfoContato.UseVisualStyleBackColor = true;
-            this.btnInfoContato.Click += new System.EventHandler(this.btnInfoContato_Click);
+            this.btnTelaLoginInfoContato.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTelaLoginInfoContato.Font = new System.Drawing.Font("Segoe UI Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTelaLoginInfoContato.Location = new System.Drawing.Point(252, -2);
+            this.btnTelaLoginInfoContato.Name = "btnTelaLoginInfoContato";
+            this.btnTelaLoginInfoContato.Size = new System.Drawing.Size(31, 30);
+            this.btnTelaLoginInfoContato.TabIndex = 6;
+            this.btnTelaLoginInfoContato.Text = "?";
+            this.btnTelaLoginInfoContato.UseVisualStyleBackColor = true;
+            this.btnTelaLoginInfoContato.Click += new System.EventHandler(this.btnInfoContato_Click);
             // 
             // lblVersao
             // 
@@ -101,70 +101,70 @@
             this.lblVersao.TabIndex = 6;
             this.lblVersao.Text = "v1.0";
             // 
-            // maskedTextBox1
+            // mkdTxtBxTelaLoginUsuario
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(3, 50);
-            this.maskedTextBox1.Mask = "000.000.000.-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(271, 22);
-            this.maskedTextBox1.TabIndex = 27;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mkdTxtBxTelaLoginUsuario.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkdTxtBxTelaLoginUsuario.Location = new System.Drawing.Point(3, 50);
+            this.mkdTxtBxTelaLoginUsuario.Mask = "000.000.000.-00";
+            this.mkdTxtBxTelaLoginUsuario.Name = "mkdTxtBxTelaLoginUsuario";
+            this.mkdTxtBxTelaLoginUsuario.Size = new System.Drawing.Size(271, 22);
+            this.mkdTxtBxTelaLoginUsuario.TabIndex = 27;
+            this.mkdTxtBxTelaLoginUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // txtBxTelaLoginSenha
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox2.Location = new System.Drawing.Point(3, 107);
-            this.textBox2.MaxLength = 20;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(271, 22);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "DIGITE SUA SENHA...";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.txtBxTelaLoginSenha.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBxTelaLoginSenha.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtBxTelaLoginSenha.Location = new System.Drawing.Point(3, 107);
+            this.txtBxTelaLoginSenha.MaxLength = 20;
+            this.txtBxTelaLoginSenha.Name = "txtBxTelaLoginSenha";
+            this.txtBxTelaLoginSenha.Size = new System.Drawing.Size(271, 22);
+            this.txtBxTelaLoginSenha.TabIndex = 4;
+            this.txtBxTelaLoginSenha.Text = "DIGITE SUA SENHA...";
+            this.txtBxTelaLoginSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBxTelaLoginSenha.UseSystemPasswordChar = true;
             // 
-            // lblSenha
+            // lblTelaLoginSenha
             // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblSenha.Location = new System.Drawing.Point(101, 84);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(71, 21);
-            this.lblSenha.TabIndex = 2;
-            this.lblSenha.Text = "SENHA:";
+            this.lblTelaLoginSenha.AutoSize = true;
+            this.lblTelaLoginSenha.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelaLoginSenha.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.lblTelaLoginSenha.Location = new System.Drawing.Point(101, 84);
+            this.lblTelaLoginSenha.Name = "lblTelaLoginSenha";
+            this.lblTelaLoginSenha.Size = new System.Drawing.Size(71, 21);
+            this.lblTelaLoginSenha.TabIndex = 2;
+            this.lblTelaLoginSenha.Text = "SENHA:";
             // 
-            // btnEntrar
+            // btnTelaLoginEntrar
             // 
-            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.Font = new System.Drawing.Font("Segoe UI Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(12, 275);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(285, 30);
-            this.btnEntrar.TabIndex = 4;
-            this.btnEntrar.Text = "ENTRAR";
-            this.btnEntrar.UseVisualStyleBackColor = true;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            this.btnTelaLoginEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTelaLoginEntrar.Font = new System.Drawing.Font("Segoe UI Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTelaLoginEntrar.Location = new System.Drawing.Point(12, 275);
+            this.btnTelaLoginEntrar.Name = "btnTelaLoginEntrar";
+            this.btnTelaLoginEntrar.Size = new System.Drawing.Size(285, 30);
+            this.btnTelaLoginEntrar.TabIndex = 4;
+            this.btnTelaLoginEntrar.Text = "ENTRAR";
+            this.btnTelaLoginEntrar.UseVisualStyleBackColor = true;
+            this.btnTelaLoginEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
-            // btnEsqueciSenha
+            // btnTelaLoginEsqueciSenha
             // 
-            this.btnEsqueciSenha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEsqueciSenha.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEsqueciSenha.Location = new System.Drawing.Point(12, 311);
-            this.btnEsqueciSenha.Name = "btnEsqueciSenha";
-            this.btnEsqueciSenha.Size = new System.Drawing.Size(285, 30);
-            this.btnEsqueciSenha.TabIndex = 5;
-            this.btnEsqueciSenha.Text = "ESQUECI A SENHA";
-            this.btnEsqueciSenha.UseVisualStyleBackColor = true;
+            this.btnTelaLoginEsqueciSenha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTelaLoginEsqueciSenha.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTelaLoginEsqueciSenha.Location = new System.Drawing.Point(12, 311);
+            this.btnTelaLoginEsqueciSenha.Name = "btnTelaLoginEsqueciSenha";
+            this.btnTelaLoginEsqueciSenha.Size = new System.Drawing.Size(285, 30);
+            this.btnTelaLoginEsqueciSenha.TabIndex = 5;
+            this.btnTelaLoginEsqueciSenha.Text = "ESQUECI A SENHA";
+            this.btnTelaLoginEsqueciSenha.UseVisualStyleBackColor = true;
             // 
             // FrmTelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(309, 353);
-            this.Controls.Add(this.btnEsqueciSenha);
-            this.Controls.Add(this.btnEntrar);
+            this.Controls.Add(this.btnTelaLoginEsqueciSenha);
+            this.Controls.Add(this.btnTelaLoginEntrar);
             this.Controls.Add(this.pnlLinksUteis);
             this.Controls.Add(this.pctBoxLogo);
             this.Name = "FrmTelaLogin";
@@ -181,15 +181,15 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pctBoxLogo;
-        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblTelaLoginUsuario;
         private System.Windows.Forms.Panel pnlLinksUteis;
-        private System.Windows.Forms.Button btnEntrar;
-        private System.Windows.Forms.Button btnEsqueciSenha;
-        private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Button btnTelaLoginEntrar;
+        private System.Windows.Forms.Button btnTelaLoginEsqueciSenha;
+        private System.Windows.Forms.Label lblTelaLoginSenha;
+        private System.Windows.Forms.TextBox txtBxTelaLoginSenha;
+        private System.Windows.Forms.MaskedTextBox mkdTxtBxTelaLoginUsuario;
         private System.Windows.Forms.Label lblVersao;
-        private System.Windows.Forms.Button btnInfoContato;
+        private System.Windows.Forms.Button btnTelaLoginInfoContato;
     }
 }
 

@@ -86,7 +86,7 @@ namespace Teu_Assistente_HABITACAO
             else
             {
                 this.guardarDados();
-                var confirmarDados = MessageBox.Show("» DADOS CADASTRAIS" + DateTime.Now +
+                var confirmarDados = MessageBox.Show("» DADOS CADASTRAIS - " + DateTime.Now +
                     "\n\n\n» PÁGINA - 1 [ DADOS PESSOAIS ]" +
                     "\n\n- NOME_COMPLETO: " + VarGlobaisFrmCadastro.dadosCadPag1NomeCompleto +
                     "\n- DATA_DE_NASCIMENTO: " + VarGlobaisFrmCadastro.dadosCadPag1Nascimento +

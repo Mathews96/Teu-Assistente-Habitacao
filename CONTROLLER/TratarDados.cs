@@ -49,7 +49,7 @@ namespace Teu_Assistente_HABITACAO
             }
             return texto;
         }
-        public bool aceitarNumeros(int qnt, string texto)
+        public bool aceitarNumeros(int quantidade, string texto)
         {
             bool resultado = false;
             int qntCaracter = 0;
@@ -58,7 +58,7 @@ namespace Teu_Assistente_HABITACAO
                 if(char.IsNumber(texto, passarCaracter))
                 {
                     qntCaracter++;
-                    if(qntCaracter == qnt)
+                    if(qntCaracter == quantidade)
                     {
                         resultado = true;
                         break;
